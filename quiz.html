@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>開始測驗</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2em;
+        }
+
+        .back-btn {
+            padding: 10px 20px;
+            background: #6c757d;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #5a6268;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 1.2em;
+            color: #667eea;
+        }
+
+        .setup-section {
+            background: #f8f9ff;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .setup-section h3 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+
+        .chapter-options,
+        .type-selection {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .chapter-option,
+        .type-option {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .chapter-option:hover,
+        .type-option:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .chapter-option input,
+        .type-option input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .chapter-option.selected,
+        .type-option.selected {
+            background: #e8eaff;
+            border-color: #667eea;
+        }
+
+        .count-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .count-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .info-text {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 8px;
+        }
+
+        .start-btn {
+            width: 100%;
+            padding: 15px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .start-btn:hover {
+            background: #5568d3;
+        }
+
+        .quiz-header {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .quiz-header h2 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .question-item {
+            background: #f8f9ff;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s;
+        }
+
+        .question-item.correct {
+            border-left-color: #28a745;
+            background: #d4edda;
+        }
+
+        .question-item.incorrect {
+            border-left-color: #dc3545;
+            background: #f8d7da;
+        }
+
+        .question-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 10px;
+        }
+
+        .question-number,
+        .question-chapter,
+        .question-type {
+            background: #6c757d;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .question-number {
+             background: #667eea;
+        }
+        .question-chapter {
+            background: #17a2b8;
+        }
+
+        .question-item.correct .question-number {
+            background: #28a745;
+        }
+
+        .question-item.incorrect .question-number {
+            background: #dc3545;
+        }
+
+        .question-title {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .options {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .option {
+            background: white;
+            padding: 12px 15px;
+            margin: 8px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+        }
+
+        .option:hover {
+            border-color: #667eea;
+            transform: translateX(3px);
+        }
+
+        .option input[type="checkbox"],
+        .option input[type="radio"] {
+            margin-right: 12px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .option label {
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .option.selected {
+            background: #e8eaff;
+            border-color: #667eea;
+        }
+
+        .option.correct {
+            background: #d4edda;
+            border-color: #28a745;
+        }
+
+        .option.incorrect {
+            background: #f8d7da;
+            border-color: #dc3545;
+        }
+
+        .option.correct::after {
+            content: ' ✓';
+            color: #28a745;
+            font-weight: bold;
+            margin-left: auto;
+        }
+
+        .option.incorrect::after {
+            content: ' ✗';
+            color: #dc3545;
+            font-weight: bold;
+            margin-left: auto;
+        }
+
+        .text-answer {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            transition: border-color 0.3s;
+        }
+
+        .text-answer:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .text-answer.correct-input {
+            border-color: #28a745;
+            background: #d4edda;
+        }
+
+        .text-answer.incorrect-input {
+            border-color: #dc3545;
+            background: #f8d7da;
+        }
+
+        .answer-result {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            display: none;
+        }
+
+        .answer-result.show {
+            display: block;
+        }
+
+        .answer-result.correct {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .answer-result.incorrect {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .submit-section {
+            position: sticky;
+            bottom: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .submit-btn {
+            padding: 15px 50px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #218838;
+        }
+
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .score-summary {
+            background: #f8f9ff;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .score-summary h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .score {
+            font-size: 3em;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        .percentage {
+            font-size: 1.5em;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: white;
+        }
+
+        .action-btn.primary {
+            background: #667eea;
+        }
+
+        .action-btn.primary:hover {
+            background: #5568d3;
+        }
+
+        .action-btn.secondary {
+            background: #28a745;
+        }
+
+        .action-btn.secondary:hover {
+            background: #218838;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 80px;
+            right: 30px;
+            background: #667eea;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+            display: none;
+        }
+
+        .back-to-top.show {
+            display: block;
+        }
+
+        .back-to-top:hover {
+            background: #5568d3;
+            transform: translateY(-5px);
+        }
+
+        .error {
+            text-align: center;
+            padding: 40px;
+            color: #dc3545;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✏️ 開始測驗</h1>
+            <a href="index.html" class="back-btn">← 返回首頁</a>
+        </div>
+
+        <div class="loading" id="loadingSection">
+            <p>正在準備測驗設定...</p>
+        </div>
+
+        <div id="errorSection" class="error hidden">
+            <p>❌ 載入失敗！</p>
+            <p id="errorMessage"></p>
+        </div>
+
+        <div id="setupSection" class="hidden">
+            <div class="setup-section">
+                <h3>📚 選擇章節</h3>
+                <div class="chapter-options" id="chapterOptions"></div>
+            </div>
+            <div class="setup-section">
+                <h3>📋 選擇題型</h3>
+                <div class="type-selection">
+                    <label class="type-option selected"><input type="checkbox" class="type-filter" value="single" checked><span>單選題</span></label>
+                    <label class="type-option selected"><input type="checkbox" class="type-filter" value="multiple" checked><span>多選題</span></label>
+                    <label class="type-option selected"><input type="checkbox" class="type-filter" value="text" checked><span>填充題</span></label>
+                </div>
+                <p class="info-text" id="availableCount">可用題目：0 題</p>
+            </div>
+            <div class="setup-section">
+                <h3>🔢 選擇題數</h3>
+                <div class="count-selection">
+                    <label for="questionCount" style="display: block; margin-bottom: 10px; font-weight: bold;">測驗題數：</label>
+                    <input type="number" id="questionCount" class="count-input" min="1" value="10">
+                    <p class="info-text">輸入想要測驗的題數</p>
+                </div>
+            </div>
+            <button class="start-btn" id="startQuizBtn">開始測驗</button>
+        </div>
+
+        <div id="quizSection" class="hidden">
+            <div class="quiz-header">
+                <h2>📝 開始答題</h2>
+                <p class="info">共 <span id="totalQuestions">0</span> 題</p>
+            </div>
+            <div class="question-list" id="questionList"></div>
+            <div class="submit-section"><button class="submit-btn" id="submitBtn">檢查答案</button></div>
+            <div id="resultSection" class="hidden">
+                <div class="score-summary">
+                    <h2>🎉 測驗結果</h2>
+                    <div class="score"><span id="scoreCorrect">0</span> / <span id="scoreTotal">0</span></div>
+                    <div class="percentage" id="percentage">0%</div>
+                </div>
+                <div class="action-buttons">
+                    <a href="index.html" class="action-btn primary">返回首頁</a>
+                    <a href="quiz.html" class="action-btn secondary">再測一次</a>
+                    <a href="review.html" class="action-btn primary" id="reviewWrongBtn">查看錯題</a>
+                    <button class="action-btn secondary" onclick="scrollToTop()">回到頂部</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <script>
+        const AVAILABLE_CHAPTERS = ['CH5', 'CH6', 'CH8', 'CH9'];
+        let allQuestions = [];
+        let questions = [];
+
+        window.addEventListener('DOMContentLoaded', function() {
+            createChapterCheckboxes();
+            updateAvailableCount();
+            document.getElementById('setupSection').addEventListener('change', (event) => {
+                if (event.target.matches('.chapter-filter, .type-filter')) {
+                    if(event.target.parentElement) {
+                        event.target.parentElement.classList.toggle('selected', event.target.checked);
+                    }
+                    updateAvailableCount();
+                }
+            });
+            window.addEventListener('scroll', function() {
+                const backToTop = document.getElementById('backToTop');
+                if (window.pageYOffset > 300) {
+                    backToTop.classList.add('show');
+                } else {
+                    backToTop.classList.remove('show');
+                }
+            });
+        });
+
+        function createChapterCheckboxes() {
+            const container = document.getElementById('chapterOptions');
+            container.innerHTML = '';
+            AVAILABLE_CHAPTERS.forEach(chapter => {
+                const label = document.createElement('label');
+                label.className = 'chapter-option selected';
+                label.innerHTML = `<input type="checkbox" class="chapter-filter" value="${chapter}" checked><span>${chapter}</span>`;
+                container.appendChild(label);
+            });
+        }
+        
+        async function updateAvailableCount() {
+            const selectedChapters = Array.from(document.querySelectorAll('.chapter-filter:checked')).map(input => input.value);
+            const selectedTypes = Array.from(document.querySelectorAll('.type-filter:checked')).map(input => input.value);
+            
+            showLoading(true, '正在載入章節資料...');
+            
+            try {
+                if (selectedChapters.length === 0) {
+                    allQuestions = [];
+                } else {
+                    const fetchPromises = selectedChapters.map(chapter =>
+                        fetch(`${chapter}.json`).then(res => res.ok ? res.json().then(data => data.map(q => ({...q, chapter}))) : [])
+                    );
+                    const chapterArrays = await Promise.all(fetchPromises);
+                    allQuestions = chapterArrays.flat();
+                }
+                const availableQuestions = allQuestions.filter(q => selectedTypes.includes(q.type));
+                document.getElementById('availableCount').textContent = `可用題目：${availableQuestions.length} 題`;
+                document.getElementById('questionCount').max = availableQuestions.length;
+                showLoading(false);
+            } catch(error) {
+                console.error("載入或計算題數時出錯:", error);
+                showError("無法載入章節資料，請檢查檔案是否存在或網路連線。");
+            }
+        }
+        
+        function showLoading(isLoading, message = '') {
+            const loadingSection = document.getElementById('loadingSection');
+            const setupSection = document.getElementById('setupSection');
+            if (isLoading) {
+                loadingSection.querySelector('p').textContent = message;
+                loadingSection.classList.remove('hidden');
+                setupSection.classList.add('hidden');
+            } else {
+                loadingSection.classList.add('hidden');
+                setupSection.classList.remove('hidden');
+            }
+        }
+        
+        function showError(message) {
+            document.getElementById('loadingSection').classList.add('hidden');
+            document.getElementById('setupSection').classList.add('hidden');
+            const errorSection = document.getElementById('errorSection');
+            errorSection.classList.remove('hidden');
+            document.getElementById('errorMessage').textContent = message;
+        }
+
+        document.getElementById('startQuizBtn').addEventListener('click', function() {
+            const selectedTypes = Array.from(document.querySelectorAll('.type-filter:checked')).map(input => input.value);
+            if (selectedTypes.length === 0) {
+                alert('請至少選擇一種題型！');
+                return;
+            }
+            const selectedChapters = Array.from(document.querySelectorAll('.chapter-filter:checked')).map(input => input.value);
+            if (selectedChapters.length === 0) {
+                alert('請至少選擇一個章節！');
+                return;
+            }
+            const count = parseInt(document.getElementById('questionCount').value);
+            const availableQuestions = allQuestions.filter(q => selectedTypes.includes(q.type));
+            if (isNaN(count) || count < 1) {
+                alert('題數至少要 1 題！');
+                return;
+            }
+            if (count > availableQuestions.length) {
+                alert(`所選條件下只有 ${availableQuestions.length} 題可用，請減少題數！`);
+                return;
+            }
+            questions = shuffleArray(availableQuestions).slice(0, count);
+            initQuiz();
+        });
+
+        function shuffleArray(array) {
+            const newArray = [...array];
+            for (let i = newArray.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+            }
+            return newArray;
+        }
+
+        function initQuiz() {
+            document.getElementById('setupSection').classList.add('hidden');
+            document.getElementById('quizSection').classList.remove('hidden');
+            document.getElementById('totalQuestions').textContent = questions.length;
+            displayAllQuestions();
+            scrollToTop();
+        }
+
+        function displayAllQuestions() {
+            const questionList = document.getElementById('questionList');
+            questionList.innerHTML = '';
+            questions.forEach((question, index) => {
+                const questionItem = document.createElement('div');
+                questionItem.className = 'question-item';
+                questionItem.id = `question-${index}`;
+                const typeText = { single: '單選題', multiple: '多選題', text: '填充題' }[question.type] || '未知';
+                let contentHTML = `
+                    <div class="question-header">
+                        <span class="question-number">${index + 1}</span>
+                        <span class="question-chapter">${question.chapter || ''}</span>
+                        <span class="question-type">${typeText}</span>
+                    </div>
+                    <div class="question-title">${question.question}</div>
+                `;
+                if (question.type === 'text') {
+                    contentHTML += `<input type="text" class="text-answer" data-index="${index}" placeholder="請輸入答案..."><div class="answer-result" id="result-${index}"></div>`;
+                } else {
+                    const inputType = question.type === 'multiple' ? 'checkbox' : 'radio';
+                    contentHTML += '<ul class="options">';
+                    (question.options || []).forEach((option, optIndex) => {
+                        contentHTML += `
+                            <li class="option" onclick="toggleOption(this, '${inputType}')">
+                                <input type="${inputType}" name="question-${index}" value="${optIndex}" id="q${index}-opt${optIndex}">
+                                <label for="q${index}-opt${optIndex}">${option}</label>
+                            </li>`;
+                    });
+                    contentHTML += '</ul>';
+                }
+                questionItem.innerHTML = contentHTML;
+                questionList.appendChild(questionItem);
+            });
+        }
+
+        function toggleOption(optionElement, inputType) {
+            const input = optionElement.querySelector('input');
+            if (!input.disabled) {
+                if (inputType === 'radio') {
+                    const name = input.name;
+                    document.querySelectorAll(`input[name="${name}"]`).forEach(radio => {
+                        radio.parentElement.classList.remove('selected');
+                    });
+                    input.checked = true;
+                    optionElement.classList.add('selected');
+                } else {
+                    input.checked = !input.checked;
+                    optionElement.classList.toggle('selected', input.checked);
+                }
+            }
+        }
+        
+        // --- 核心修正：新增 getSafeAnswerArray 輔助函式 ---
+        function getSafeAnswerArray(answer) {
+            if (answer === undefined || answer === null) {
+                return [];
+            }
+            return Array.isArray(answer) ? answer : [answer];
+        }
+
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            let score = 0;
+            const wrongQuestions = [];
+            questions.forEach((question, index) => {
+                const questionItem = document.getElementById(`question-${index}`);
+                let isCorrect = false;
+                
+                // --- 使用新的安全函式 ---
+                const safeAnswerArray = getSafeAnswerArray(question.answer);
+
+                if (question.type === 'text') {
+                    const input = questionItem.querySelector('.text-answer');
+                    const userAnswer = input.value.trim();
+                    input.disabled = true;
+                    const correctAnswers = safeAnswerArray.map(a => String(a).toLowerCase());
+                    isCorrect = correctAnswers.includes(userAnswer.toLowerCase());
+                    if (isCorrect) {
+                        score++;
+                        input.classList.add('correct-input');
+                        questionItem.classList.add('correct');
+                    } else {
+                        input.classList.add('incorrect-input');
+                        questionItem.classList.add('incorrect');
+                        const resultDiv = questionItem.querySelector('.answer-result');
+                        resultDiv.className = 'answer-result incorrect show';
+                        resultDiv.textContent = `正確答案：${safeAnswerArray.join(' 或 ')}`;
+                        wrongQuestions.push({ ...question, userAnswer: userAnswer || '(未作答)', timestamp: new Date().toISOString() });
+                    }
+                } else {
+                    const selectedInputs = questionItem.querySelectorAll('input:checked');
+                    const selectedAnswers = Array.from(selectedInputs).map(input => parseInt(input.value));
+                    const correctAnswers = [...safeAnswerArray].sort();
+                    isCorrect = JSON.stringify([...selectedAnswers].sort()) === JSON.stringify(correctAnswers);
+
+                    const options = questionItem.querySelectorAll('.option');
+                    options.forEach((option) => {
+                        option.onclick = null;
+                        const input = option.querySelector('input');
+                        input.disabled = true;
+                        const optIndex = parseInt(input.value);
+                        if (correctAnswers.includes(optIndex)) {
+                            option.classList.add('correct');
+                        } else if (selectedAnswers.includes(optIndex)) {
+                            option.classList.add('incorrect');
+                        }
+                    });
+
+                    if (isCorrect) {
+                        score++;
+                        questionItem.classList.add('correct');
+                    } else {
+                        questionItem.classList.add('incorrect');
+                        wrongQuestions.push({
+                            ...question,
+                            userAnswer: selectedAnswers.length > 0 ? selectedAnswers.map(i => question.options[i]) : ['(未作答)'],
+                            correctAnswerText: correctAnswers.map(i => question.options[i]),
+                            timestamp: new Date().toISOString()
+                        });
+                    }
+                }
+            });
+
+            if (wrongQuestions.length > 0) {
+                const existingWrong = JSON.parse(localStorage.getItem('wrongQuestions')) || [];
+                const updatedWrongQuestions = [...existingWrong, ...wrongQuestions];
+                localStorage.setItem('wrongQuestions', JSON.stringify(updatedWrongQuestions));
+                document.getElementById('reviewWrongBtn').classList.remove('hidden');
+            } else {
+                document.getElementById('reviewWrongBtn').classList.add('hidden');
+            }
+
+            const stats = JSON.parse(localStorage.getItem('quizStats')) || { totalQuizzes: 0, totalWrong: 0, totalScore: 0 };
+            stats.totalQuizzes++;
+            stats.totalWrong += wrongQuestions.length;
+            stats.totalScore += (score / questions.length) * 100;
+            localStorage.setItem('quizStats', JSON.stringify(stats));
+
+            const percentage = questions.length > 0 ? ((score / questions.length) * 100).toFixed(1) : 0;
+            document.getElementById('scoreCorrect').textContent = score;
+            document.getElementById('scoreTotal').textContent = questions.length;
+            document.getElementById('percentage').textContent = `${percentage}%`;
+            
+            const resultSection = document.getElementById('resultSection');
+            resultSection.classList.remove('hidden');
+            document.querySelector('.submit-section').classList.add('hidden');
+            
+            setTimeout(() => resultSection.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100);
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

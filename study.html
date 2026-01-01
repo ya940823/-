@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>閱讀記憶</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            min-height: 100vh; padding: 20px;
+        }
+        .container {
+            max-width: 1200px; margin: 0 auto; background: white;
+            border-radius: 20px; padding: 40px; box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+        h1 { color: #333; font-size: 2em; }
+        .back-btn {
+            padding: 10px 20px; background: #6c757d; color: white;
+            text-decoration: none; border-radius: 8px; transition: background 0.3s;
+        }
+        .back-btn:hover { background: #5a6268; }
+        .loading { text-align: center; padding: 40px; font-size: 1.2em; color: #4facfe; }
+        .filter-section {
+            background: #f8f9ff; padding: 25px; border-radius: 15px; margin-bottom: 30px;
+        }
+        .filter-group { margin-bottom: 20px; }
+        .filter-group:last-child { margin-bottom: 0; }
+        .filter-section h3 { color: #4facfe; margin-bottom: 15px; }
+        .chapter-options, .type-options, .display-options {
+            display: flex; gap: 15px; flex-wrap: wrap; align-items: center;
+        }
+        .chapter-option, .type-option, .action-button {
+            display: flex; align-items: center; padding: 12px 20px; background: white;
+            border: 2px solid #e0e0e0; border-radius: 10px; cursor: pointer; transition: all 0.3s;
+        }
+        .chapter-option:hover, .type-option:hover, .action-button:hover { border-color: #4facfe; }
+        .chapter-option.selected, .type-option.selected, .action-button.active {
+            background: #e8f4fd; border-color: #4facfe; font-weight: bold;
+        }
+        .chapter-option input, .type-option input {
+            width: 18px; height: 18px; margin-right: 8px; cursor: pointer;
+        }
+        .action-button { font-size: 14px; font-family: 'Microsoft JhengHei', sans-serif; }
+
+        .highlight-info {
+            background: #fff3cd; padding: 20px; border-radius: 15px; margin-bottom: 30px;
+            border-left: 5px solid #ffc107;
+        }
+        .highlight-info h3 { color: #856404; margin-bottom: 10px; }
+        .highlight-info p { color: #856404; line-height: 1.6; }
+        .question-item {
+            background: #f8f9ff; padding: 25px; border-radius: 15px; margin-bottom: 25px;
+            border-left: 5px solid #4facfe;
+        }
+        .question-header { display: flex; align-items: center; margin-bottom: 15px; gap: 10px; flex-wrap: wrap; }
+        .question-number {
+            background: #4facfe; color: white; padding: 5px 12px;
+            border-radius: 20px; font-weight: bold; font-size: 0.9em;
+        }
+        .question-type, .question-chapter {
+            background: #6c757d; color: white; padding: 5px 12px;
+            border-radius: 20px; font-size: 0.85em;
+        }
+        .question-chapter { background: #17a2b8; }
+        .question-title {
+            font-size: 1.1em; color: #333; margin-bottom: 15px; line-height: 1.6; font-weight: 500;
+        }
+        .options { list-style: none; margin-top: 15px; }
+        .option {
+            background: white; padding: 12px 15px; margin: 8px 0; border-radius: 8px;
+            border: 2px solid #e0e0e0; display: flex; align-items: center;
+        }
+        .option.answer { background: #d4edda; border-color: #28a745; font-weight: bold; }
+        .option.answer::before { content: '✓ '; color: #28a745; font-weight: bold; margin-right: 5px; }
+        .option.highlight { background: #fff3cd; border-color: #ffc107; font-weight: bold; position: relative; }
+        .option.highlight::before { content: '⭐ '; color: #ffc107; font-weight: bold; margin-right: 5px; }
+        .option.highlight::after {
+            content: '需特別記憶！'; position: absolute; right: 15px; background: #ffc107;
+            color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.75em;
+        }
+        .text-answer {
+            background: #d4edda; padding: 15px; border-radius: 8px;
+            border: 2px solid #28a745; font-weight: bold; margin-top: 10px;
+        }
+        .text-answer.highlight { background: #fff3cd; border-color: #ffc107; }
+        .text-answer::before { content: '✓ 答案：'; color: #28a745; font-weight: bold; margin-right: 10px; }
+        .text-answer.highlight::before { content: '⭐ 答案：'; color: #ffc107; }
+        .highlight-badge {
+            display: inline-block; background: #ffc107; color: white; padding: 5px 12px;
+            border-radius: 20px; font-size: 0.85em; margin-left: auto;
+        }
+        .stats-summary {
+            background: #f8f9ff; padding: 25px; border-radius: 15px; margin-bottom: 30px;
+            text-align: center;
+        }
+        .stats-summary h3 { color: #4facfe; margin-bottom: 15px; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
+        .stat-box { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .stat-box .number { font-size: 2em; font-weight: bold; color: #4facfe; }
+        .stat-box .label { color: #666; margin-top: 5px; font-size: 0.9em; }
+        .empty-state { text-align: center; padding: 60px 20px; color: #666; }
+        .empty-state .icon { font-size: 5em; margin-bottom: 20px; }
+        .error { text-align: center; padding: 40px; color: #dc3545; font-size: 1.1em; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📖 閱讀記憶</h1>
+            <a href="index.html" class="back-btn">← 返回首頁</a>
+        </div>
+
+        <div class="loading" id="loadingSection"><p>正在準備介面...</p></div>
+        <div id="errorSection" class="error hidden"><p>❌ 載入失敗！</p><p id="errorMessage"></p></div>
+
+        <div id="contentSection" class="hidden">
+            <div class="filter-section">
+                <div class="filter-group">
+                    <h3>📚 選擇章節</h3>
+                    <div class="chapter-options" id="chapterOptions"></div>
+                </div>
+                <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;">
+                <div class="filter-group">
+                    <h3>📋 篩選題型</h3>
+                    <div class="type-options">
+                        <label class="type-option selected"><input type="checkbox" value="single" class="type-filter" checked><span>單選題</span></label>
+                        <label class="type-option selected"><input type="checkbox" value="multiple" class="type-filter" checked><span>多選題</span></label>
+                        <label class="type-option selected"><input type="checkbox" value="text" class="type-filter" checked><span>填充題</span></label>
+                    </div>
+                </div>
+                <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;">
+                <div class="filter-group">
+                    <h3>⚙️ 排序方式</h3>
+                    <div class="display-options">
+                        <button id="sortByAnswerBtn" class="action-button">按答案重複次數排序</button>
+                        <button id="resetSortBtn" class="action-button">恢復預設排序</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-info">
+                <h3>💡 如何使用閱讀記憶</h3>
+                <p>⭐ 標記的選項表示：<strong>該答案沒有在其他題目的選項中出現過</strong>，需要特別記憶！</p>
+                <p style="margin-top: 8px;">✓ 標記的選項是該題的正確答案</p>
+            </div>
+
+            <div class="stats-summary" id="statsSummary">
+                <h3>📊 題目統計</h3>
+                <div class="stats-grid">
+                    <div class="stat-box"><div class="number" id="totalCount">0</div><div class="label">總題數</div></div>
+                    <div class="stat-box"><div class="number" id="highlightCount">0</div><div class="label">需特別記憶</div></div>
+                    <div class="stat-box"><div class="number" id="singleCount">0</div><div class="label">單選題</div></div>
+                    <div class="stat-box"><div class="number" id="multipleCount">0</div><div class="label">多選題</div></div>
+                    <div class="stat-box"><div class="number" id="textCount">0</div><div class="label">填充題</div></div>
+                </div>
+            </div>
+
+            <div id="questionList"></div>
+            <div id="emptyState" class="empty-state hidden">
+                <div class="icon">🗑️</div>
+                <h3>沒有符合條件的題目</h3>
+                <p>請選擇至少一個章節和題型</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const AVAILABLE_CHAPTERS = ['CH5', 'CH6', 'CH8', 'CH9'];
+        let allQuestions = [];
+        let displayedQuestions = [];
+        let analysis = { highlightOptions: new Set(), highlightAnswers: new Set() };
+        let answerCounts = {};
+
+        window.addEventListener('DOMContentLoaded', () => {
+            createChapterCheckboxes();
+            setupEventListeners();
+            loadAndDisplayContent();
+        });
+
+        function createChapterCheckboxes() {
+            const container = document.getElementById('chapterOptions');
+            AVAILABLE_CHAPTERS.forEach((chapter, index) => {
+                const isChecked = index === 0;
+                const label = document.createElement('label');
+                label.className = `chapter-option ${isChecked ? 'selected' : ''}`;
+                label.innerHTML = `<input type="checkbox" value="${chapter}" class="chapter-filter" ${isChecked ? 'checked' : ''}><span>${chapter}</span>`;
+                container.appendChild(label);
+            });
+        }
+        
+        function setupEventListeners() {
+            document.querySelector('.filter-section').addEventListener('change', (event) => {
+                const target = event.target;
+                if (target.matches('.chapter-filter, .type-filter')) {
+                    target.parentElement.classList.toggle('selected', target.checked);
+                    loadAndDisplayContent();
+                }
+            });
+
+            document.getElementById('sortByAnswerBtn').addEventListener('click', () => {
+                document.getElementById('sortByAnswerBtn').classList.add('active');
+                document.getElementById('resetSortBtn').classList.remove('active');
+                sortAndRender();
+            });
+
+            document.getElementById('resetSortBtn').addEventListener('click', () => {
+                document.getElementById('sortByAnswerBtn').classList.remove('active');
+                document.getElementById('resetSortBtn').classList.add('active');
+                sortAndRender();
+            });
+        }
+
+        async function loadAndDisplayContent() {
+            showLoading(true, '正在讀取章節資料...');
+            const selectedChapters = getSelectedFilters('.chapter-filter');
+
+            if (selectedChapters.length === 0) {
+                allQuestions = [];
+                processAndRender();
+                showLoading(false);
+                return;
+            }
+
+            try {
+                const fetchPromises = selectedChapters.map(chapter => 
+                    fetch(`${chapter}.json`).then(res => {
+                        if (!res.ok) throw new Error(`無法載入 ${chapter}.json`);
+                        return res.json();
+                    }).then(data => data.map(q => ({...q, chapter})))
+                );
+                
+                const chapterArrays = await Promise.all(fetchPromises);
+                allQuestions = chapterArrays.flat();
+
+                allQuestions.forEach((q, index) => q.originalIndex = index);
+                
+                processAndRender();
+
+            } catch (error) {
+                console.error('載入章節錯誤:', error);
+                showError(error.message);
+            } finally {
+                showLoading(false);
+            }
+        }
+        
+        function processAndRender() {
+            analyzeQuestions();
+            const selectedTypes = getSelectedFilters('.type-filter');
+            displayedQuestions = allQuestions.filter(q => selectedTypes.includes(q.type));
+            calculateAnswerFrequencies();
+            sortAndRender();
+            updateStats();
+        }
+        
+        function sortAndRender() {
+            if (document.getElementById('sortByAnswerBtn').classList.contains('active')) {
+                sortQuestionsByAnswer();
+            } else {
+                resetSort();
+            }
+            renderQuestions();
+        }
+
+        // --- 核心修正：強化 analyzeQuestions ---
+        function analyzeQuestions() {
+            const allOtherOptions = new Set();
+            allQuestions.forEach(q => {
+                // 修正 q.answer 確保它是陣列
+                const answerArray = Array.isArray(q.answer) ? q.answer : [q.answer].filter(a => a !== undefined && a !== null);
+                
+                if (q.options && Array.isArray(q.options)) {
+                    q.options.forEach((opt, optIdx) => {
+                        if (!answerArray.includes(optIdx)) {
+                            allOtherOptions.add(opt);
+                        }
+                    });
+                }
+            });
+
+            analysis.highlightOptions.clear();
+            analysis.highlightAnswers.clear();
+
+            allQuestions.forEach(q => {
+                // 再次確保 answer 是陣列
+                const answerArray = Array.isArray(q.answer) ? q.answer : [q.answer].filter(a => a !== undefined && a !== null);
+                
+                if (q.type === 'text') {
+                    answerArray.forEach(ans => {
+                        if (!allOtherOptions.has(ans)) {
+                            analysis.highlightAnswers.add(ans);
+                        }
+                    });
+                } else if (q.options && Array.isArray(q.options)) {
+                    answerArray.forEach(ansIdx => {
+                        const optionText = q.options[ansIdx];
+                        if (optionText && !allOtherOptions.has(optionText)) {
+                            analysis.highlightOptions.add(optionText);
+                        }
+                    });
+                }
+            });
+        }
+
+        function calculateAnswerFrequencies() {
+            answerCounts = {};
+            displayedQuestions.forEach(q => {
+                const answerKey = getSortableAnswer(q, 'key');
+                answerCounts[answerKey] = (answerCounts[answerKey] || 0) + 1;
+            });
+        }
+
+        function getSortableAnswer(question, type = 'string') {
+            const answerArray = Array.isArray(question.answer) ? question.answer : [question.answer].filter(a => a !== undefined && a !== null);
+            if (!question || answerArray.length === 0) {
+                return type === 'key' ? 'Z_NO_ANSWER' : 9999;
+            }
+
+            let answerContent;
+            if (question.type === 'single' || question.type === 'multiple') {
+                answerContent = answerArray.map(index => question.options[index]).filter(Boolean);
+            } else {
+                answerContent = answerArray;
+            }
+            
+            const sortedAnswer = [...answerContent].sort();
+            
+            if (type === 'key') return JSON.stringify(sortedAnswer);
+
+            const count = answerCounts[JSON.stringify(sortedAnswer)] || 0;
+            return 10000 - count;
+        }
+
+        function sortQuestionsByAnswer() {
+            displayedQuestions.sort((a, b) => {
+                const rankA = getSortableAnswer(a, 'rank');
+                const rankB = getSortableAnswer(b, 'rank');
+                if (rankA !== rankB) return rankA - rankB;
+
+                const answerKeyA = getSortableAnswer(a, 'key');
+                const answerKeyB = getSortableAnswer(b, 'key');
+                if (answerKeyA !== answerKeyB) return answerKeyA.localeCompare(answerKeyB);
+                
+                return a.originalIndex - b.originalIndex;
+            });
+        }
+        
+        function resetSort() {
+            displayedQuestions.sort((a, b) => a.originalIndex - b.originalIndex);
+        }
+
+        function renderQuestions() {
+            const questionList = document.getElementById('questionList');
+            const emptyState = document.getElementById('emptyState');
+            questionList.innerHTML = '';
+
+            if (displayedQuestions.length === 0) {
+                emptyState.classList.remove('hidden');
+                return;
+            }
+            emptyState.classList.add('hidden');
+
+            displayedQuestions.forEach((question, index) => {
+                const questionItem = document.createElement('div');
+                questionItem.className = 'question-item';
+
+                const typeText = { single: '單選題', multiple: '多選題', text: '填充題' }[question.type] || '未知';
+                const chapterTag = `<span class="question-chapter">${question.chapter}</span>`;
+                
+                let hasHighlight = false;
+                let questionTitleHTML = `<p class="question-title">${question.question}</p>`;
+                let contentHTML = `<div class="question-header"><span class="question-number">${index + 1}</span><span class="question-type">${typeText}</span>${chapterTag}</div>${questionTitleHTML}`;
+
+                const answerArray = Array.isArray(question.answer) ? question.answer : [question.answer].filter(a => a !== undefined && a !== null);
+
+                if (question.type === 'text') {
+                    const ans = answerArray.join(' / ');
+                    const isHighlight = answerArray.some(a => analysis.highlightAnswers.has(a));
+                    if (isHighlight) hasHighlight = true;
+                    contentHTML += `<div class="text-answer ${isHighlight ? 'highlight' : ''}">${ans}</div>`;
+                } else {
+                    contentHTML += '<ul class="options">';
+                    (question.options || []).forEach((option, optIndex) => {
+                        const isAnswer = answerArray.includes(optIndex);
+                        const isHighlight = isAnswer && analysis.highlightOptions.has(option);
+                        if (isHighlight) hasHighlight = true;
+                        let optionClass = 'option';
+                        if (isAnswer) optionClass += ' answer';
+                        if (isHighlight) optionClass += ' highlight';
+                        contentHTML += `<li class="${optionClass}">${option}</li>`;
+                    });
+                    contentHTML += '</ul>';
+                }
+
+                if (hasHighlight) {
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = contentHTML;
+                    const header = tempDiv.querySelector('.question-header');
+                    if (header) {
+                      header.innerHTML += '<span class="highlight-badge">需特別記憶</span>';
+                      contentHTML = tempDiv.innerHTML;
+                    }
+                }
+                questionItem.innerHTML = contentHTML;
+                questionList.appendChild(questionItem);
+            });
+        }
+        
+        function getSelectedFilters(selector) {
+            return Array.from(document.querySelectorAll(`${selector}:checked`)).map(input => input.value);
+        }
+
+        function showLoading(isLoading, message = '') {
+            const loadingSection = document.getElementById('loadingSection');
+            const contentSection = document.getElementById('contentSection');
+            if (isLoading) {
+                loadingSection.querySelector('p').textContent = message;
+                loadingSection.classList.remove('hidden');
+                contentSection.classList.add('hidden');
+                document.getElementById('errorSection').classList.add('hidden');
+            } else {
+                loadingSection.classList.add('hidden');
+                contentSection.classList.remove('hidden');
+            }
+        }
+        
+        function showError(message) {
+            const errorSection = document.getElementById('errorSection');
+            errorSection.classList.remove('hidden');
+            document.getElementById('errorMessage').textContent = message;
+            document.getElementById('contentSection').classList.add('hidden');
+        }
+
+        function updateStats() {
+            let highlightCount = 0;
+            const typeCounts = { single: 0, multiple: 0, text: 0 };
+            (displayedQuestions || []).forEach(q => {
+                if (typeCounts[q.type] !== undefined) typeCounts[q.type]++;
+
+                const answerArray = Array.isArray(q.answer) ? q.answer : [q.answer].filter(a => a !== undefined && a !== null);
+                let hasHighlight = false;
+                if (q.type === 'text') {
+                    if (answerArray.some(ans => analysis.highlightAnswers.has(ans))) hasHighlight = true;
+                } else if (q.options && q.answer) {
+                    if (answerArray.some(ansIdx => q.options[ansIdx] && analysis.highlightOptions.has(q.options[ansIdx]))) hasHighlight = true;
+                }
+                if (hasHighlight) highlightCount++;
+            });
+            document.getElementById('totalCount').textContent = displayedQuestions.length;
+            document.getElementById('highlightCount').textContent = highlightCount;
+            document.getElementById('singleCount').textContent = typeCounts.single;
+            document.getElementById('multipleCount').textContent = typeCounts.multiple;
+            document.getElementById('textCount').textContent = typeCounts.text;
+        }
+    </script>
+</body>
+</html>

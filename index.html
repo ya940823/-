@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>刷題系統 - 主頁</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 50px;
+            font-size: 1.1em;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .menu-card {
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            color: white;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu-card.quiz {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .menu-card.review {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .menu-card.study {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .menu-icon {
+            font-size: 4em;
+            margin-bottom: 15px;
+        }
+
+        .menu-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .menu-desc {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+
+        .stats {
+            background: #f8f9ff;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .stats h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .stat-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            color: #666;
+            margin-top: 5px;
+            font-size: 0.9em;
+        }
+
+        .clear-btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .clear-btn:hover {
+            background: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 刷題系統</h1>
+        <p class="subtitle">選擇你想要的功能</p>
+
+        <div class="menu-grid">
+            <a href="quiz.html" class="menu-card quiz">
+                <div class="menu-icon">✏️</div>
+                <div class="menu-title">開始測驗</div>
+                <div class="menu-desc">選擇題型和題數進行測驗</div>
+            </a>
+
+            <a href="review.html" class="menu-card review">
+                <div class="menu-icon">❌</div>
+                <div class="menu-title">錯題回顧</div>
+                <div class="menu-desc">查看並複習之前的錯題</div>
+            </a>
+
+            <a href="study.html" class="menu-card study">
+                <div class="menu-icon">📖</div>
+                <div class="menu-title">閱讀記憶</div>
+                <div class="menu-desc">標記重點選項快速記憶</div>
+            </a>
+        </div>
+
+        <div class="stats">
+            <h3>📊 學習統計</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalQuizzes">0</div>
+                    <div class="stat-label">測驗次數</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="totalWrong">0</div>
+                    <div class="stat-label">累計錯題</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="avgScore">0%</div>
+                    <div class="stat-label">平均分數</div>
+                </div>
+            </div>
+            <button class="clear-btn" onclick="clearAllData()">清除所有記錄</button>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            // 載入統計資料
+            const stats = JSON.parse(localStorage.getItem('quizStats')) || {
+                totalQuizzes: 0,
+                totalWrong: 0,
+                totalScore: 0
+            };
+
+            document.getElementById('totalQuizzes').textContent = stats.totalQuizzes;
+            document.getElementById('totalWrong').textContent = stats.totalWrong;
+            
+            const avgScore = stats.totalQuizzes > 0 
+                ? (stats.totalScore / stats.totalQuizzes).toFixed(1) 
+                : 0;
+            document.getElementById('avgScore').textContent = avgScore + '%';
+        });
+
+        function clearAllData() {
+            if (confirm('確定要清除所有學習記錄嗎？此操作無法復原！')) {
+                // 使用 localStorage.clear() 更明確地清除所有資料
+                localStorage.clear();
+                alert('已清除所有記錄！');
+                location.reload();
+            }
+        }
+    </script>
+</body>
+</html>
