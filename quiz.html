@@ -535,6 +535,44 @@
         let allQuestions = [];
         let questions = [];
 
+        // --- 新增：自動推斷與正規化題目格式 ---
+        function toAnswerArray(answer) {
+            if (answer === undefined || answer === null) return [];
+            return Array.isArray(answer) ? answer : [answer];
+        }
+
+        function inferQuestionType(q) {
+            if (q.type === 'single' || q.type === 'multiple' || q.type === 'text') return q.type;
+
+            const options = Array.isArray(q.options) ? q.options : [];
+            const ansArr = toAnswerArray(q.answer);
+
+            if (options.length > 0) {
+                return ansArr.length > 1 ? 'multiple' : 'single';
+            }
+            return 'text';
+        }
+
+        function normalizeQuestion(q, chapter) {
+            const options = Array.isArray(q.options) ? q.options : [];
+            const type = inferQuestionType({ ...q, options });
+
+            let answer;
+            if (type === 'single' || type === 'multiple') {
+                answer = toAnswerArray(q.answer).map(x => Number(x)).filter(x => Number.isFinite(x));
+            } else {
+                answer = toAnswerArray(q.answer).map(x => String(x));
+            }
+
+            return {
+                ...q,
+                chapter,
+                options,
+                type,
+                answer
+            };
+        }
+
         window.addEventListener('DOMContentLoaded', function() {
             createChapterCheckboxes();
             updateAvailableCount();
@@ -578,7 +616,7 @@
                     allQuestions = [];
                 } else {
                     const fetchPromises = selectedChapters.map(chapter =>
-                        fetch(`${chapter}.json`).then(res => res.ok ? res.json().then(data => data.map(q => ({...q, chapter}))) : [])
+                        fetch(`${chapter}.json`).then(res => res.ok ? res.json().then(data => (data || []).map(q => normalizeQuestion(q, chapter))) : [])
                     );
                     const chapterArrays = await Promise.all(fetchPromises);
                     allQuestions = chapterArrays.flat();
