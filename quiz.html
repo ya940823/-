@@ -113,6 +113,33 @@
             border-color: #667eea;
         }
 
+        /* 新增：中文題目選項的排版 */
+        .extra-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            user-select: none;
+        }
+        .extra-option:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+        }
+        .extra-option.selected {
+            background: #e8eaff;
+            border-color: #667eea;
+        }
+        .extra-option input[type="checkbox"]{
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
         .count-input {
             width: 100%;
             padding: 12px;
@@ -199,7 +226,7 @@
             font-weight: bold;
             font-size: 0.9em;
         }
-        
+
         .question-number {
              background: #667eea;
         }
@@ -485,6 +512,7 @@
                 <h3>📚 選擇章節</h3>
                 <div class="chapter-options" id="chapterOptions"></div>
             </div>
+
             <div class="setup-section">
                 <h3>📋 選擇題型</h3>
                 <div class="type-selection">
@@ -494,6 +522,17 @@
                 </div>
                 <p class="info-text" id="availableCount">可用題目：0 題</p>
             </div>
+
+            <!-- 新增：只測驗中文題目 -->
+            <div class="setup-section">
+                <h3>🔎 題目篩選</h3>
+                <label class="extra-option" id="zhOnlyLabel">
+                    <input type="checkbox" id="chineseOnly">
+                    <span>只測驗中文題目（題目出現過中文字即可）</span>
+                </label>
+                <p class="info-text">判斷方式：只檢查題目文字是否包含任一中文字（不檢查選項）。</p>
+            </div>
+
             <div class="setup-section">
                 <h3>🔢 選擇題數</h3>
                 <div class="count-selection">
@@ -520,7 +559,8 @@
                 </div>
                 <div class="action-buttons">
                     <a href="index.html" class="action-btn primary">返回首頁</a>
-                    <a href="quiz.html" class="action-btn secondary">再測一次</a>
+                    <!-- 改成 button：點了會保存設定，然後導回 quiz.html 自動重測 -->
+                    <button class="action-btn secondary" id="retryBtn" type="button">再測一次</button>
                     <a href="review.html" class="action-btn primary" id="reviewWrongBtn">查看錯題</a>
                     <button class="action-btn secondary" onclick="scrollToTop()">回到頂部</button>
                 </div>
@@ -534,6 +574,10 @@
         const AVAILABLE_CHAPTERS = ['CH5', 'CH6', 'CH8', 'CH9'];
         let allQuestions = [];
         let questions = [];
+
+        // localStorage keys
+        const LS_SETTINGS_KEY = 'quizSettings';
+        const LS_AUTO_START_KEY = 'quizAutoStart';
 
         // --- 新增：自動推斷與正規化題目格式 ---
         function toAnswerArray(answer) {
@@ -573,17 +617,116 @@
             };
         }
 
+        function hasChinese(text) {
+            if (text === undefined || text === null) return false;
+            return /[\u4e00-\u9fff]/.test(String(text));
+        }
+
+        function getCurrentSettingsFromUI() {
+            const selectedChapters = Array.from(document.querySelectorAll('.chapter-filter:checked')).map(i => i.value);
+            const selectedTypes = Array.from(document.querySelectorAll('.type-filter:checked')).map(i => i.value);
+            const count = parseInt(document.getElementById('questionCount').value);
+            const chineseOnly = document.getElementById('chineseOnly').checked;
+
+            return {
+                selectedChapters,
+                selectedTypes,
+                count: isNaN(count) ? 10 : count,
+                chineseOnly
+            };
+        }
+
+        function saveSettings(settings) {
+            localStorage.setItem(LS_SETTINGS_KEY, JSON.stringify(settings));
+        }
+
+        function loadSettings() {
+            try {
+                return JSON.parse(localStorage.getItem(LS_SETTINGS_KEY)) || null;
+            } catch (e) {
+                return null;
+            }
+        }
+
+        function applySettingsToUI(settings) {
+            if (!settings) return;
+
+            // chapters
+            document.querySelectorAll('.chapter-filter').forEach(input => {
+                const checked = (settings.selectedChapters || []).includes(input.value);
+                input.checked = checked;
+                if (input.parentElement) input.parentElement.classList.toggle('selected', checked);
+            });
+
+            // types
+            document.querySelectorAll('.type-filter').forEach(input => {
+                const checked = (settings.selectedTypes || []).includes(input.value);
+                input.checked = checked;
+                if (input.parentElement) input.parentElement.classList.toggle('selected', checked);
+            });
+
+            // count
+            if (typeof settings.count === 'number' && Number.isFinite(settings.count) && settings.count >= 1) {
+                document.getElementById('questionCount').value = settings.count;
+            }
+
+            // chineseOnly
+            const zh = !!settings.chineseOnly;
+            document.getElementById('chineseOnly').checked = zh;
+            document.getElementById('zhOnlyLabel').classList.toggle('selected', zh);
+        }
+
+        function setAutoStartOnce(enabled) {
+            localStorage.setItem(LS_AUTO_START_KEY, enabled ? '1' : '0');
+        }
+
+        function consumeAutoStartOnce() {
+            const v = localStorage.getItem(LS_AUTO_START_KEY);
+            if (v === '1') {
+                localStorage.setItem(LS_AUTO_START_KEY, '0');
+                return true;
+            }
+            return false;
+        }
+
         window.addEventListener('DOMContentLoaded', function() {
             createChapterCheckboxes();
-            updateAvailableCount();
+
+            // 套用上一次設定（如果有）
+            const saved = loadSettings();
+            if (saved) {
+                applySettingsToUI(saved);
+            }
+
+            // 任何設定變更就重新計算可用題目數 + 存起來
             document.getElementById('setupSection').addEventListener('change', (event) => {
-                if (event.target.matches('.chapter-filter, .type-filter')) {
-                    if(event.target.parentElement) {
+                if (event.target.matches('.chapter-filter, .type-filter, #chineseOnly')) {
+                    if (event.target.parentElement && (event.target.classList.contains('chapter-filter') || event.target.classList.contains('type-filter'))) {
                         event.target.parentElement.classList.toggle('selected', event.target.checked);
                     }
+                    if (event.target.id === 'chineseOnly') {
+                        document.getElementById('zhOnlyLabel').classList.toggle('selected', event.target.checked);
+                    }
+
+                    // 存設定
+                    saveSettings(getCurrentSettingsFromUI());
                     updateAvailableCount();
                 }
             });
+
+            // 題數輸入也存設定（不重抓題目）
+            document.getElementById('questionCount').addEventListener('input', () => {
+                saveSettings(getCurrentSettingsFromUI());
+            });
+
+            updateAvailableCount().then(() => {
+                // 如果是按「再測一次」導回來，會自動開始測驗
+                if (consumeAutoStartOnce()) {
+                    document.getElementById('startQuizBtn').click();
+                }
+            });
+
+            // back to top
             window.addEventListener('scroll', function() {
                 const backToTop = document.getElementById('backToTop');
                 if (window.pageYOffset > 300) {
@@ -604,11 +747,22 @@
                 container.appendChild(label);
             });
         }
+
+        function getFilteredAvailableQuestions() {
+            const selectedTypes = Array.from(document.querySelectorAll('.type-filter:checked')).map(input => input.value);
+            const chineseOnly = document.getElementById('chineseOnly').checked;
+
+            let available = allQuestions.filter(q => selectedTypes.includes(q.type));
+
+            if (chineseOnly) {
+                available = available.filter(q => hasChinese(q.question));
+            }
+            return available;
+        }
         
         async function updateAvailableCount() {
             const selectedChapters = Array.from(document.querySelectorAll('.chapter-filter:checked')).map(input => input.value);
-            const selectedTypes = Array.from(document.querySelectorAll('.type-filter:checked')).map(input => input.value);
-            
+
             showLoading(true, '正在載入章節資料...');
             
             try {
@@ -621,9 +775,19 @@
                     const chapterArrays = await Promise.all(fetchPromises);
                     allQuestions = chapterArrays.flat();
                 }
-                const availableQuestions = allQuestions.filter(q => selectedTypes.includes(q.type));
+
+                const availableQuestions = getFilteredAvailableQuestions();
                 document.getElementById('availableCount').textContent = `可用題目：${availableQuestions.length} 題`;
                 document.getElementById('questionCount').max = availableQuestions.length;
+
+                // 若目前題數大於可用題數，順便修正（避免按開始測驗直接報錯）
+                const countInput = document.getElementById('questionCount');
+                const current = parseInt(countInput.value);
+                if (!isNaN(current) && availableQuestions.length > 0 && current > availableQuestions.length) {
+                    countInput.value = availableQuestions.length;
+                    saveSettings(getCurrentSettingsFromUI());
+                }
+
                 showLoading(false);
             } catch(error) {
                 console.error("載入或計算題數時出錯:", error);
@@ -658,13 +822,16 @@
                 alert('請至少選擇一種題型！');
                 return;
             }
+
             const selectedChapters = Array.from(document.querySelectorAll('.chapter-filter:checked')).map(input => input.value);
             if (selectedChapters.length === 0) {
                 alert('請至少選擇一個章節！');
                 return;
             }
+
             const count = parseInt(document.getElementById('questionCount').value);
-            const availableQuestions = allQuestions.filter(q => selectedTypes.includes(q.type));
+            const availableQuestions = getFilteredAvailableQuestions();
+
             if (isNaN(count) || count < 1) {
                 alert('題數至少要 1 題！');
                 return;
@@ -673,6 +840,10 @@
                 alert(`所選條件下只有 ${availableQuestions.length} 題可用，請減少題數！`);
                 return;
             }
+
+            // 保存設定（讓「再測一次」或下次進來記得）
+            saveSettings(getCurrentSettingsFromUI());
+
             questions = shuffleArray(availableQuestions).slice(0, count);
             initQuiz();
         });
@@ -841,6 +1012,19 @@
             document.querySelector('.submit-section').classList.add('hidden');
             
             setTimeout(() => resultSection.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100);
+        });
+
+        // 新增：再測一次 - 記住設定並自動開始
+        document.getElementById('retryBtn').addEventListener('click', function() {
+            // 設定頁面雖然隱藏了，但 checkbox / input 仍然存在 DOM 中，可直接讀取
+            const settings = getCurrentSettingsFromUI();
+            saveSettings(settings);
+
+            // 設定「只啟動一次」的自動開始
+            setAutoStartOnce(true);
+
+            // 回到 quiz.html（同頁 reload 也可）
+            location.href = 'quiz.html';
         });
 
         function scrollToTop() {
