@@ -132,6 +132,21 @@
                         <label class="type-option selected"><input type="checkbox" value="text" class="type-filter" checked><span>填充題</span></label>
                     </div>
                 </div>
+
+                <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;">
+                <div class="filter-group">
+                    <h3>🔎 題目篩選</h3>
+                    <div class="type-options">
+                        <label class="type-option" id="zhOnlyLabel">
+                            <input type="checkbox" id="chineseOnly">
+                            <span>只閱讀中文題目（題目出現過中文字即可）</span>
+                        </label>
+                    </div>
+                    <p style="color:#666; font-size:0.9em; margin-top:8px;">
+                        判斷方式：只檢查題目文字是否包含任一中文字（不檢查選項）。
+                    </p>
+                </div>
+
                 <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;">
                 <div class="filter-group">
                     <h3>⚙️ 排序方式</h3>
@@ -213,6 +228,12 @@
             return normalized;
         }
 
+        // --- 新增：只檢查題目文字是否含中文字（不檢查選項）---
+        function hasChinese(text) {
+            if (text === undefined || text === null) return false;
+            return /[\u4e00-\u9fff]/.test(String(text));
+        }
+
         window.addEventListener('DOMContentLoaded', () => {
             createChapterCheckboxes();
             setupEventListeners();
@@ -233,8 +254,13 @@
         function setupEventListeners() {
             document.querySelector('.filter-section').addEventListener('change', (event) => {
                 const target = event.target;
-                if (target.matches('.chapter-filter, .type-filter')) {
-                    target.parentElement.classList.toggle('selected', target.checked);
+                if (target.matches('.chapter-filter, .type-filter, #chineseOnly')) {
+                    if (target.classList.contains('chapter-filter') || target.classList.contains('type-filter')) {
+                        target.parentElement.classList.toggle('selected', target.checked);
+                    }
+                    if (target.id === 'chineseOnly') {
+                        document.getElementById('zhOnlyLabel')?.classList.toggle('selected', target.checked);
+                    }
                     loadAndDisplayContent();
                 }
             });
@@ -289,7 +315,14 @@
         function processAndRender() {
             analyzeQuestions();
             const selectedTypes = getSelectedFilters('.type-filter');
+
             displayedQuestions = allQuestions.filter(q => selectedTypes.includes(q.type));
+
+            const chineseOnly = document.getElementById('chineseOnly')?.checked;
+            if (chineseOnly) {
+                displayedQuestions = displayedQuestions.filter(q => hasChinese(q.question));
+            }
+
             calculateAnswerFrequencies();
             sortAndRender();
             updateStats();
@@ -474,7 +507,7 @@
             let highlightCount = 0;
             const typeCounts = { single: 0, multiple: 0, text: 0 };
             (displayedQuestions || []).forEach(q => {
-                if (typeCounts[q.type] !== undefined) typeCounts[q.type]++;
+                if (typeCounts[q.type] !== undefined) typeCounts[q.type]++;if （typeCounts[q.type] ！== 未定義） typeCounts[q.type]++;
 
                 const answerArray = toAnswerArray(q.answer);
                 let hasHighlight = false;
