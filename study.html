@@ -123,7 +123,9 @@
                     <h3>📚 選擇章節</h3>
                     <div class="chapter-options" id="chapterOptions"></div>
                 </div>
+
                 <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;">
+
                 <div class="filter-group">
                     <h3>📋 篩選題型</h3>
                     <div class="type-options">
@@ -134,6 +136,7 @@
                 </div>
 
                 <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;">
+
                 <div class="filter-group">
                     <h3>🔎 題目篩選</h3>
                     <div class="type-options">
@@ -148,6 +151,7 @@
                 </div>
 
                 <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;">
+
                 <div class="filter-group">
                     <h3>⚙️ 排序方式</h3>
                     <div class="display-options">
@@ -228,10 +232,11 @@
             return normalized;
         }
 
-        // --- 新增：只檢查題目文字是否含中文字（不檢查選項）---
+        // --- 只檢查題目文字是否含中文字（不檢查選項）---
         function hasChinese(text) {
             if (text === undefined || text === null) return false;
-            return /[\u4e00-\u9fff]/.test(String(text));
+            // 使用 [一-龥] 避免貼上造成 \uXXXX token 問題
+            return /[一-龥]/.test(String(text));
         }
 
         window.addEventListener('DOMContentLoaded', () => {
@@ -242,6 +247,7 @@
 
         function createChapterCheckboxes() {
             const container = document.getElementById('chapterOptions');
+            container.innerHTML = '';
             AVAILABLE_CHAPTERS.forEach((chapter, index) => {
                 const isChecked = index === 0;
                 const label = document.createElement('label');
@@ -252,26 +258,33 @@
         }
 
         function setupEventListeners() {
-            document.querySelector('.filter-section').addEventListener('change', (event) => {
-                const target = event.target;
-                if (target.matches('.chapter-filter, .type-filter, #chineseOnly')) {
-                    if (target.classList.contains('chapter-filter') || target.classList.contains('type-filter')) {
-                        target.parentElement.classList.toggle('selected', target.checked);
-                    }
-                    if (target.id === 'chineseOnly') {
-                        document.getElementById('zhOnlyLabel')?.classList.toggle('selected', target.checked);
-                    }
-                    loadAndDisplayContent();
-                }
-            });
+            const filterSection = document.querySelector('.filter-section');
+            if (filterSection) {
+                filterSection.addEventListener('change', (event) => {
+                    const target = event.target;
 
-            document.getElementById('sortByAnswerBtn').addEventListener('click', () => {
+                    if (target.matches('.chapter-filter, .type-filter, #chineseOnly')) {
+                        if (target.classList.contains('chapter-filter') || target.classList.contains('type-filter')) {
+                            target.parentElement.classList.toggle('selected', target.checked);
+                        }
+
+                        if (target.id === 'chineseOnly') {
+                            const zhLabel = document.getElementById('zhOnlyLabel');
+                            if (zhLabel) zhLabel.classList.toggle('selected', target.checked);
+                        }
+
+                        loadAndDisplayContent();
+                    }
+                });
+            }
+
+            document.getElementById('sortByAnswerBtn')?.addEventListener('click', () => {
                 document.getElementById('sortByAnswerBtn').classList.add('active');
                 document.getElementById('resetSortBtn').classList.remove('active');
                 sortAndRender();
             });
 
-            document.getElementById('resetSortBtn').addEventListener('click', () => {
+            document.getElementById('resetSortBtn')?.addEventListener('click', () => {
                 document.getElementById('sortByAnswerBtn').classList.remove('active');
                 document.getElementById('resetSortBtn').classList.add('active');
                 sortAndRender();
@@ -279,22 +292,21 @@
         }
 
         async function loadAndDisplayContent() {
-            showLoading(true, '正在讀取章節資料...');
-            const selectedChapters = getSelectedFilters('.chapter-filter');
-
-            if (selectedChapters.length === 0) {
-                allQuestions = [];
-                processAndRender();
-                showLoading(false);
-                return;
-            }
-
             try {
+                showLoading(true, '正在讀取章節資料...');
+                const selectedChapters = getSelectedFilters('.chapter-filter');
+
+                if (selectedChapters.length === 0) {
+                    allQuestions = [];
+                    processAndRender();
+                    return;
+                }
+
                 const fetchPromises = selectedChapters.map(chapter =>
                     fetch(`${chapter}.json`).then(res => {
                         if (!res.ok) throw new Error(`無法載入 ${chapter}.json`);
                         return res.json();
-                    }).then(data => data.map(q => normalizeQuestion(q, chapter)))
+                    }).then(data => (data || []).map(q => normalizeQuestion(q, chapter)))
                 );
 
                 const chapterArrays = await Promise.all(fetchPromises);
@@ -303,10 +315,9 @@
                 allQuestions.forEach((q, index) => q.originalIndex = index);
 
                 processAndRender();
-
             } catch (error) {
                 console.error('載入章節錯誤:', error);
-                showError(error.message);
+                showError(error?.message || String(error));
             } finally {
                 showLoading(false);
             }
@@ -314,8 +325,8 @@
 
         function processAndRender() {
             analyzeQuestions();
-            const selectedTypes = getSelectedFilters('.type-filter');
 
+            const selectedTypes = getSelectedFilters('.type-filter');
             displayedQuestions = allQuestions.filter(q => selectedTypes.includes(q.type));
 
             const chineseOnly = document.getElementById('chineseOnly')?.checked;
@@ -329,7 +340,7 @@
         }
 
         function sortAndRender() {
-            if (document.getElementById('sortByAnswerBtn').classList.contains('active')) {
+            if (document.getElementById('sortByAnswerBtn')?.classList.contains('active')) {
                 sortQuestionsByAnswer();
             } else {
                 resetSort();
@@ -339,6 +350,7 @@
 
         function analyzeQuestions() {
             const allOtherOptions = new Set();
+
             allQuestions.forEach(q => {
                 const answerArray = toAnswerArray(q.answer);
                 if (q.options && Array.isArray(q.options)) {
@@ -445,7 +457,7 @@
                 const answerArray = toAnswerArray(question.answer);
 
                 if (question.type === 'text') {
-                    const ans = answerArray.join(' / ' );
+                    const ans = answerArray.join(' / ');
                     const isHighlight = answerArray.some(a => analysis.highlightAnswers.has(a));
                     if (isHighlight) hasHighlight = true;
                     contentHTML += `<div class="text-answer ${isHighlight ? 'highlight' : ''}">${ans}</div>`;
@@ -455,9 +467,11 @@
                         const isAnswer = answerArray.includes(optIndex);
                         const isHighlight = isAnswer && analysis.highlightOptions.has(option);
                         if (isHighlight) hasHighlight = true;
+
                         let optionClass = 'option';
                         if (isAnswer) optionClass += ' answer';
                         if (isHighlight) optionClass += ' highlight';
+
                         contentHTML += `<li class="${optionClass}">${option}</li>`;
                     });
                     contentHTML += '</ul>';
@@ -506,18 +520,22 @@
         function updateStats() {
             let highlightCount = 0;
             const typeCounts = { single: 0, multiple: 0, text: 0 };
+
             (displayedQuestions || []).forEach(q => {
-                if (typeCounts[q.type] !== undefined) typeCounts[q.type]++;if （typeCounts[q.type] ！== 未定義） typeCounts[q.type]++;
+                if (typeCounts[q.type] !== undefined) typeCounts[q.type]++;
 
                 const answerArray = toAnswerArray(q.answer);
                 let hasHighlight = false;
+
                 if (q.type === 'text') {
                     if (answerArray.some(ans => analysis.highlightAnswers.has(ans))) hasHighlight = true;
                 } else if (q.options && q.answer) {
                     if (answerArray.some(ansIdx => q.options[ansIdx] && analysis.highlightOptions.has(q.options[ansIdx]))) hasHighlight = true;
                 }
+
                 if (hasHighlight) highlightCount++;
             });
+
             document.getElementById('totalCount').textContent = displayedQuestions.length;
             document.getElementById('highlightCount').textContent = highlightCount;
             document.getElementById('singleCount').textContent = typeCounts.single;
