@@ -1,5 +1,944 @@
 [
   {
+    "id": 664,
+    "postId": null,
+    "question": "Which function is used to calculate the average of a set of values?",
+    "type": null,
+    "options": [],
+    "answer": "AVG()"
+  },
+  {
+    "id": 663,
+    "postId": null,
+    "question": "To exclude duplicates from results, add [__1__] after SELECT. (Answer in lowercase English)",
+    "type": null,
+    "options": [],
+    "answer": "distinct"
+  },
+  {
+    "id": 662,
+    "postId": null,
+    "question": "What formats can a subquery return?",
+    "type": null,
+    "options": [],
+    "answer": "Single value (Scalar)\u003Cbr\u003EOne row\u003Cbr\u003EOne column/list\u003Cbr\u003EEntire virtual table"
+  },
+  {
+    "id": 661,
+    "postId": null,
+    "question": "When sorting data, ORDER BY can?",
+    "type": null,
+    "options": [],
+    "answer": "Sort by single column\u003Cbr\u003ESort by multiple columns\u003Cbr\u003ESort using aliases"
+  },
+  {
+    "id": 660,
+    "postId": null,
+    "question": "Keyword to specify relation condition in a join: [__1__]. (Answer in lowercase English)",
+    "type": null,
+    "options": [],
+    "answer": "on"
+  },
+  {
+    "id": 659,
+    "postId": null,
+    "question": "Filter depts with avg salary \u003E 30k: GROUP BY dept_id [__1__] AVG(salary) \u003E 30000; (Answer in lowercase English)",
+    "type": null,
+    "options": [],
+    "answer": "having"
+  },
+  {
+    "id": 658,
+    "postId": null,
+    "question": "To query the average salary for each department, which clause must be used for grouping?",
+    "type": null,
+    "options": [],
+    "answer": "GROUP BY"
+  },
+  {
+    "id": 657,
+    "postId": null,
+    "question": "To sum all shipping fees: SELECT [__1__](shipping_fee) FROM orders; (Answer in lowercase English)",
+    "type": null,
+    "options": [],
+    "answer": "sum"
+  },
+  {
+    "id": 656,
+    "postId": null,
+    "question": "Query records with no related data: WHERE col_name [__1__] [__2__]. (Answer in lowercase English with a space)",
+    "type": null,
+    "options": [],
+    "answer": "is\u003Cbr\u003E null"
+  },
+  {
+    "id": 655,
+    "postId": null,
+    "question": "What happens if no join condition is specified in a multi-table query?",
+    "type": null,
+    "options": [],
+    "answer": "Cartesian product produced\u003Cbr\u003EExecution time increases\u003Cbr\u003EData volume explodes"
+  },
+  {
+    "id": 624,
+    "postId": null,
+    "question": "In GROUP BY, separate multiple columns with [__1__]. (Answer with half-width punctuation)",
+    "type": null,
+    "options": [],
+    "answer": "\u003Cbr\u003E"
+  },
+  {
+    "id": 623,
+    "postId": null,
+    "question": "Difference between HAVING and WHERE?",
+    "type": null,
+    "options": [],
+    "answer": "WHERE filters before grouping\u003Cbr\u003EHAVING filters after grouping\u003Cbr\u003EHAVING must be with GROUP BY"
+  },
+  {
+    "id": 622,
+    "postId": null,
+    "question": "COUNT([__1__]) counts total rows, including NULL. (Answer with symbol)",
+    "type": null,
+    "options": [],
+    "answer": "*"
+  },
+  {
+    "id": 621,
+    "postId": null,
+    "question": "Which of the following are aggregate functions?",
+    "type": null,
+    "options": [],
+    "answer": "SUM()\u003Cbr\u003ECOUNT()\u003Cbr\u003EMAX()"
+  },
+  {
+    "id": 620,
+    "postId": null,
+    "question": "To query employees not assigned to any department after JOIN, use?",
+    "type": null,
+    "options": [],
+    "answer": "WHERE dept_id IS NULL"
+  },
+  {
+    "id": 619,
+    "postId": null,
+    "question": "Subqueries are usually placed after which keyword for filtering?",
+    "type": null,
+    "options": [],
+    "answer": "WHERE"
+  },
+  {
+    "id": 618,
+    "postId": null,
+    "question": "To query the lowest salary amount in the employees table?",
+    "type": null,
+    "options": [],
+    "answer": "SELECT MIN(salary)"
+  },
+  {
+    "id": 617,
+    "postId": null,
+    "question": "A query nested inside another query as a condition is called?",
+    "type": null,
+    "options": [],
+    "answer": "Subquery"
+  },
+  {
+    "id": 616,
+    "postId": 1380,
+    "question": "What is the function of COUNT(DISTINCT name)?",
+    "type": "single",
+    "options": [
+      "Count total names",
+      "Delete duplicate names",
+      "Count unique names",
+      "Count name length"
+    ],
+    "answer": [2]
+  },
+  {
+    "id": 615,
+    "postId": 1408,
+    "question": "About RIGHT JOIN, which are correct?",
+    "type": "multiple",
+    "options": [
+      "based on right table",
+      "NULL if left no match",
+      "Not interchangeable with LEFT JOIN",
+      "All right table data appears"
+    ],
+    "answer": [0, 1, 3]
+  },
+  {
+    "id": 614,
+    "postId": null,
+    "question": "Query orders with price \u003E average: SELECT * FROM orders WHERE price \u003E ([__1__] [__2__](price) FROM orders); (Answer in lowercase English with a space)",
+    "type": null,
+    "options": [],
+    "answer": "select\u003Cbr\u003E avg"
+  },
+  {
+    "id": 613,
+    "postId": 1442,
+    "question": "To check if \"any\" record in subquery matches, use [__1__] operator. (Answer in lowercase English)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "any"
+    ]
+  },
+  {
+    "id": 612,
+    "postId": 1406,
+    "question": "What are the benefits of Aliases?",
+    "type": "multiple",
+    "options": [
+      "Use aggregate alias in WHERE",
+      "Solve Self-join conflicts",
+      "Shorten table names",
+      "Improve readability"
+    ],
+    "answer": [1, 2, 3]
+  },
+  {
+    "id": 611,
+    "postId": 1445,
+    "question": "Keyword for ascending order (optional by default) is [__1__]. (Answer in lowercase English)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "asc"
+    ]
+  },
+  {
+    "id": 610,
+    "postId": 1438,
+    "question": "Find the most expensive unit price: SELECT [__1__](unit_price) FROM sales; (Answer in lowercase English)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "max"
+    ]
+  },
+  {
+    "id": 609,
+    "postId": 1436,
+    "question": "Command for Right Outer Join: [__1__] [__2__] [__3__]. (Answer in lowercase English with a space)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "right",
+      "outer",
+      "join"
+    ]
+  },
+  {
+    "id": 608,
+    "postId": 1417,
+    "question": "Count employees per department: SELECT dept_id, [__1__](*) FROM emp [__2__] [__3__] dept_id; (Answer in lowercase English with a space)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "count",
+      "group",
+      "by"
+    ]
+  },
+  {
+    "id": 607,
+    "postId": 1393,
+    "question": "About INNER JOIN features, which are correct?",
+    "type": "multiple",
+    "options": [
+      "Returns only matched records",
+      "Unmatched records show NULL",
+      "It's the default JOIN type",
+      "Creates Cartesian Product"
+    ],
+    "answer": [0, 2]
+  },
+  {
+    "id": 606,
+    "postId": 1425,
+    "question": "Combine results and keep duplicates: SELECT... [__1__] [__2__] SELECT...; (Answer in lowercase English with a space)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "union",
+      "all"
+    ]
+  },
+  {
+    "id": 605,
+    "postId": null,
+    "question": "Query employee and dept names: ... JOIN dept d [__1__] e.did = d.did; (Answer in lowercase English)",
+    "type": null,
+    "options": [],
+    "answer": "on"
+  },
+  {
+    "id": 604,
+    "postId": 1370,
+    "question": "To sort products from lowest to highest price, use?",
+    "type": "single",
+    "options": [
+      "ORDER BY price ASC",
+      "ORDER BY price DESC",
+      "GROUP BY price",
+      "SORT BY price"
+    ],
+    "answer": [0]
+  },
+  {
+    "id": 603,
+    "postId": null,
+    "question": "Xiao Hua wants to find the highest salary amount in the company, what command should he use?",
+    "type": null,
+    "options": [],
+    "answer": "SELECT MAX(salary)"
+  },
+  {
+    "id": 602,
+    "postId": 1366,
+    "question": "To calculate the total amount of all orders in the orders table, which aggregate function is used?",
+    "type": "single",
+    "options": [
+      "COUNT()",
+      "SUM()",
+      "AVG()",
+      "TOTAL()"
+    ],
+    "answer": [1]
+  },
+  {
+    "id": 601,
+    "postId": null,
+    "question": "To filter conditions after grouping (e.g., avg salary \u003E 50k), use?",
+    "type": null,
+    "options": [],
+    "answer": "HAVING"
+  },
+  {
+    "id": 600,
+    "postId": 1412,
+    "question": "MAX() can be used on which data types?",
+    "type": "multiple",
+    "options": [
+      "Boolean",
+      "Date",
+      "String/Text",
+      "Numeric"
+    ],
+    "answer": [1, 2, 3]
+  },
+  {
+    "id": 599,
+    "postId": 1434,
+    "question": "SELECT AVG(score) FROM tests; will [__1__] (calculate/skip) NULL values. (Answer in Chinese)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "略過"
+    ]
+  },
+  {
+    "id": 598,
+    "postId": 1381,
+    "question": "To calculate the total number of \"items\" sold (summing quantity column), use?",
+    "type": "single",
+    "options": [
+      "AVG(quantity)",
+      "COUNT(quantity)",
+      "SUM(quantity)",
+      "MAX(quantity)"
+    ],
+    "answer": [2]
+  },
+  {
+    "id": 597,
+    "postId": 1420,
+    "question": "Top 3 most expensive products: ORDER BY price [__1__] [__2__] 3; (Answer in lowercase English with a space)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "desc",
+      "limit"
+    ]
+  },
+  {
+    "id": 596,
+    "postId": 1391,
+    "question": "Regarding GROUP BY rules, which are correct?",
+    "type": "multiple",
+    "options": [
+      "Must be after WHERE",
+      "Non-aggregate columns in SELECT must be in GROUP BY",
+      "Can group by multiple columns",
+      "Must be after ORDER BY"
+    ],
+    "answer": [0, 1, 2]
+  },
+  {
+    "id": 595,
+    "postId": 1384,
+    "question": "In ORDER BY 1 DESC, what does 1 represent?",
+    "type": "single",
+    "options": [
+      "The first column",
+      "Value 1",
+      "The first record",
+      "The last row"
+    ],
+    "answer": [0]
+  },
+  {
+    "id": 594,
+    "postId": 1432,
+    "question": "CROSS JOIN 會產生兩表的 [__1__] 積。 (請用中文回答)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "笛卡兒"
+    ]
+  },
+  {
+    "id": 593,
+    "postId": 1436,
+    "question": "右外部連結的指令：[__1__] [__2__] [__3__]。 (請用小寫英文回答字母間留一個空白)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "right",
+      "outer",
+      "join"
+    ]
+  },
+  {
+    "id": 592,
+    "postId": 1428,
+    "question": "Find the youngest student: SELECT [__1__](age) FROM students; (Answer in lowercase English)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "min"
+    ]
+  },
+  {
+    "id": 591,
+    "postId": 1389,
+    "question": "What is the execution order of a subquery?",
+    "type": "single",
+    "options": [
+      "Random",
+      "Subquery first",
+      "Simultaneously",
+      "Main query first"
+    ],
+    "answer": [1]
+  },
+  {
+    "id": 590,
+    "postId": 1424,
+    "question": "Operator to check if a subquery returns any results: [__1__]. (Answer in lowercase English)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "exists"
+    ]
+  },
+  {
+    "id": 589,
+    "postId": 1387,
+    "question": "How does AVG() handle NULL values?",
+    "type": "single",
+    "options": [
+      "Skip the record",
+      "Throw error",
+      "Result becomes NULL",
+      "Count as 0"
+    ],
+    "answer": [0]
+  },
+  {
+    "id": 588,
+    "postId": 1443,
+    "question": "When grouping, aggregate functions usually appear in the [__1__] clause. (Answer in lowercase English)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "select"
+    ]
+  },
+  {
+    "id": 587,
+    "postId": 1435,
+    "question": "Syntax to count unique items: COUNT([__1__] col_name). (Answer in lowercase English)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "distinct"
+    ]
+  },
+  {
+    "id": 586,
+    "postId": 1403,
+    "question": "Which are correct about CROSS JOIN?",
+    "type": "multiple",
+    "options": [
+      "No ON condition needed",
+      "Used for all combinations",
+      "Rows = A + B rows",
+      "Produces Cartesian product"
+    ],
+    "answer": [0, 1, 3]
+  },
+  {
+    "id": 585,
+    "postId": 1420,
+    "question": "想要查詢 products 中單價最高的前三名：ORDER BY price [__1__] [__2__] 3; (請用小寫英文回答字母間留一個空白)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "desc",
+      "limit"
+    ]
+  },
+  {
+    "id": 584,
+    "postId": 1367,
+    "question": "小華想找出公司裡最高薪水的金額，他應該下達什麼指令？",
+    "type": "single",
+    "options": [
+      "SELECT LIMIT(salary)",
+      "SELECT MAX(salary)",
+      "SELECT HIGH(salary)",
+      "SELECT TOP(salary)"
+    ],
+    "answer": [1]
+  },
+  {
+    "id": 583,
+    "postId": 1400,
+    "question": "Constraints when using UNION?",
+    "type": "multiple",
+    "options": [
+      "Data types must be compatible",
+      "Column names must be identical",
+      "Removes duplicates by default",
+      "Column counts must match"
+    ],
+    "answer": [0, 2, 3]
+  },
+  {
+    "id": 582,
+    "postId": 1411,
+    "question": "Where can a subquery be placed?",
+    "type": "multiple",
+    "options": [
+      "FROM clause",
+      "WHERE clause",
+      "HAVING clause",
+      "SELECT clause"
+    ],
+    "answer": [0, 1, 2, 3]
+  },
+  {
+    "id": 581,
+    "postId": 1369,
+    "question": "想要查詢各部門的平均薪資，必須配合哪一個子句來分類？",
+    "type": "single",
+    "options": [
+      "WHERE",
+      "GROUP BY",
+      "ORDER BY",
+      "HAVING"
+    ],
+    "answer": [1]
+  },
+  {
+    "id": 580,
+    "postId": 1411,
+    "question": "關於子查詢 (Subquery) 的位置，它可以放在？",
+    "type": "multiple",
+    "options": [
+      "SELECT 子句中",
+      "WHERE 子句中",
+      "FROM 子句中",
+      "HAVING 子句中"
+    ],
+    "answer": [0, 1, 2, 3]
+  },
+  {
+    "id": 579,
+    "postId": 1390,
+    "question": "如果 SELECT COUNT(*) 的結果是 0，代表什麼？",
+    "type": "single",
+    "options": [
+      "欄位不存在",
+      "表格是空的",
+      "語法錯誤",
+      "數值相加為 0"
+    ],
+    "answer": [1]
+  },
+  {
+    "id": 578,
+    "postId": 1368,
+    "question": "To count the total number of students in the students table, use?",
+    "type": "single",
+    "options": [
+      "COUNT(*)",
+      "ADD(*)",
+      "SUM(*)",
+      "MAX(*)"
+    ],
+    "answer": [0]
+  },
+  {
+    "id": 577,
+    "postId": 1441,
+    "question": "合併查詢時，兩表的欄位 [__1__] 必須一致。 (請用中文回答)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "數量"
+    ]
+  },
+  {
+    "id": 576,
+    "postId": 1388,
+    "question": "To query the \"most expensive\" price in each category, use?",
+    "type": "single",
+    "options": [
+      "ORDER BY price DESC",
+      "GROUP BY category HAVING MAX(price)",
+      "GROUP BY category SELECT MAX(price)",
+      "SELECT category, MAX(price) FROM items GROUP BY category"
+    ],
+    "answer": [3]
+  },
+  {
+    "id": 575,
+    "postId": 1426,
+    "question": "Salary between 40k and 60k: WHERE salary [__1__] 40000 [__2__] 60000; (Answer in lowercase English with a space)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "between",
+      "and"
+    ]
+  },
+  {
+    "id": 574,
+    "postId": 1427,
+    "question": "If subquery returns multiple values, use [__1__] operator to check membership. (Answer in lowercase English)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "in"
+    ]
+  },
+  {
+    "id": 573,
+    "postId": 1433,
+    "question": "To temporarily change column display name, use [__1__] keyword. (Answer in lowercase English)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "as"
+    ]
+  },
+  {
+    "id": 572,
+    "postId": 1401,
+    "question": "哪些彙總函數會自動忽略 NULL 值？",
+    "type": "multiple",
+    "options": [
+      "SUM()",
+      "COUNT(*)",
+      "AVG()",
+      "MAX()"
+    ],
+    "answer": [0, 2, 3]
+  },
+  {
+    "id": 571,
+    "postId": 1421,
+    "question": "Full syntax for Left Outer Join: SELECT * FROM A [__1__] [__2__] [__3__] B ON A.id = B.id; (Answer in lowercase English with a space)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "left",
+      "outer",
+      "join"
+    ]
+  },
+  {
+    "id": 570,
+    "postId": 1390,
+    "question": "If SELECT COUNT(*) result is 0, what does it mean?",
+    "type": "single",
+    "options": [
+      "Syntax error",
+      "Column doesn't exist",
+      "Table is empty",
+      "Sum of values is 0"
+    ],
+    "answer": [2]
+  },
+  {
+    "id": 569,
+    "postId": 1415,
+    "question": "To query customers with \"at least one order\", use?",
+    "type": "multiple",
+    "options": [
+      "WHERE EXISTS (subquery)",
+      "INNER JOIN customers and orders",
+      "WHERE customer_id IN (subquery)",
+      "LEFT JOIN ... WHERE order_id IS NULL"
+    ],
+    "answer": [0, 1, 2]
+  },
+  {
+    "id": 568,
+    "postId": 1366,
+    "question": "若要計算 orders 表中所有訂單的總金額，該用哪個彙總函數？",
+    "type": "single",
+    "options": [
+      "AVG()",
+      "SUM()",
+      "TOTAL()",
+      "COUNT()"
+    ],
+    "answer": [1]
+  },
+  {
+    "id": 567,
+    "postId": 1393,
+    "question": "關於 INNER JOIN 的特性，哪些是正確的？",
+    "type": "multiple",
+    "options": [
+      "只回傳兩表對應成功的資料",
+      "會產生笛卡兒積 (Cartesian Product)",
+      "是預設的 JOIN 類型",
+      "沒對應到的資料會顯示 NULL"
+    ],
+    "answer": [0, 2]
+  },
+  {
+    "id": 566,
+    "postId": 1383,
+    "question": "在多表查詢中，用來指定兩表關聯欄位的關鍵字是？",
+    "type": "single",
+    "options": [
+      "IN",
+      "ON",
+      "AT",
+      "WITH"
+    ],
+    "answer": [1]
+  },
+  {
+    "id": 565,
+    "postId": 1407,
+    "question": "Which operators are common in subqueries?",
+    "type": "multiple",
+    "options": [
+      "ANY",
+      "EXISTS",
+      "IN",
+      "ALL"
+    ],
+    "answer": [0, 1, 2, 3]
+  },
+  {
+    "id": 564,
+    "postId": 1412,
+    "question": "MAX() 函數可以用在哪些資料型態？",
+    "type": "multiple",
+    "options": [
+      "字串 (String/Text)",
+      "日期 (Date)",
+      "布林值 (Boolean)",
+      "數字 (Numeric)"
+    ],
+    "answer": [0, 1, 3]
+  },
+  {
+    "id": 563,
+    "postId": 1399,
+    "question": "在多表查詢中，為了簡化代碼，我們可以使用別名 (Alias)，其語法包含？",
+    "type": "multiple",
+    "options": [
+      "表名 = 別名",
+      "別名(表名)",
+      "表名 別名 (省略 AS)",
+      "表名 AS 別名"
+    ],
+    "answer": [2, 3]
+  },
+  {
+    "id": 562,
+    "postId": 1444,
+    "question": "查詢員工姓名及所屬部門名：SELECT e.name, d.dname FROM emp e JOIN dept d [__1__] e.did = d.did; (請用小寫英文回答)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "on"
+    ]
+  },
+  {
+    "id": 561,
+    "postId": 1385,
+    "question": "To combine two tables with the same structure and \"exclude\" duplicates, use?",
+    "type": "single",
+    "options": [
+      "JOIN",
+      "UNION",
+      "MERGE",
+      "UNION ALL"
+    ],
+    "answer": [1]
+  },
+  {
+    "id": 560,
+    "postId": 1414,
+    "question": "關於 ORDER BY 的 NULL 排序，預設情況下？",
+    "type": "multiple",
+    "options": [
+      "視資料庫系統而定 (如 MySQL vs Oracle)",
+      "NULL 會排在最後面",
+      "NULL 不會被排序",
+      "NULL 會排在最前面"
+    ],
+    "answer": [0, 1]
+  },
+  {
+    "id": 559,
+    "postId": 1391,
+    "question": "關於 GROUP BY 的規則，下列哪些敘述正確？",
+    "type": "multiple",
+    "options": [
+      "可以同時根據多個欄位分組",
+      "必須放在 WHERE 之後",
+      "SELECT 的非彙總欄位必須出現在 GROUP BY 中",
+      "必須放在 ORDER BY 之後"
+    ],
+    "answer": [0, 1, 2]
+  },
+  {
+    "id": 558,
+    "postId": 1421,
+    "question": "左外部連結的完整語法：SELECT * FROM A [__1__] [__2__] [__3__] B ON A.id = B.id; (請用小寫英文回答字母間留一個空白)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "left",
+      "outer",
+      "join"
+    ]
+  },
+  {
+    "id": 557,
+    "postId": null,
+    "question": "Which commands can combine content from two tables?",
+    "type": null,
+    "options": [],
+    "answer": "JOIN\u003Cbr\u003EUNION\u003Cbr\u003EUNION ALL"
+  },
+  {
+    "id": 556,
+    "postId": 1430,
+    "question": "在 GROUP BY 中，若想根據多個欄位分組，欄位間以 [__1__] 隔開。 (請用半型標點符號回答)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      ","
+    ]
+  },
+  {
+    "id": 555,
+    "postId": 1428,
+    "question": "欲找出 students 表中年紀最小的學生：SELECT [__1__](age) FROM students; (請用小寫英文回答)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "min"
+    ]
+  },
+  {
+    "id": 554,
+    "postId": 1381,
+    "question": "想要計算總共賣出了多少「件」商品（加總數量欄位），應使用？",
+    "type": "single",
+    "options": [
+      "MAX(quantity)",
+      "SUM(quantity)",
+      "COUNT(quantity)",
+      "AVG(quantity)"
+    ],
+    "answer": [1]
+  },
+  {
+    "id": 553,
+    "postId": 1378,
+    "question": "When column names repeat in tables, what symbol links \"Table\" and \"Column\"?",
+    "type": "single",
+    "options": [
+      "Comma (,)",
+      "Period (.)",
+      "Arrow (-\u003E)",
+      "Colon (:)"
+    ],
+    "answer": [1]
+  },
+  {
+    "id": 552,
+    "postId": 1443,
+    "question": "執行分組時，通常彙總函數會出現在 [__1__] 子句中。 (請用小寫英文回答)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "select"
+    ]
+  },
+  {
+    "id": 551,
+    "postId": 1433,
+    "question": "欲在查詢時暫時更改欄位顯示名稱，使用 [__1__] 關鍵字。 (請用小寫英文回答)",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "as"
+    ]
+  },
+  {
+    "id": 550,
+    "postId": 1394,
+    "question": "想要排序資料時，ORDER BY 可以？",
+    "type": "multiple",
+    "options": [
+      "使用別名排序",
+      "在分組之前執行排序",
+      "根據單一欄位排序",
+      "根據多個欄位排序"
+    ],
+    "answer": [0, 2, 3]
+  },
+  {
+    "id": 549,
+    "postId": 1373,
+    "question": "若要在分組統計後過濾條件（例如平均薪資 \u003E 5萬），應使用哪個子句？",
+    "type": "single",
+    "options": [
+      "ORDER BY",
+      "WHERE",
+      "HAVING",
+      "GROUP BY"
+    ],
+    "answer": [2]
+  },
+  {
     "id": 544,
     "postId": null,
     "question": "In multi-table queries, the keyword to specify the relation column is?",
@@ -9,147 +948,216 @@
   },
   {
     "id": 543,
-    "postId": null,
+    "postId": 1377,
     "question": "想要查詢訂單日期並依最新日期排在最前面，該怎麼寫？",
-    "type": null,
-    "options": [],
-    "answer": "ORDER BY date DESC"
+    "type": "single",
+    "options": [
+      "SORT BY date",
+      "GROUP BY date",
+      "ORDER BY date DESC",
+      "ORDER BY date ASC"
+    ],
+    "answer": [2]
   },
   {
     "id": 542,
-    "postId": null,
+    "postId": 1417,
     "question": "計算每個部門的人數：SELECT dept_id, [__1__](*) FROM emp [__2__] [__3__] dept_id; (請用小寫英文回答字母間留一個空白)",
-    "type": null,
+    "type": "text",
     "options": [],
-    "answer": "count\u003Cbr\u003E group\u003Cbr\u003E by"
+    "answer": [
+      "count",
+      "group",
+      "by"
+    ]
   },
   {
     "id": 541,
-    "postId": null,
+    "postId": 1386,
     "question": "想要合併兩張結構相同的表並「保留」所有重複列，應使用？",
-    "type": null,
-    "options": [],
-    "answer": "UNION ALL"
+    "type": "single",
+    "options": [
+      "JOIN",
+      "UNION",
+      "INTERSECT",
+      "UNION ALL"
+    ],
+    "answer": [3]
   },
   {
     "id": 540,
-    "postId": null,
+    "postId": 1398,
     "question": "COUNT(*) 與 COUNT(欄位名) 的差異為何？",
-    "type": null,
-    "options": [],
-    "answer": "前者包含 NULL 值\u003Cbr\u003E後者不包含 NULL 值\u003Cbr\u003E前者計算行數，後者計算非空值數"
+    "type": "multiple",
+    "options": [
+      "前者計算行數，後者計算非空值數",
+      "後者不包含 NULL 值",
+      "兩者完全一樣",
+      "前者包含 NULL 值"
+    ],
+    "answer": [0, 1, 3]
   },
   {
     "id": 539,
-    "postId": null,
+    "postId": 1418,
     "question": "篩選平均薪資大於 3 萬的部門：GROUP BY dept_id [__1__] AVG(salary) \u003E 30000; (請用小寫英文回答)",
-    "type": null,
+    "type": "text",
     "options": [],
-    "answer": "having"
+    "answer": [
+      "having"
+    ]
   },
   {
     "id": 538,
-    "postId": null,
+    "postId": 1416,
     "question": "欲查詢 orders 表中訂單金額大於平均值的語法：SELECT * FROM orders WHERE price \u003E ([__1__] [__2__](price) FROM orders); (請用小寫英文回答字母間留一個空白)",
-    "type": null,
+    "type": "text",
     "options": [],
-    "answer": "select\u003Cbr\u003E avg"
+    "answer": [
+      "select",
+      "avg"
+    ]
   },
   {
     "id": 537,
-    "postId": null,
+    "postId": 1409,
     "question": "在 SQL 查詢中，執行順序 (Logical Query Processing) 哪些是正確的？",
-    "type": null,
-    "options": [],
-    "answer": "FROM 最先執行\u003Cbr\u003ESELECT 在 WHERE 之後執行\u003Cbr\u003EORDER BY 最後執行"
+    "type": "multiple",
+    "options": [
+      "WHERE 在 GROUP BY 之後執行",
+      "FROM 最先執行",
+      "ORDER BY 最後執行",
+      "SELECT 在 WHERE 之後執行"
+    ],
+    "answer": [1, 2, 3]
   },
   {
     "id": 536,
-    "postId": null,
+    "postId": 1410,
     "question": "To calculate \"Total Sales\" and \"Total Orders\", use?",
-    "type": null,
-    "options": [],
-    "answer": "SELECT SUM(price), COUNT(*)\u003Cbr\u003ESELECT SUM(price), COUNT(id)"
+    "type": "multiple",
+    "options": [
+      "SELECT SUM(price), COUNT(*)",
+      "SELECT SUM(price), COUNT(id)",
+      "SELECT AVG(price)",
+      "SELECT MAX(price), MIN(price)"
+    ],
+    "answer": [0, 1]
   },
   {
     "id": 535,
-    "postId": null,
+    "postId": 1441,
     "question": "When combining queries, the [__1__] of columns must match. (Answer in Chinese)",
-    "type": null,
+    "type": "text",
     "options": [],
-    "answer": "數量"
+    "answer": [
+      "數量"
+    ]
   },
   {
     "id": 534,
-    "postId": null,
+    "postId": 1435,
     "question": "用來計算非重複項數量的語法：COUNT([__1__] col_name)。 (請用小寫英文回答)",
-    "type": null,
+    "type": "text",
     "options": [],
-    "answer": "distinct"
+    "answer": [
+      "distinct"
+    ]
   },
   {
     "id": 533,
-    "postId": null,
+    "postId": 1445,
     "question": "設定遞增排序的關鍵字（預設可不寫）是 [__1__]。 (請用小寫英文回答)",
-    "type": null,
+    "type": "text",
     "options": [],
-    "answer": "asc"
+    "answer": [
+      "asc"
+    ]
   },
   {
     "id": 532,
-    "postId": null,
+    "postId": 1398,
     "question": "Difference between COUNT(*) and COUNT(col)?",
-    "type": null,
-    "options": [],
-    "answer": "Former includes NULL\u003Cbr\u003ELatter excludes NULL\u003Cbr\u003EFormer counts rows, latter non-NULLs"
+    "type": "multiple",
+    "options": [
+      "Both are identical",
+      "Former includes NULL",
+      "Former counts rows, latter non-NULLs",
+      "Latter excludes NULL"
+    ],
+    "answer": [1, 2, 3]
   },
   {
     "id": 531,
-    "postId": null,
+    "postId": 1429,
     "question": "排序時，若要由大到小（遞減）排列，需使用關鍵字 [__1__]。 (請用小寫英文回答)",
-    "type": null,
+    "type": "text",
     "options": [],
-    "answer": "desc"
+    "answer": [
+      "desc"
+    ]
   },
   {
     "id": 530,
-    "postId": null,
+    "postId": 1407,
     "question": "下列哪些運算子常用於子查詢中？",
-    "type": null,
-    "options": [],
-    "answer": "IN\u003Cbr\u003EEXISTS\u003Cbr\u003EANY\u003Cbr\u003EALL"
+    "type": "multiple",
+    "options": [
+      "EXISTS",
+      "ALL",
+      "ANY",
+      "IN"
+    ],
+    "answer": [0, 1, 2, 3]
   },
   {
     "id": 529,
-    "postId": null,
+    "postId": 1400,
     "question": "UNION 運算子在使用時有哪些限制？",
-    "type": null,
-    "options": [],
-    "answer": "兩表的欄位數量必須相同\u003Cbr\u003E兩表的欄位資料型態必須相容\u003Cbr\u003E預設會移除重複資料"
+    "type": "multiple",
+    "options": [
+      "兩表的欄位名稱必須完全一樣",
+      "兩表的欄位資料型態必須相容",
+      "預設會移除重複資料",
+      "兩表的欄位數量必須相同"
+    ],
+    "answer": [1, 2, 3]
   },
   {
     "id": 528,
-    "postId": null,
+    "postId": 1404,
     "question": "下列哪些是子查詢可以回傳的格式？",
-    "type": null,
-    "options": [],
-    "answer": "單一數值 (Scalar)\u003Cbr\u003E一列資料 (Row)\u003Cbr\u003E一欄資料 (Column/List)\u003Cbr\u003E整個虛擬表 (Table)"
+    "type": "multiple",
+    "options": [
+      "整個虛擬表 (Table)",
+      "一欄資料 (Column/List)",
+      "一列資料 (Row)",
+      "單一數值 (Scalar)"
+    ],
+    "answer": [0, 1, 2, 3]
   },
   {
     "id": 527,
-    "postId": null,
+    "postId": 1439,
     "question": "若子查詢寫在 FROM 之後，該子查詢被視為一個 [__1__] 表。 (請用中文回答)",
-    "type": null,
+    "type": "text",
     "options": [],
-    "answer": "虛擬"
+    "answer": [
+      "虛擬"
+    ]
   },
   {
     "id": 526,
-    "postId": null,
+    "postId": 1392,
     "question": "下列哪些屬於 SQL 的彙總函數 (Aggregate Functions)？",
-    "type": null,
-    "options": [],
-    "answer": "SUM()\u003Cbr\u003ECOUNT()\u003Cbr\u003EMAX()"
+    "type": "multiple",
+    "options": [
+      "MAX()",
+      "DISTINCT()",
+      "SUM()",
+      "COUNT()"
+    ],
+    "answer": [0, 2, 3]
   },
   {
     "id": 525,
@@ -161,370 +1169,558 @@
   },
   {
     "id": 524,
-    "postId": null,
+    "postId": 1422,
     "question": "查詢結果若要排除重複，應在 SELECT 後加上 [__1__]。 (請用小寫英文回答)",
-    "type": null,
+    "type": "text",
     "options": [],
-    "answer": "distinct"
+    "answer": [
+      "distinct"
+    ]
   },
   {
     "id": 523,
-    "postId": null,
+    "postId": 1423,
     "question": "欲加總所有訂單的運費：SELECT [__1__](shipping_fee) FROM orders; (請用小寫英文回答)",
-    "type": null,
+    "type": "text",
     "options": [],
-    "answer": "sum"
+    "answer": [
+      "sum"
+    ]
   },
   {
     "id": 522,
-    "postId": null,
+    "postId": 1380,
     "question": "COUNT(DISTINCT name) 的作用是什麼？",
-    "type": null,
-    "options": [],
-    "answer": "計算不重複的名字數量"
+    "type": "single",
+    "options": [
+      "刪除重複的名字",
+      "計算所有名字的總數",
+      "計算不重複的名字數量",
+      "計算名字的長度"
+    ],
+    "answer": [2]
   },
   {
     "id": 521,
-    "postId": null,
+    "postId": 1395,
     "question": "When is it suitable to use a Subquery?",
-    "type": null,
-    "options": [],
-    "answer": "Find employees above average salary\u003Cbr\u003EFind customers with no orders\u003Cbr\u003ECondition depends on another query"
+    "type": "multiple",
+    "options": [
+      "Find customers with no orders",
+      "Condition depends on another query",
+      "Merge unrelated DBs",
+      "Find employees above average salary"
+    ],
+    "answer": [0, 1, 3]
   },
   {
     "id": 520,
-    "postId": null,
+    "postId": 1386,
     "question": "To combine two tables with the same structure and \"keep\" duplicates, use?",
-    "type": null,
-    "options": [],
-    "answer": "UNION ALL"
+    "type": "single",
+    "options": [
+      "UNION",
+      "JOIN",
+      "UNION ALL",
+      "INTERSECT"
+    ],
+    "answer": [2]
   },
   {
     "id": 519,
-    "postId": null,
+    "postId": 1379,
     "question": "子查詢通常放在哪一個關鍵字的後面來做條件過濾？",
-    "type": null,
-    "options": [],
-    "answer": "WHERE"
+    "type": "single",
+    "options": [
+      "ORDER BY",
+      "FROM",
+      "SELECT",
+      "WHERE"
+    ],
+    "answer": [3]
   },
   {
     "id": 518,
-    "postId": null,
+    "postId": 1384,
     "question": "SELECT * FROM table ORDER BY 1 DESC; 中的 1 代表什麼？",
-    "type": null,
-    "options": [],
-    "answer": "第一個欄位"
+    "type": "single",
+    "options": [
+      "第一個欄位",
+      "倒數第一列",
+      "數值 1",
+      "第一筆資料"
+    ],
+    "answer": [0]
   },
   {
     "id": 517,
-    "postId": null,
+    "postId": 1425,
     "question": "將兩個查詢結果聯集且保留重複項：SELECT... [__1__] [__2__] SELECT...; (請用小寫英文回答字母間留一個空白)",
-    "type": null,
+    "type": "text",
     "options": [],
-    "answer": "union\u003Cbr\u003E all"
+    "answer": [
+      "union",
+      "all"
+    ]
   },
   {
     "id": 516,
-    "postId": null,
+    "postId": 1419,
     "question": "進行內部連結時，指定關聯條件的關鍵字是 [__1__]。 (請用小寫英文回答)",
-    "type": null,
+    "type": "text",
     "options": [],
-    "answer": "on"
+    "answer": [
+      "on"
+    ]
   },
   {
     "id": 515,
-    "postId": null,
+    "postId": 1396,
     "question": "關於 HAVING 與 WHERE 的差別，正確的是？",
-    "type": null,
-    "options": [],
-    "answer": "WHERE 在分組前過濾\u003Cbr\u003EHAVING 在分組後過濾\u003Cbr\u003EHAVING 必須跟著 GROUP BY 使用"
+    "type": "multiple",
+    "options": [
+      "HAVING 必須跟著 GROUP BY 使用",
+      "WHERE 在分組前過濾",
+      "HAVING 在分組後過濾",
+      "WHERE 可以用彙總函數"
+    ],
+    "answer": [0, 1, 2]
   },
   {
     "id": 514,
-    "postId": null,
+    "postId": 1408,
     "question": "關於 RIGHT JOIN 的特性，正確的是？",
-    "type": null,
-    "options": [],
-    "answer": "以右表為基準\u003Cbr\u003E左表沒對應到則顯示 NULL\u003Cbr\u003E右表所有資料都會出現"
+    "type": "multiple",
+    "options": [
+      "右表所有資料都會出現",
+      "以右表為基準",
+      "與 LEFT JOIN 完全不能互換",
+      "左表沒對應到則顯示 NULL"
+    ],
+    "answer": [0, 1, 3]
   },
   {
     "id": 513,
-    "postId": null,
+    "postId": 1368,
     "question": "若要計算 students 表中共有多少位學生，應該使用？",
-    "type": null,
-    "options": [],
-    "answer": "COUNT(*)"
+    "type": "single",
+    "options": [
+      "COUNT(*)",
+      "MAX(*)",
+      "ADD(*)",
+      "SUM(*)"
+    ],
+    "answer": [0]
   },
   {
     "id": 512,
-    "postId": null,
+    "postId": 1438,
     "question": "找出銷售表中「單價最貴」的金額：SELECT [__1__](unit_price) FROM sales; (請用小寫英文回答)",
-    "type": null,
+    "type": "text",
     "options": [],
-    "answer": "max"
+    "answer": [
+      "max"
+    ]
   },
   {
     "id": 511,
-    "postId": null,
+    "postId": 1376,
     "question": "LEFT JOIN 會回傳哪些資料？",
-    "type": null,
-    "options": [],
-    "answer": "左表所有資料與右表符合的資料"
+    "type": "single",
+    "options": [
+      "左表所有資料與右表符合的資料",
+      "右表所有資料與左表符合的資料",
+      "只有兩表相符的資料",
+      "兩張表的所有資料"
+    ],
+    "answer": [0]
   },
   {
     "id": 510,
-    "postId": null,
+    "postId": 1389,
     "question": "子查詢的執行順序通常是？",
-    "type": null,
-    "options": [],
-    "answer": "先執行子查詢"
+    "type": "single",
+    "options": [
+      "先執行子查詢",
+      "隨機執行",
+      "先執行主查詢",
+      "同時執行"
+    ],
+    "answer": [0]
   },
   {
     "id": 509,
-    "postId": null,
+    "postId": 1371,
     "question": "想要合併 students 與 classes 兩張表，並只取出資料對應到的部分，應使用？",
-    "type": null,
-    "options": [],
-    "answer": "INNER JOIN"
+    "type": "single",
+    "options": [
+      "INNER JOIN",
+      "FULL JOIN",
+      "RIGHT JOIN",
+      "LEFT JOIN"
+    ],
+    "answer": [0]
   },
   {
     "id": 507,
-    "postId": null,
+    "postId": 1395,
     "question": "下列哪些情況適合使用子查詢 (Subquery)？",
-    "type": null,
-    "options": [],
-    "answer": "找出薪水大於公司平均的人\u003Cbr\u003E找出沒有訂單的客戶\u003Cbr\u003E查詢條件依賴另一個查詢的結果"
+    "type": "multiple",
+    "options": [
+      "找出薪水大於公司平均的人",
+      "查詢條件依賴另一個查詢的結果",
+      "找出沒有訂單的客戶",
+      "合併兩個完全無關的資料庫"
+    ],
+    "answer": [0, 1, 2]
   },
   {
     "id": 506,
-    "postId": null,
+    "postId": 1434,
     "question": "SELECT AVG(score) FROM tests; 會 [__1__] (填：計算或略過) NULL 值。 (請用中文回答)",
-    "type": null,
+    "type": "text",
     "options": [],
-    "answer": "略過"
+    "answer": [
+      "略過"
+    ]
   },
   {
     "id": 505,
-    "postId": null,
+    "postId": 1432,
     "question": "CROSS JOIN produces the [__1__] product of two tables. (Answer in Chinese)",
-    "type": null,
+    "type": "text",
     "options": [],
-    "answer": "笛卡兒"
+    "answer": [
+      "笛卡兒"
+    ]
   },
   {
     "id": 504,
-    "postId": null,
+    "postId": 1370,
     "question": "若要將產品依價格從「低到高」排列，應使用哪種排序？",
-    "type": null,
-    "options": [],
-    "answer": "ORDER BY price ASC"
+    "type": "single",
+    "options": [
+      "GROUP BY price",
+      "ORDER BY price ASC",
+      "SORT BY price",
+      "ORDER BY price DESC"
+    ],
+    "answer": [1]
   },
   {
     "id": 503,
-    "postId": null,
+    "postId": 1415,
     "question": "如果要查詢「至少有一筆訂單」的客戶，可以使用？",
-    "type": null,
-    "options": [],
-    "answer": "INNER JOIN customers and orders\u003Cbr\u003EWHERE EXISTS (subquery)\u003Cbr\u003EWHERE customer_id IN (subquery)"
+    "type": "multiple",
+    "options": [
+      "WHERE EXISTS (subquery)",
+      "WHERE customer_id IN (subquery)",
+      "INNER JOIN customers and orders",
+      "LEFT JOIN ... WHERE order_id IS NULL"
+    ],
+    "answer": [0, 1, 2]
   },
   {
     "id": 502,
-    "postId": null,
+    "postId": 1403,
     "question": "關於 CROSS JOIN (交叉連接) 的敘述哪些正確？",
-    "type": null,
-    "options": [],
-    "answer": "會產生兩表相乘的結果\u003Cbr\u003E不需要 ON 條件\u003Cbr\u003E常用於生成所有可能的組合"
+    "type": "multiple",
+    "options": [
+      "不需要 ON 條件",
+      "會產生兩表相乘的結果",
+      "常用於生成所有可能的組合",
+      "結果行數為 A表行數 + B表行數"
+    ],
+    "answer": [0, 1, 2]
   },
   {
     "id": 501,
-    "postId": null,
+    "postId": 1410,
     "question": "想要計算「銷售總額」與「訂單總數」，可以寫成？",
-    "type": null,
-    "options": [],
-    "answer": "SELECT SUM(price), COUNT(*)\u003Cbr\u003ESELECT SUM(price), COUNT(id)"
+    "type": "multiple",
+    "options": [
+      "SELECT MAX(price), MIN(price)",
+      "SELECT SUM(price), COUNT(*)",
+      "SELECT AVG(price)",
+      "SELECT SUM(price), COUNT(id)"
+    ],
+    "answer": [1, 3]
   },
   {
     "id": 500,
-    "postId": null,
+    "postId": 1409,
     "question": "Regarding Logical Query Processing order, which are correct?",
-    "type": null,
-    "options": [],
-    "answer": "FROM executes first\u003Cbr\u003ESELECT after WHERE\u003Cbr\u003EORDER BY executes last"
+    "type": "multiple",
+    "options": [
+      "SELECT after WHERE",
+      "FROM executes first",
+      "WHERE after GROUP BY",
+      "ORDER BY executes last"
+    ],
+    "answer": [0, 1, 3]
   },
   {
     "id": 499,
-    "postId": null,
+    "postId": 1405,
     "question": "執行多表查詢時，若沒有指定連接條件，會發生什麼？",
-    "type": null,
-    "options": [],
-    "answer": "產生笛卡兒積\u003Cbr\u003E執行時間變長\u003Cbr\u003E資料量暴增"
+    "type": "multiple",
+    "options": [
+      "語法錯誤",
+      "執行時間變長",
+      "資料量暴增",
+      "產生笛卡兒積"
+    ],
+    "answer": [1, 2, 3]
   },
   {
     "id": 498,
-    "postId": null,
+    "postId": 1397,
     "question": "下列哪些指令會用到 JOIN 關鍵字？",
-    "type": null,
-    "options": [],
-    "answer": "LEFT OUTER JOIN\u003Cbr\u003ECROSS JOIN\u003Cbr\u003ERIGHT JOIN"
+    "type": "multiple",
+    "options": [
+      "RIGHT JOIN",
+      "UNION JOIN",
+      "CROSS JOIN",
+      "LEFT OUTER JOIN"
+    ],
+    "answer": [0, 2, 3]
   },
   {
     "id": 497,
-    "postId": null,
+    "postId": 1440,
     "question": "欲將結果先按部門排序，再按薪水排序：ORDER BY dept_id, [__1__]; (請用小寫英文回答)",
-    "type": null,
+    "type": "text",
     "options": [],
-    "answer": "salary"
+    "answer": [
+      "salary"
+    ]
   },
   {
     "id": 496,
-    "postId": null,
+    "postId": 1427,
     "question": "子查詢若回傳多個值，可用 [__1__] 運算子比對主查詢是否在其中。 (請用小寫英文回答)",
-    "type": null,
+    "type": "text",
     "options": [],
-    "answer": "in"
+    "answer": [
+      "in"
+    ]
   },
   {
     "id": 495,
-    "postId": null,
+    "postId": 1385,
     "question": "想要合併兩張結構相同的表並「排除」重複列，應使用？",
-    "type": null,
-    "options": [],
-    "answer": "UNION"
+    "type": "single",
+    "options": [
+      "UNION ALL",
+      "MERGE",
+      "UNION",
+      "JOIN"
+    ],
+    "answer": [2]
   },
   {
     "id": 494,
-    "postId": null,
+    "postId": 1413,
     "question": "哪些指令可以用來合併兩張表的內容？",
-    "type": null,
-    "options": [],
-    "answer": "JOIN\u003Cbr\u003EUNION\u003Cbr\u003EUNION ALL"
+    "type": "multiple",
+    "options": [
+      "UNION",
+      "JOIN",
+      "UNION ALL",
+      "SELECT INTO"
+    ],
+    "answer": [0, 1, 2]
   },
   {
     "id": 493,
-    "postId": null,
+    "postId": 1406,
     "question": "關於別名 (Alias) 的優點，哪些敘述正確？",
-    "type": null,
-    "options": [],
-    "answer": "增加欄位可讀性\u003Cbr\u003E縮短長表名的輸入\u003Cbr\u003E解決自連接 (Self-join) 的命名衝突"
+    "type": "multiple",
+    "options": [
+      "縮短長表名的輸入",
+      "解決自連接 (Self-join) 的命名衝突",
+      "可以在 WHERE 子句中直接使用彙總別名",
+      "增加欄位可讀性"
+    ],
+    "answer": [0, 1, 3]
   },
   {
     "id": 492,
-    "postId": null,
+    "postId": 1377,
     "question": "To query order dates with the most recent date first, how to write?",
-    "type": null,
-    "options": [],
-    "answer": "ORDER BY date DESC"
+    "type": "single",
+    "options": [
+      "GROUP BY date",
+      "SORT BY date",
+      "ORDER BY date DESC",
+      "ORDER BY date ASC"
+    ],
+    "answer": [2]
   },
   {
     "id": 491,
-    "postId": null,
+    "postId": 1388,
     "question": "想要查詢各類別中「最貴」的商品價格，應使用？",
-    "type": null,
-    "options": [],
-    "answer": "SELECT category, MAX(price) FROM items GROUP BY category"
+    "type": "single",
+    "options": [
+      "ORDER BY price DESC",
+      "SELECT category, MAX(price) FROM items GROUP BY category",
+      "GROUP BY category HAVING MAX(price)",
+      "GROUP BY category SELECT MAX(price)"
+    ],
+    "answer": [1]
   },
   {
     "id": 490,
-    "postId": null,
+    "postId": 1402,
     "question": "想要查詢「各部門中最高薪水且大於 5 萬」的部門，語法應包含？",
-    "type": null,
-    "options": [],
-    "answer": "GROUP BY dept\u003Cbr\u003EHAVING MAX(salary) &gt; 50000\u003Cbr\u003ESELECT dept, MAX(salary)"
+    "type": "multiple",
+    "options": [
+      "GROUP BY dept",
+      "HAVING MAX(salary) \u003E 50000",
+      "SELECT dept, MAX(salary)",
+      "WHERE salary \u003E 50000"
+    ],
+    "answer": [0, 1, 2]
   },
   {
     "id": 489,
-    "postId": null,
+    "postId": 1387,
     "question": "使用 AVG() 函數時，SQL 會如何處理 NULL 值？",
-    "type": null,
-    "options": [],
-    "answer": "略過該筆資料不計"
+    "type": "single",
+    "options": [
+      "把結果變成 NULL",
+      "略過該筆資料不計",
+      "產生報錯",
+      "當作 0 計算"
+    ],
+    "answer": [1]
   },
   {
     "id": 488,
-    "postId": null,
+    "postId": 1429,
     "question": "For descending order, use keyword [__1__]. (Answer in lowercase English)",
-    "type": null,
+    "type": "text",
     "options": [],
-    "answer": "desc"
+    "answer": [
+      "desc"
+    ]
   },
   {
     "id": 487,
-    "postId": null,
+    "postId": 1375,
     "question": "想要查詢 employees 表中薪水最低的員工金額？",
-    "type": null,
-    "options": [],
-    "answer": "SELECT MIN(salary)"
+    "type": "single",
+    "options": [
+      "SELECT SMALL(salary)",
+      "SELECT LOW(salary)",
+      "SELECT MIN(salary)",
+      "SELECT BOTTOM(salary)"
+    ],
+    "answer": [2]
   },
   {
     "id": 486,
-    "postId": null,
+    "postId": 1374,
     "question": "寫在括號內，作為另一個查詢條件的查詢語句稱為？",
-    "type": null,
-    "options": [],
-    "answer": "子查詢 (Subquery)"
+    "type": "single",
+    "options": [
+      "主查詢",
+      "聯集查詢",
+      "交叉查詢",
+      "子查詢 (Subquery)"
+    ],
+    "answer": [3]
   },
   {
     "id": 485,
-    "postId": null,
+    "postId": 1431,
     "question": "COUNT([__1__]) 會計算表格中的總行數，包含 NULL。 (請用符號回答)",
-    "type": null,
+    "type": "text",
     "options": [],
-    "answer": "*"
+    "answer": [
+      "*"
+    ]
   },
   {
     "id": 484,
-    "postId": null,
+    "postId": 1372,
     "question": "哪一個函數可以用來計算一組數值的平均值？",
-    "type": null,
-    "options": [],
-    "answer": "AVG()"
+    "type": "single",
+    "options": [
+      "AVERAGE()",
+      "AVG()",
+      "SUM()",
+      "MEAN()"
+    ],
+    "answer": [1]
   },
   {
     "id": 483,
-    "postId": null,
+    "postId": 1382,
     "question": "若要查詢沒被分配到任何部門的員工，JOIN 後應搭配什麼條件？",
-    "type": null,
-    "options": [],
-    "answer": "WHERE dept_id IS NULL"
+    "type": "single",
+    "options": [
+      "WHERE dept_id IS EMPTY",
+      "WHERE dept_id IS NULL",
+      "WHERE dept_id = ''",
+      "WHERE dept_id = 0"
+    ],
+    "answer": [1]
   },
   {
     "id": 482,
-    "postId": null,
+    "postId": 1442,
     "question": "判斷子查詢中「是否有任何一筆」符合條件，使用 [__1__] 運算子。 (請用小寫英文回答)",
-    "type": null,
+    "type": "text",
     "options": [],
-    "answer": "any"
+    "answer": [
+      "any"
+    ]
   },
   {
     "id": 481,
-    "postId": null,
+    "postId": 1437,
     "question": "查詢沒有任何關聯資料的語法：WHERE col_name [__1__] [__2__]。 (請用小寫英文回答字母間留一個空白)",
-    "type": null,
+    "type": "text",
     "options": [],
-    "answer": "is\u003Cbr\u003E null"
+    "answer": [
+      "is",
+      "null"
+    ]
   },
   {
     "id": 480,
-    "postId": null,
+    "postId": 1424,
     "question": "檢查子查詢是否存在結果的運算子是 [__1__]。 (請用小寫英文回答)",
-    "type": null,
+    "type": "text",
     "options": [],
-    "answer": "exists"
+    "answer": [
+      "exists"
+    ]
   },
   {
     "id": 479,
-    "postId": null,
+    "postId": 1426,
     "question": "查詢薪資在 4 萬到 6 萬之間：WHERE salary [__1__] 40000 [__2__] 60000; (請用小寫英文回答字母間留一個空白)",
-    "type": null,
+    "type": "text",
     "options": [],
-    "answer": "between\u003Cbr\u003E and"
+    "answer": [
+      "between",
+      "and"
+    ]
   },
   {
     "id": 478,
-    "postId": null,
+    "postId": 1378,
     "question": "當欄位名稱在多個表中重複時，SQL 使用什麼符號連結「表名」與「欄位」？",
-    "type": null,
-    "options": [],
-    "answer": "點 (.)"
+    "type": "single",
+    "options": [
+      "箭頭 (-\u003E)",
+      "點 (.)",
+      "冒號 (:)",
+      "逗號 (,)"
+    ],
+    "answer": [1]
   }
 ]
