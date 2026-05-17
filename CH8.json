@@ -1435,7 +1435,7 @@
     "question": "小美不小心建立錯了資料庫 test_db，想將它永久刪除，應使用？",
     "type": "single",
     "options": [
-      "REMOVE DATABASE test_db",
+      "REMOVE DATABASE test_db",「移除資料庫test_db」，
       "DROP DATABASE test_db",
       "CLEAR DATABASE test_db",
       "DELETE DATABASE test_db"
