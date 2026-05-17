@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最新題庫總覽</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+        h1 { color: #1c3f64; }
+        .back-btn {
+            text-decoration: none;
+            background: #6c757d;
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 8px;
+        }
+        .summary {
+            background: #f4f8ff;
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+        .card {
+            border: 1px solid #e5e9f2;
+            border-left: 5px solid #185a9d;
+            border-radius: 12px;
+            padding: 16px;
+            background: #fff;
+        }
+        .card h3 { margin-bottom: 8px; color: #185a9d; }
+        .line { color: #4f5d75; margin: 4px 0; font-size: 0.95em; }
+        .loading, .error { text-align: center; margin-top: 20px; }
+        .error { color: #c0392b; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🆕 最新題庫檔案總覽</h1>
+            <a href="index.html" class="back-btn">← 返回首頁</a>
+        </div>
+
+        <div class="summary" id="summary">讀取中...</div>
+        <div class="grid" id="chapterGrid"></div>
+        <div class="loading" id="loading">正在載入最新檔案...</div>
+        <div class="error" id="error"></div>
+    </div>
+
+    <script>
+        const LATEST_CHAPTERS = ['CH5', 'CH6', 'CH8', 'CH9'];
+
+        function inferType(q) {
+            if (q.type === 'single' || q.type === 'multiple' || q.type === 'text') return q.type;
+            if (!Array.isArray(q.options) || q.options.length === 0) return 'text';
+            const ans = Array.isArray(q.answer) ? q.answer : [q.answer];
+            return ans.length > 1 ? 'multiple' : 'single';
+        }
+
+        async function loadLatestChapters() {
+            const loading = document.getElementById('loading');
+            const error = document.getElementById('error');
+            const summary = document.getElementById('summary');
+            const grid = document.getElementById('chapterGrid');
+
+            try {
+                const results = await Promise.all(
+                    LATEST_CHAPTERS.map(async chapter => {
+                        const res = await fetch(`${chapter}.json`);
+                        if (!res.ok) throw new Error(`無法載入 ${chapter}.json`);
+                        const questions = await res.json();
+                        const stats = { single: 0, multiple: 0, text: 0 };
+                        (questions || []).forEach(q => {
+                            const type = inferType(q);
+                            stats[type] = (stats[type] || 0) + 1;
+                        });
+                        return { chapter, total: (questions || []).length, stats };
+                    })
+                );
+
+                results.sort((a, b) => Number(b.chapter.replace('CH', '')) - Number(a.chapter.replace('CH', '')));
+
+                const totalQuestions = results.reduce((sum, r) => sum + r.total, 0);
+                summary.textContent = `共 ${results.length} 個最新章節檔，合計 ${totalQuestions} 題。`;
+
+                grid.innerHTML = '';
+                results.forEach(r => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.innerHTML = `
+                        <h3>${r.chapter}.json</h3>
+                        <div class="line">總題數：${r.total}</div>
+                        <div class="line">單選題：${r.stats.single || 0}</div>
+                        <div class="line">多選題：${r.stats.multiple || 0}</div>
+                        <div class="line">填充題：${r.stats.text || 0}</div>
+                    `;
+                    grid.appendChild(card);
+                });
+            } catch (e) {
+                summary.textContent = '最新檔案載入失敗。';
+                error.textContent = e.message || String(e);
+            } finally {
+                loading.style.display = 'none';
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', loadLatestChapters);
+    </script>
+</body>
+</html>
