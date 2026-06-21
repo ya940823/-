@@ -4,7 +4,7 @@
     "postId": null,
     "question": "Eliminating partial functional dependency is to reach the [__1__]nd Normal Form. (Answer with digits)",
     "language": "en",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": 2
   },
@@ -13,7 +13,7 @@
     "postId": null,
     "question": "If a table has only one field as the primary key, it automatically satisfies [__1__]nd NF. (Answer with digits)",
     "language": "en",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": 2
   },
@@ -22,7 +22,7 @@
     "postId": null,
     "question": "Each row must be unique, a basic requirement of [__1__]st Normal Form. (Answer with digits)",
     "language": "en",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": 1
   },
@@ -31,7 +31,7 @@
     "postId": null,
     "question": "Redundancy can cause insertion, modification, and [__1__] anomalies. (In lowercase English)",
     "language": "en",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "deletion"
   },
@@ -40,7 +40,7 @@
     "postId": null,
     "question": "In 2NF, non-key fields must be [__1__] functionally dependent on the key. (In lowercase English)",
     "language": "en",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "fully"
   },
@@ -49,16 +49,16 @@
     "postId": null,
     "question": "Poor database schema design causes?",
     "language": "en",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "Data redundancy\u003Cbr\u003EWasted space\u003Cbr\u003EMaintenance issues\u003Cbr\u003EUpdate anomalies"
+    "answer": "Data redundancy<br>Wasted space<br>Maintenance issues<br>Update anomalies"
   },
   {
     "id": 933,
     "postId": null,
     "question": "A good database design should generally reach at least which normal form?",
     "language": "en",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "3NF"
   },
@@ -67,7 +67,7 @@
     "postId": null,
     "question": "A composite primary key is composed of how many fields?",
     "language": "en",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "Multiple"
   },
@@ -76,16 +76,16 @@
     "postId": null,
     "question": "What are the conditions for 2NF?",
     "language": "en",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "Must satisfy 1NF\u003Cbr\u003EEliminate partial dependency"
+    "answer": "Must satisfy 1NF<br>Eliminate partial dependency"
   },
   {
     "id": 929,
     "postId": null,
     "question": "BCNF solves problems of [__1__] dependency within keys. (In lowercase English)",
     "language": "en",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "functional"
   },
@@ -94,16 +94,16 @@
     "postId": null,
     "question": "Which forms are tied to \"Primary Key\" definition?",
     "language": "en",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "2NF\u003Cbr\u003E3NF\u003Cbr\u003EBCNF\u003Cbr\u003E1NF"
+    "answer": "2NF<br>3NF<br>BCNF<br>1NF"
   },
   {
     "id": 927,
     "postId": null,
-    "question": "When A-\u003EB, A is called the [__1__]. (In lowercase English)",
+    "question": "When A->B, A is called the [__1__]. (In lowercase English)",
     "language": "en",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "determinant"
   },
@@ -112,7 +112,7 @@
     "postId": null,
     "question": "Which of the following is NOT an update anomaly caused by data redundancy?",
     "language": "en",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "Query anomaly"
   },
@@ -121,7 +121,7 @@
     "postId": null,
     "question": "Normalization [__1__] a large table into small tables. (In lowercase English)",
     "language": "en",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "split"
   },
@@ -130,16 +130,16 @@
     "postId": null,
     "question": "What are the conditions for 3NF?",
     "language": "en",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "Must satisfy 2NF\u003Cbr\u003EEliminate transitive dependency"
+    "answer": "Must satisfy 2NF<br>Eliminate transitive dependency"
   },
   {
     "id": 923,
     "postId": null,
     "question": "[__1__] dependency means a field depends on only part of a composite key. (In lowercase English)",
     "language": "en",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "partial"
   },
@@ -148,7 +148,7 @@
     "postId": null,
     "question": "\"修改異常\" in English is [__1__] anomaly. (In lowercase English)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "modification"
   },
@@ -157,7 +157,7 @@
     "postId": null,
     "question": "What problem does 1NF solve in a table?",
     "language": "en",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "Repeating groups"
   },
@@ -166,7 +166,7 @@
     "postId": null,
     "question": "The practice of intentionally increasing redundancy to improve query efficiency is called?",
     "language": "en",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "De-normalization"
   },
@@ -175,7 +175,7 @@
     "postId": null,
     "question": "BCNF 解決了主鍵中存在[__1__]相依的問題。(請用小寫英文回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "functional"
   },
@@ -184,7 +184,7 @@
     "postId": null,
     "question": "3NF requires eliminating [__1__] dependency between non-key fields. (In lowercase English)",
     "language": "en",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "transitive"
   },
@@ -193,7 +193,7 @@
     "postId": null,
     "question": "正規化的過程通常是將一個大資料表進行什麼動作？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "分割"
   },
@@ -202,7 +202,7 @@
     "postId": null,
     "question": "修改一處資料卻要更新多筆記錄，否則會資料不一致，稱為？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "修改異常"
   },
@@ -211,7 +211,7 @@
     "postId": null,
     "question": "De-normalization is often used in which systems to speed up reads?",
     "language": "en",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "Data Warehouse"
   },
@@ -220,7 +220,7 @@
     "postId": null,
     "question": "第一正規化英文縮寫為 [__1__]。(請用小寫英文回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "1nf"
   },
@@ -229,16 +229,16 @@
     "postId": null,
     "question": "Common de-normalization techniques?",
     "language": "en",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "Add redundant fields\u003Cbr\u003EMerge tables\u003Cbr\u003EAdd derived fields"
+    "answer": "Add redundant fields<br>Merge tables<br>Add derived fields"
   },
   {
     "id": 912,
     "postId": null,
     "question": "正規化是為了降低資料的[__1__]。(請用小寫英文回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "redundancy"
   },
@@ -247,7 +247,7 @@
     "postId": null,
     "question": "The term for database structure is [__1__]. (In lowercase English)",
     "language": "en",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "schema"
   },
@@ -256,7 +256,7 @@
     "postId": null,
     "question": "功能相依 (Functional Dependence) 的符號通常表示為？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "A -&gt; B"
   },
@@ -265,7 +265,7 @@
     "postId": null,
     "question": "符合 BCNF 代表所有的[__1__]項都必須是候選鍵。(請用小寫英文回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "determinant"
   },
@@ -274,7 +274,7 @@
     "postId": null,
     "question": "在 1NF 中，不允許出現[__1__]群組。(請用小寫英文回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "repeating"
   },
@@ -283,7 +283,7 @@
     "postId": null,
     "question": "在 1NF 中，每個儲存格只能包含幾個值？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "1個"
   },
@@ -292,7 +292,7 @@
     "postId": null,
     "question": "1NF requires that attribute values in a table must be?",
     "language": "en",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "Atomic values"
   },
@@ -301,16 +301,16 @@
     "postId": null,
     "question": "哪些正規化與「主鍵」的定義息息相關？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "2NF\u003Cbr\u003E3NF\u003Cbr\u003EBCNF\u003Cbr\u003E1NF"
+    "answer": "2NF<br>3NF<br>BCNF<br>1NF"
   },
   {
     "id": 904,
     "postId": null,
     "question": "一個良好的資料庫設計，通常至少應達到哪一個正規化程度？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "3NF"
   },
@@ -319,7 +319,7 @@
     "postId": null,
     "question": "3NF is primarily used to eliminate which type of dependency?",
     "language": "en",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "Transitive functional dependency"
   },
@@ -328,7 +328,7 @@
     "postId": null,
     "question": "正規化的英文術語是？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "Normalization"
   },
@@ -337,7 +337,7 @@
     "postId": null,
     "question": "If A determines B, A is called a?",
     "language": "en",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "Determinant"
   },
@@ -346,7 +346,7 @@
     "postId": null,
     "question": "BCNF 的全稱是 [__1__] Normal Form。(請用小寫英文回答字母間留一個空白)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "boyce codd"
   },
@@ -355,16 +355,16 @@
     "postId": null,
     "question": "3NF 與 BCNF 的差異在於？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "BCNF 處理主鍵間的相依\u003Cbr\u003E3NF 允許某些決定項不是候選鍵"
+    "answer": "BCNF 處理主鍵間的相依<br>3NF 允許某些決定項不是候選鍵"
   },
   {
     "id": 898,
     "postId": null,
     "question": "[__1__]相依是指欄位只相依於複合主鍵的一部分。(請用小寫英文回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "partial"
   },
@@ -373,7 +373,7 @@
     "postId": null,
     "question": "功能相依中的「完全」功能相依，英文是？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "Full Functional"
   },
@@ -382,16 +382,16 @@
     "postId": null,
     "question": "正規化過程中「分割」資料表的依據通常是？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "功能相依關係\u003Cbr\u003E為了消除異常"
+    "answer": "功能相依關係<br>為了消除異常"
   },
   {
     "id": 895,
     "postId": null,
     "question": "資料庫綱要的英文是？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "Database Schema"
   },
@@ -400,16 +400,16 @@
     "postId": null,
     "question": "資料庫綱要設計不良會造成？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "資料冗餘\u003Cbr\u003E空間浪費\u003Cbr\u003E維護困難\u003Cbr\u003E更新異常"
+    "answer": "資料冗餘<br>空間浪費<br>維護困難<br>更新異常"
   },
   {
     "id": 893,
     "postId": null,
     "question": "第一正規化 (1NF) 要求資料表中的屬性值必須是？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "原子值 (不可分割)"
   },
@@ -418,16 +418,16 @@
     "postId": null,
     "question": "\"Atomicity\" in normalization means?",
     "language": "en",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "Fields are indivisible\u003Cbr\u003EValues are single"
+    "answer": "Fields are indivisible<br>Values are single"
   },
   {
     "id": 891,
     "postId": null,
     "question": "新增異常的英文是 [__1__] anomaly。(請用小寫英文回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "insertion"
   },
@@ -436,7 +436,7 @@
     "postId": null,
     "question": "下列哪項不屬於因資料重複而產生的更新異常？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "查詢異常"
   },
@@ -445,7 +445,7 @@
     "postId": null,
     "question": "第二正規化 (2NF) 主要是為了消除何種相依性？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "部分功能相依"
   },
@@ -454,7 +454,7 @@
     "postId": null,
     "question": "判斷 3NF 的關鍵字？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "遞移"
   },
@@ -463,16 +463,16 @@
     "postId": null,
     "question": "Normalization can solve which of the following anomalies?",
     "language": "en",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "Insertion anomaly\u003Cbr\u003EDeletion anomaly\u003Cbr\u003EModification anomaly"
+    "answer": "Insertion anomaly<br>Deletion anomaly<br>Modification anomaly"
   },
   {
     "id": 886,
     "postId": null,
-    "question": "Transitive dependency means A-\u003EB and B-\u003EC, where B is?",
+    "question": "Transitive dependency means A->B and B->C, where B is?",
     "language": "en",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "Non-key attribute"
   },
@@ -481,7 +481,7 @@
     "postId": null,
     "question": "資料重複可能導致新增、修改與[__1__]異常。(請用小寫英文回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "deletion"
   },
@@ -490,7 +490,7 @@
     "postId": null,
     "question": "Normalization is to reduce data [__1__]. (In lowercase English)",
     "language": "en",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "redundancy"
   },
@@ -499,34 +499,34 @@
     "postId": null,
     "question": "在 2NF 中，所有「非主鍵欄位」都必須完全相依於？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "主鍵"
   },
   {
     "id": 882,
     "postId": null,
-    "question": "In FD A -\u003E B, which statements are correct?",
+    "question": "In FD A -> B, which statements are correct?",
     "language": "en",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "A determines B\u003Cbr\u003EB is dependent on A\u003Cbr\u003EA is the determinant"
+    "answer": "A determines B<br>B is dependent on A<br>A is the determinant"
   },
   {
     "id": 881,
     "postId": null,
     "question": "關於 BCNF 的敘述哪些正確？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "比 3NF 更嚴格\u003Cbr\u003E針對主鍵由多個欄位組成的情況\u003Cbr\u003E所有的決定項都必須是主鍵/候選鍵"
+    "answer": "比 3NF 更嚴格<br>針對主鍵由多個欄位組成的情況<br>所有的決定項都必須是主鍵/候選鍵"
   },
   {
     "id": 880,
     "postId": null,
     "question": "在 2NF 中，非主鍵欄位必須[__1__]功能相依於主鍵。(請用小寫英文回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "fully"
   },
@@ -535,7 +535,7 @@
     "postId": null,
     "question": "功能相依的英文縮寫是 [__1__]。(請用小寫英文回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "fd"
   },
@@ -544,7 +544,7 @@
     "postId": null,
     "question": "What is \"資料庫綱要\" in English?",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "Database Schema"
   },
@@ -553,7 +553,7 @@
     "postId": null,
     "question": "正規化後，資料表的數量會？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "增加"
   },
@@ -562,7 +562,7 @@
     "postId": null,
     "question": "What does BCNF stand for?",
     "language": "en",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "Boyce-Codd"
   },
@@ -571,16 +571,16 @@
     "postId": null,
     "question": "資料庫正規化與效能的關係？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "正規化通常增加 Join 的次數\u003Cbr\u003E反正規化可提升讀取效能\u003Cbr\u003E正規化減少資料量"
+    "answer": "正規化通常增加 Join 的次數<br>反正規化可提升讀取效能<br>正規化減少資料量"
   },
   {
     "id": 873,
     "postId": null,
     "question": "正規化是屬於資料庫設計的哪個階段？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "邏輯設計/綱要檢視"
   },
@@ -589,16 +589,16 @@
     "postId": null,
     "question": "Requirements of 1NF include?",
     "language": "en",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "Atomic attributes\u003Cbr\u003ENo repeating groups\u003Cbr\u003EUnique rows"
+    "answer": "Atomic attributes<br>No repeating groups<br>Unique rows"
   },
   {
     "id": 871,
     "postId": null,
-    "question": "當 A-\u003EB 時，稱 A 為[__1__]項。(請用小寫英文回答)",
+    "question": "當 A->B 時，稱 A 為[__1__]項。(請用小寫英文回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "determinant"
   },
@@ -607,7 +607,7 @@
     "postId": null,
     "question": "The full name of BCNF is [__1__] Normal Form. (In lowercase English with a space)",
     "language": "en",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "boyce codd"
   },
@@ -616,16 +616,16 @@
     "postId": null,
     "question": "2NF 修正了 1NF 中的哪些問題？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "部分功能相依造成的冗餘\u003Cbr\u003E新增與刪除異常"
+    "answer": "部分功能相依造成的冗餘<br>新增與刪除異常"
   },
   {
     "id": 868,
     "postId": null,
     "question": "反正規化通常應用在什麼系統以加快讀取速度？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "資料倉儲/OLAP"
   },
@@ -634,7 +634,7 @@
     "postId": null,
     "question": "消除遞移功能相依是為了達到第[__1__]正規化。(請用數字回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": 3
   },
@@ -643,7 +643,7 @@
     "postId": null,
     "question": "BCNF 是哪兩個人的名字縮寫？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "Boyce-Codd"
   },
@@ -652,25 +652,25 @@
     "postId": null,
     "question": "Which statements are correct?",
     "language": "en",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "3NF implies 2NF\u003Cbr\u003E2NF implies 1NF\u003Cbr\u003EBCNF implies 3NF"
+    "answer": "3NF implies 2NF<br>2NF implies 1NF<br>BCNF implies 3NF"
   },
   {
     "id": 864,
     "postId": null,
     "question": "反正規化 (De-normalization) 的缺點可能包括？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "增加資料重覆\u003Cbr\u003E可能產生更新異常\u003Cbr\u003E耗費更多儲存空間"
+    "answer": "增加資料重覆<br>可能產生更新異常<br>耗費更多儲存空間"
   },
   {
     "id": 863,
     "postId": null,
     "question": "為了效率刻意違反正規化稱為 [__1__]。(請用小寫英文回答字母間留一個虛線)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "de-normalization"
   },
@@ -679,34 +679,34 @@
     "postId": null,
     "question": "關於「更新異常」(Update Anomalies) 的敘述，哪些正確？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "因為資料重覆引起\u003Cbr\u003E修改異常會導致資料不一致\u003Cbr\u003E刪除異常會導致不該刪的資料也被刪除"
+    "answer": "因為資料重覆引起<br>修改異常會導致資料不一致<br>刪除異常會導致不該刪的資料也被刪除"
   },
   {
     "id": 852,
     "postId": null,
-    "question": "功能相依 A -\u003E B 中，下列敘述哪些正確？",
+    "question": "功能相依 A -> B 中，下列敘述哪些正確？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "A 決定 B\u003Cbr\u003EB 相依於 A\u003Cbr\u003EA 是決定項"
+    "answer": "A 決定 B<br>B 相依於 A<br>A 是決定項"
   },
   {
     "id": 851,
     "postId": null,
     "question": "In 1NF, how many values can each cell contain?",
     "language": "en",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "one"
   },
   {
     "id": 850,
     "postId": null,
-    "question": "遞移相依是指 A-\u003EB 且 B-\u003EC，則 A 透過 B 決定 C，其中 B 是？",
+    "question": "遞移相依是指 A->B 且 B->C，則 A 透過 B 決定 C，其中 B 是？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "非主鍵欄位"
   },
@@ -715,7 +715,7 @@
     "postId": null,
     "question": "正規化將一個大表[__1__]成小表。(請用小寫英文回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "split"
   },
@@ -724,16 +724,16 @@
     "postId": null,
     "question": "第一正規化 (1NF) 的要求包含？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "屬性不可再分割\u003Cbr\u003E沒有重複群組\u003Cbr\u003E每一橫列都是唯一的"
+    "answer": "屬性不可再分割<br>沒有重複群組<br>每一橫列都是唯一的"
   },
   {
     "id": 847,
     "postId": null,
     "question": "3NF 要求消除非主鍵欄位間的[__1__]相依。(請用小寫英文回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "transitive"
   },
@@ -742,7 +742,7 @@
     "postId": null,
     "question": "What is the symbol for Functional Dependence?",
     "language": "en",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "A -&gt; B"
   },
@@ -751,7 +751,7 @@
     "postId": null,
     "question": "複合主鍵是由幾個欄位組成的？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "多個"
   },
@@ -760,16 +760,16 @@
     "postId": null,
     "question": "Issues with Composite Keys?",
     "language": "en",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "Partial dependency risk\u003Cbr\u003ELeads to non-2NF\u003Cbr\u003EIndex overhead"
+    "answer": "Partial dependency risk<br>Leads to non-2NF<br>Index overhead"
   },
   {
     "id": 843,
     "postId": null,
     "question": "第三正規化 (3NF) 主要是為了消除何種相依性？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "遞移功能相依"
   },
@@ -778,16 +778,16 @@
     "postId": null,
     "question": "下列哪些屬於功能相依 (Functional Dependence) 的類型？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "完全功能相依\u003Cbr\u003E部分功能相依\u003Cbr\u003E遞移功能相依"
+    "answer": "完全功能相依<br>部分功能相依<br>遞移功能相依"
   },
   {
     "id": 841,
     "postId": null,
     "question": "正規化後的資料庫在[__1__]時通常需要 Join 操作。(請用小寫英文回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "query"
   },
@@ -796,25 +796,25 @@
     "postId": null,
     "question": "為什麼要進行資料庫正規化？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "減少資料重覆\u003Cbr\u003E避免更新異常\u003Cbr\u003E提升資料完整性\u003Cbr\u003E讓資料表變小"
+    "answer": "減少資料重覆<br>避免更新異常<br>提升資料完整性<br>讓資料表變小"
   },
   {
     "id": 839,
     "postId": null,
     "question": "哪些是反正規化的常見技巧？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "增加冗餘欄位\u003Cbr\u003E合併資料表\u003Cbr\u003E建立衍生性欄位"
+    "answer": "增加冗餘欄位<br>合併資料表<br>建立衍生性欄位"
   },
   {
     "id": 838,
     "postId": null,
     "question": "如果 A 決定 B，B 決定 C，則 A 到 C 存在[__1__]相依。(請用小寫英文回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "transitive"
   },
@@ -823,7 +823,7 @@
     "postId": null,
     "question": "下列何者是 3NF 的進階加強版？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "BCNF"
   },
@@ -832,16 +832,16 @@
     "postId": null,
     "question": "執行正規化的優點包含？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "節省儲存空間\u003Cbr\u003E減少更新異常\u003Cbr\u003E資料結構更清晰"
+    "answer": "節省儲存空間<br>減少更新異常<br>資料結構更清晰"
   },
   {
     "id": 835,
     "postId": null,
     "question": "如果資料表主鍵只有一個欄位，則它自動符合第[__1__]正規化。(請用數字回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": 2
   },
@@ -850,16 +850,16 @@
     "postId": null,
     "question": "3NF 解決了哪些問題？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "遞移相依造成的異常\u003Cbr\u003E非主鍵間的相依"
+    "answer": "遞移相依造成的異常<br>非主鍵間的相依"
   },
   {
     "id": 833,
     "postId": null,
     "question": "更新異常的英文總稱是 [__1__] anomalies。(請用小寫英文回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "update"
   },
@@ -868,7 +868,7 @@
     "postId": null,
     "question": "為了提高查詢效率而刻意增加資料重複性的做法稱為？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "反正規化"
   },
@@ -877,34 +877,34 @@
     "postId": null,
     "question": "哪種正規化要求主鍵中的每一個欄位都不能被非主鍵欄位決定？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "BCNF"
   },
   {
     "id": 830,
     "postId": null,
-    "question": "關於遞移相依 (Transitive Dependency) A-\u003EB, B-\u003EC，下列哪些正確？",
+    "question": "關於遞移相依 (Transitive Dependency) A->B, B->C，下列哪些正確？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "C 相依於 B\u003Cbr\u003EB 相依於 A\u003Cbr\u003EC 遞移相依於 A"
+    "answer": "C 相依於 B<br>B 相依於 A<br>C 遞移相依於 A"
   },
   {
     "id": 829,
     "postId": null,
     "question": "正規化的「原子性」(Atomicity) 是指？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "欄位不可分割\u003Cbr\u003E值是單一的"
+    "answer": "欄位不可分割<br>值是單一的"
   },
   {
     "id": 828,
     "postId": null,
     "question": "正規化程序的目的是降低資料的 [__1__]。(請用小寫英文回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "redundancy"
   },
@@ -913,7 +913,7 @@
     "postId": null,
     "question": "若欄位 A 的值可以決定欄位 B 的值，我們稱 B 何助於 A？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "相依於"
   },
@@ -922,16 +922,16 @@
     "postId": null,
     "question": "符合第三正規化 (3NF) 的條件包括哪些？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "必須符合 2NF\u003Cbr\u003E消除遞移相依"
+    "answer": "必須符合 2NF<br>消除遞移相依"
   },
   {
     "id": 825,
     "postId": null,
     "question": "What is the primary purpose of normalization to reduce?",
     "language": "en",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "Redundancy"
   },
@@ -940,34 +940,34 @@
     "postId": null,
     "question": "2NF fixes which 1NF problems?",
     "language": "en",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "Partial FD redundancy\u003Cbr\u003EInsert/Delete anomalies"
+    "answer": "Partial FD redundancy<br>Insert/Delete anomalies"
   },
   {
     "id": 823,
     "postId": null,
     "question": "正規化的過程是？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "1NF -&gt; 2NF -&gt; 3NF\u003Cbr\u003E遞增式改進"
+    "answer": "1NF -&gt; 2NF -&gt; 3NF<br>遞增式改進"
   },
   {
     "id": 822,
     "postId": null,
     "question": "Basis of normalization theory?",
     "language": "en",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "Set theory\u003Cbr\u003ERelational algebra\u003Cbr\u003EFunctional dependency"
+    "answer": "Set theory<br>Relational algebra<br>Functional dependency"
   },
   {
     "id": 821,
     "postId": null,
     "question": "每一列在資料庫中必須是唯一的，這是第[__1__]正規化的基本要求。(請用數字回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": 1
   },
@@ -976,7 +976,7 @@
     "postId": null,
     "question": "[__1__]相依是 2NF 處理的核心問題。(請用小寫英文回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "partial"
   },
@@ -985,7 +985,7 @@
     "postId": null,
     "question": "當刪除一筆資料卻導致其他不該刪除的資訊消失，這稱為？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "刪除異常"
   },
@@ -994,16 +994,16 @@
     "postId": null,
     "question": "正規化可以解決下列哪些異常狀況？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "新增異常\u003Cbr\u003E刪除異常\u003Cbr\u003E修改異常"
+    "answer": "新增異常<br>刪除異常<br>修改異常"
   },
   {
     "id": 817,
     "postId": null,
     "question": "若 A 決定 B，則稱 A 為？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "決定項"
   },
@@ -1012,7 +1012,7 @@
     "postId": null,
     "question": "哪一種異常是指無法加入新資料，除非同時具備其他不相關的資訊？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "新增異常"
   },
@@ -1021,7 +1021,7 @@
     "postId": null,
     "question": "修改異常的英文是 [__1__] anomaly。(請用小寫英文回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "modification"
   },
@@ -1030,16 +1030,16 @@
     "postId": null,
     "question": "複合主鍵 (Composite Key) 可能帶來的問題？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "容易產生部分相依\u003Cbr\u003E導致不符合 2NF\u003Cbr\u003E增加索引負擔"
+    "answer": "容易產生部分相依<br>導致不符合 2NF<br>增加索引負擔"
   },
   {
     "id": 813,
     "postId": null,
-    "question": "遞移相依涉及 A-\u003EB 和 B-\u003EC，其中 B 是[__1__]欄位。(請用小寫英文回答字母間留一個虛線)",
+    "question": "遞移相依涉及 A->B 和 B->C，其中 B 是[__1__]欄位。(請用小寫英文回答字母間留一個虛線)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "non-key"
   },
@@ -1048,7 +1048,7 @@
     "postId": null,
     "question": "正規化的主要目的是為了降低資料的什麼？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "重複性"
   },
@@ -1057,7 +1057,7 @@
     "postId": null,
     "question": "如果一個資料表已經符合 3NF，且只有單一主鍵，它通常也符合？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "BCNF"
   },
@@ -1066,16 +1066,16 @@
     "postId": null,
     "question": "下列哪些狀況會導致「修改異常」？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "資料存放在多個地方\u003Cbr\u003E更新時漏掉部分記錄"
+    "answer": "資料存放在多個地方<br>更新時漏掉部分記錄"
   },
   {
     "id": 809,
     "postId": null,
     "question": "1NF 解決了資料表中的什麼問題？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "重複群組"
   },
@@ -1084,7 +1084,7 @@
     "postId": null,
     "question": "資料庫綱要的英文是 [__1__]。(請用小寫英文回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "schema"
   },
@@ -1093,16 +1093,16 @@
     "postId": null,
     "question": "更新異常中的「新增異常」例子？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "沒學生修課就不能建立課程資料"
   },
   {
     "id": 806,
     "postId": null,
-    "question": "資料相依性分析中，X -\u003E Y 意指？",
+    "question": "資料相依性分析中，X -> Y 意指？",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "X 決定 Y"
   },
@@ -1111,7 +1111,7 @@
     "postId": null,
     "question": "1NF 要求欄位值必須具備[__1__]性，即不可再分割。(請用小寫英文回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "atomicity"
   },
@@ -1120,52 +1120,52 @@
     "postId": null,
     "question": "符合第二正規化 (2NF) 的條件包括哪些？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "必須符合 1NF\u003Cbr\u003E消除部分功能相依"
+    "answer": "必須符合 1NF<br>消除部分功能相依"
   },
   {
     "id": 803,
     "postId": null,
     "question": "正規化理論的基礎包含？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "集合論\u003Cbr\u003E關聯式代數\u003Cbr\u003E功能相依"
+    "answer": "集合論<br>關聯式代數<br>功能相依"
   },
   {
     "id": 802,
     "postId": null,
     "question": "下列敘述正確的是？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "3NF 一定符合 2NF\u003Cbr\u003E2NF 一定符合 1NF\u003Cbr\u003EBCNF 一定符合 3NF"
+    "answer": "3NF 一定符合 2NF<br>2NF 一定符合 1NF<br>BCNF 一定符合 3NF"
   },
   {
     "id": 801,
     "postId": null,
     "question": "下列哪些是資料庫設計中常見的正規形式 (Normal Forms)？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "1NF\u003Cbr\u003E2NF\u003Cbr\u003E3NF\u003Cbr\u003EBCNF"
+    "answer": "1NF<br>2NF<br>3NF<br>BCNF"
   },
   {
     "id": 800,
     "postId": null,
     "question": "如何判斷一個資料表不符合 2NF？",
     "language": "zh",
-    "type": null,
+    "type": "multiple",
     "options": [],
-    "answer": "存在複合主鍵\u003Cbr\u003E非主鍵欄位只相依於主鍵的一部分"
+    "answer": "存在複合主鍵<br>非主鍵欄位只相依於主鍵的一部分"
   },
   {
     "id": 799,
     "postId": null,
     "question": "Keywords for 3NF?",
     "language": "en",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "Transitive"
   },
@@ -1174,7 +1174,7 @@
     "postId": null,
     "question": "消除部分功能相依是為了達到第[__1__]正規化。(請用數字回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": 2
   },
@@ -1183,7 +1183,7 @@
     "postId": null,
     "question": "After normalization, the number of tables will?",
     "language": "en",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "Increase"
   },
@@ -1192,7 +1192,7 @@
     "postId": null,
     "question": "[__1__]主鍵是由兩個或多個欄位組成的。(請用小寫英文回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "composite"
   },
@@ -1201,7 +1201,7 @@
     "postId": null,
     "question": "刪除異常的英文是 [__1__] anomaly。(請用小寫英文回答)",
     "language": "zh",
-    "type": null,
+    "type": "text",
     "options": [],
     "answer": "deletion"
   },
@@ -1210,7 +1210,7 @@
     "postId": null,
     "question": "What is the English term for 正規化?",
     "language": "zh",
-    "type": null,
+    "type": "single",
     "options": [],
     "answer": "Normalization"
   }
