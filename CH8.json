@@ -1,8 +1,486 @@
 [
   {
+    "id": 939,
+    "postId": 1550,
+    "question": "Correct descriptions of 1:1 conversion?",
+    "language": "en",
+    "type": "multiple",
+    "options": [
+      "Can embed A PK in B",
+      "Can embed B PK in A",
+      "Must merge into one",
+      "Both can be FKs"
+    ],
+    "answer": [0, 1, 3]
+  },
+  {
+    "id": 932,
+    "postId": 1513,
+    "question": "An employee with multiple phone numbers uses which symbol?",
+    "language": "en",
+    "type": "single",
+    "options": [
+      "Double Oval",
+      "Dashed Oval",
+      "Diamond",
+      "Single Oval"
+    ],
+    "answer": [0]
+  },
+  {
+    "id": 875,
+    "postId": 1527,
+    "question": "When converting ERD to Table, ovals become?",
+    "language": "en",
+    "type": "single",
+    "options": [
+      "Records",
+      "Indexes",
+      "Columns (Attributes)",
+      "Tables"
+    ],
+    "answer": [2]
+  },
+  {
+    "id": 862,
+    "postId": 1565,
+    "question": "Role of Foreign Key (FK) in conversion?",
+    "language": "en",
+    "type": "multiple",
+    "options": [
+      "Establish link",
+      "Connect two tables",
+      "Ensure Ref Integrity",
+      "Replace Primary Key"
+    ],
+    "answer": [0, 1, 2]
+  },
+  {
+    "id": 861,
+    "postId": 1542,
+    "question": "Which statements about attribute categories are correct?",
+    "language": "en",
+    "type": "multiple",
+    "options": [
+      "Simple attr is indivisible",
+      "Composite attr is divisible",
+      "Derived attr needs calc",
+      "PK cannot repeat"
+    ],
+    "answer": [0, 1, 2, 3]
+  },
+  {
+    "id": 860,
+    "postId": 1566,
+    "question": "Meaning of numbers (1, M) on diamonds?",
+    "language": "en",
+    "type": "multiple",
+    "options": [
+      "Aid conversion",
+      "Row count",
+      "Cardinality",
+      "Attribute count"
+    ],
+    "answer": [0, 2]
+  },
+  {
+    "id": 859,
+    "postId": 1536,
+    "question": "What does \"N\" in an M:N relationship represent?",
+    "language": "en",
+    "type": "single",
+    "options": [
+      "Single",
+      "Many",
+      "Zero",
+      "Negative"
+    ],
+    "answer": [1]
+  },
+  {
+    "id": 858,
+    "postId": 1544,
+    "question": "What are the types of \"Relationship\"?",
+    "language": "en",
+    "type": "multiple",
+    "options": [
+      "0.042361111111111",
+      "0.00069444444444444",
+      "M:N",
+      "1:M"
+    ],
+    "answer": [0, 2, 3]
+  },
+  {
+    "id": 857,
+    "postId": 1517,
+    "question": "The relationship between Weak and Strong entities uses?",
+    "language": "en",
+    "type": "single",
+    "options": [
+      "Double Diamond",
+      "Dashed Diamond",
+      "Single Diamond",
+      "Circle"
+    ],
+    "answer": [0]
+  },
+  {
+    "id": 856,
+    "postId": 1541,
+    "question": "What are the three core components of the ER Model?",
+    "language": "en",
+    "type": "multiple",
+    "options": [
+      "Relationship",
+      "Attribute",
+      "Index",
+      "Entity"
+    ],
+    "answer": [0, 1, 3]
+  },
+  {
+    "id": 855,
+    "postId": 1582,
+    "question": "A double oval represents a [__1__] attribute. (please answer in lowercase english with hyphen)",
+    "language": "en",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "multi-valued"
+    ]
+  },
+  {
+    "id": 854,
+    "postId": 1599,
+    "question": "Names inside rectangles represent [__1__] in a database. (please answer in lowercase english)",
+    "language": "en",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "entity"
+    ]
+  },
+  {
+    "id": 793,
+    "postId": null,
+    "question": "In ER to Table rules, the [__1__] side refers to the [2] side. (please answer in lowercase letters/numbers)",
+    "language": "en",
+    "type": null,
+    "options": [],
+    "answer": "m 1"
+  },
+  {
+    "id": 792,
+    "postId": 1559,
+    "question": "Primary Key marking in an ERD?",
+    "language": "en",
+    "type": "multiple",
+    "options": [
+      "Dashed line",
+      "Core of entity",
+      "Unique identifier",
+      "Oval with underline"
+    ],
+    "answer": [1, 2, 3]
+  },
+  {
+    "id": 791,
+    "postId": 1524,
+    "question": "After M:N conversion, the new table's PK is usually?",
+    "language": "en",
+    "type": "single",
+    "options": [
+      "Random ID",
+      "Only N side PK",
+      "Only M side PK",
+      "Combination of both PKs"
+    ],
+    "answer": [3]
+  },
+  {
+    "id": 790,
+    "postId": 1549,
+    "question": "Characteristics of a Weak Entity?",
+    "language": "en",
+    "type": "multiple",
+    "options": [
+      "Cannot have attributes",
+      "Double rectangle symbol",
+      "Depends on Strong",
+      "No full PK usually"
+    ],
+    "answer": [1, 2, 3]
+  },
+  {
+    "id": 789,
+    "postId": 1592,
+    "question": "ER stands for [__1__]. (please answer in lowercase english separated by space)",
+    "language": "en",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "entity relationship"
+    ]
+  },
+  {
+    "id": 788,
+    "postId": 1603,
+    "question": "Entities, attributes, and relationships form the [__1__] model. (please answer in uppercase english abbreviation)",
+    "language": "en",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "ER"
+    ]
+  },
+  {
+    "id": 787,
+    "postId": 1594,
+    "question": "When an entity relates to itself, it is a [__1__] relationship. (please answer in lowercase english)",
+    "language": "en",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "recursive"
+    ]
+  },
+  {
+    "id": 786,
+    "postId": null,
+    "question": "How are composite attributes usually handled in a Table?",
+    "language": "en",
+    "type": null,
+    "options": [],
+    "answer": "Split into simple columns"
+  },
+  {
+    "id": 785,
+    "postId": 1600,
+    "question": "An attribute containing \"First\" and \"Last\" name is [__1__]. (please answer in lowercase english)",
+    "language": "en",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "composite"
+    ]
+  },
+  {
+    "id": 784,
+    "postId": 1605,
+    "question": "1:1 relationships are established via [__1__] embedding. (please answer in lowercase english abbreviation)",
+    "language": "en",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "fk"
+    ]
+  },
+  {
+    "id": 783,
+    "postId": null,
+    "question": "A PK attribute has an [__1__] under the text in an oval. (please answer in lowercase english)",
+    "language": "en",
+    "type": null,
+    "options": [],
+    "answer": "underline"
+  },
+  {
+    "id": 782,
+    "postId": 1548,
+    "question": "Features of Derived Attributes?",
+    "language": "en",
+    "type": "multiple",
+    "options": [
+      "Must be PK",
+      "Dashed oval symbol",
+      "Derived from others",
+      "Not stored directly"
+    ],
+    "answer": [1, 2, 3]
+  },
+  {
+    "id": 781,
+    "postId": 1547,
+    "question": "Which of the following are examples of \"Entity\"?",
+    "language": "en",
+    "type": "multiple",
+    "options": [
+      "Teacher",
+      "Course",
+      "Student",
+      "Name"
+    ],
+    "answer": [0, 1, 2]
+  },
+  {
+    "id": 780,
+    "postId": 1567,
+    "question": "Main benefits of the ER model?",
+    "language": "en",
+    "type": "multiple",
+    "options": [
+      "Easy to understand",
+      "Fixed structure",
+      "H/W S/W independent",
+      "Bridge reqs & dev"
+    ],
+    "answer": [0, 2, 3]
+  },
+  {
+    "id": 779,
+    "postId": 1583,
+    "question": "A dashed oval represents a [__1__] attribute. (please answer in lowercase english)",
+    "language": "en",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "derived"
+    ]
+  },
+  {
+    "id": 778,
+    "postId": null,
+    "question": "Dashed ovals mean the value does not need to be [__1__]d in the DB. (please answer in lowercase english)",
+    "language": "en",
+    "type": null,
+    "options": [],
+    "answer": "store"
+  },
+  {
+    "id": 777,
+    "postId": 1610,
+    "question": "基數「1」在菱形端代表該實體參與[__1__]次關係。(請用小寫英文回答)",
+    "language": "zh",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "one"
+    ]
+  },
+  {
+    "id": 776,
+    "postId": 1555,
+    "question": "為什麼要使用 ER Model？",
+    "language": "zh",
+    "type": "multiple",
+    "options": [
+      "自動寫程式碼",
+      "視覺化資料結構",
+      "方便轉成關聯表",
+      "溝通設計需求"
+    ],
+    "answer": [1, 2, 3]
+  },
+  {
+    "id": 775,
+    "postId": 1539,
+    "question": "弱實體必須依賴強實體的什麼完整性？",
+    "language": "zh",
+    "type": "single",
+    "options": [
+      "值域完整性",
+      "參考完整性",
+      "實體完整性",
+      "系統完整性"
+    ],
+    "answer": [1]
+  },
+  {
+    "id": 774,
+    "postId": null,
+    "question": "In 1:1 conversion, the most common approach is?",
+    "language": "en",
+    "type": null,
+    "options": [],
+    "answer": "Embed PK as FK"
+  },
+  {
+    "id": 773,
+    "postId": 1572,
+    "question": "Correct statements on weak relationships?",
+    "language": "en",
+    "type": "multiple",
+    "options": [
+      "Double diamond symbol",
+      "Strong PK must embed",
+      "Weak can stand alone",
+      "Identifying relationship"
+    ],
+    "answer": [0, 1, 3]
+  },
+  {
+    "id": 772,
+    "postId": 1568,
+    "question": "Which elements are connected in ERD?",
+    "language": "en",
+    "type": "multiple",
+    "options": [
+      "Entity",
+      "Attribute",
+      "Trigger",
+      "Relationship"
+    ],
+    "answer": [0, 1, 3]
+  },
+  {
+    "id": 771,
+    "postId": 1570,
+    "question": "1:1 關係在 ER 圖中如何識別？",
+    "language": "zh",
+    "type": "multiple",
+    "options": [
+      "代表獨佔關係",
+      "菱形兩端標註 1",
+      "代表多對一",
+      "不需要轉換"
+    ],
+    "answer": [0, 1]
+  },
+  {
+    "id": 770,
+    "postId": 1589,
+    "question": "A [__1__] entity depends on a strong entity to exist. (please answer in lowercase english)",
+    "language": "en",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "weak"
+    ]
+  },
+  {
+    "id": 769,
+    "postId": 1526,
+    "question": "弱實體通常透過什麼來輔助識別？",
+    "language": "zh",
+    "type": "single",
+    "options": [
+      "強實體的主鍵",
+      "隨機編號",
+      "自己的主鍵",
+      "衍生屬性"
+    ],
+    "answer": [0]
+  },
+  {
+    "id": 768,
+    "postId": 1574,
+    "question": "Lines between attributes and entities mean?",
+    "language": "en",
+    "type": "multiple",
+    "options": [
+      "1:1 link",
+      "Attribute belongs to Ent",
+      "Data stored together",
+      "Meaningless"
+    ],
+    "answer": [1, 2]
+  },
+  {
     "id": 767,
     "postId": 1551,
     "question": "Terms for Attribute in a Table?",
+    "language": "en",
     "type": "multiple",
     "options": [
       "Column",
@@ -16,6 +494,7 @@
     "id": 766,
     "postId": 1567,
     "question": "實體關係模式的主要優點？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "橋接需求與開發",
@@ -29,6 +508,7 @@
     "id": 765,
     "postId": 1507,
     "question": "In an ER Model, what are \"Student\" or \"Course\" usually called?",
+    "language": "en",
     "type": "single",
     "options": [
       "Keys",
@@ -42,6 +522,7 @@
     "id": 764,
     "postId": 1525,
     "question": "If a relationship has attributes (like grades), they go?",
+    "language": "en",
     "type": "single",
     "options": [
       "Discarded",
@@ -55,6 +536,7 @@
     "id": 763,
     "postId": 1514,
     "question": "由「入學年份」推算的「年級」在 ER 圖中如何表示？",
+    "language": "zh",
     "type": "single",
     "options": [
       "虛線橢圓",
@@ -68,6 +550,7 @@
     "id": 762,
     "postId": 1581,
     "question": "[__1__]屬性可以細分為更小的簡單屬性。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -78,6 +561,7 @@
     "id": 761,
     "postId": 1532,
     "question": "ER model is mainly used in which DB design phase?",
+    "language": "en",
     "type": "single",
     "options": [
       "Implementation",
@@ -91,6 +575,7 @@
     "id": 760,
     "postId": 1519,
     "question": "One teacher teaching many students is what relationship type?",
+    "language": "en",
     "type": "single",
     "options": [
       "0.042361111111111",
@@ -104,6 +589,7 @@
     "id": 759,
     "postId": 1539,
     "question": "Weak entities rely on which integrity of strong entities?",
+    "language": "en",
     "type": "single",
     "options": [
       "Domain Integrity",
@@ -117,6 +603,7 @@
     "id": 758,
     "postId": 1546,
     "question": "M:N 關係轉換時，新建立的資料表會包含？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "只有實體 A 主鍵",
@@ -130,6 +617,7 @@
     "id": 757,
     "postId": 1609,
     "question": "一對多關係轉換規則中，多方實體轉換後的資料表須增加一個[__1__]。(請用小寫英文縮寫)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -140,6 +628,7 @@
     "id": 756,
     "postId": 1549,
     "question": "弱實體 (Weak Entity) 的特性包括？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "不可有任何屬性",
@@ -153,6 +642,7 @@
     "id": 755,
     "postId": 1515,
     "question": "依附於強實體而存在的實體稱為？",
+    "language": "zh",
     "type": "single",
     "options": [
       "複合實體",
@@ -166,6 +656,7 @@
     "id": 754,
     "postId": 1569,
     "question": "關於複合主鍵 (Composite Key) 在轉換後的特點？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "只有一個欄位",
@@ -179,6 +670,7 @@
     "id": 753,
     "postId": 1588,
     "question": "In 1:M, the one-side [__1__] is embedded in the many-side as [__2__]. (please answer in lowercase english abbreviations separated by space)",
+    "language": "en",
     "type": "text",
     "options": [],
     "answer": [
@@ -190,6 +682,7 @@
     "id": 752,
     "postId": 1556,
     "question": "What can a Relationship connect?",
+    "language": "en",
     "type": "multiple",
     "options": [
       "Entity to Attr",
@@ -203,6 +696,7 @@
     "id": 751,
     "postId": 1529,
     "question": "下列何者是描述真實世界的物件？",
+    "language": "zh",
     "type": "single",
     "options": [
       "關係",
@@ -216,6 +710,7 @@
     "id": 750,
     "postId": 1557,
     "question": "關於強實體與弱實體的敘述，哪些正確？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "強實體有主鍵",
@@ -229,6 +724,7 @@
     "id": 749,
     "postId": 1526,
     "question": "How is a Weak Entity usually identified?",
+    "language": "en",
     "type": "single",
     "options": [
       "Random number",
@@ -242,6 +738,7 @@
     "id": 748,
     "postId": 1606,
     "question": "若主鍵包含多個欄位，則此主鍵稱為[__1__]主鍵。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -250,16 +747,23 @@
   },
   {
     "id": 747,
-    "postId": null,
+    "postId": 1568,
     "question": "哪些是 ER 圖中用來連線的元素？",
-    "type": null,
-    "options": [],
-    "answer": "實體\u003Cbr\u003E關係\u003Cbr\u003E屬性"
+    "language": "zh",
+    "type": "multiple",
+    "options": [
+      "關係",
+      "屬性",
+      "觸發器",
+      "實體"
+    ],
+    "answer": [0, 1, 3]
   },
   {
     "id": 746,
     "postId": 1536,
     "question": "M:N 關係中的「N」代表什麼？",
+    "language": "zh",
     "type": "single",
     "options": [
       "零",
@@ -273,6 +777,7 @@
     "id": 745,
     "postId": 1516,
     "question": "弱實體在 ER 圖中使用的符號是？",
+    "language": "zh",
     "type": "single",
     "options": [
       "雙線菱形",
@@ -286,6 +791,7 @@
     "id": 744,
     "postId": 1506,
     "question": "ER Model 主要是用來描述什麼之間關係的工具？",
+    "language": "zh",
     "type": "single",
     "options": [
       "程式與硬體",
@@ -299,6 +805,7 @@
     "id": 743,
     "postId": 1558,
     "question": "M:N 關係中，聯合資料表的主鍵特性？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "僅包含一邊主鍵",
@@ -312,6 +819,7 @@
     "id": 742,
     "postId": 1528,
     "question": "ER 圖轉 Table 時，長方形會變成？",
+    "language": "zh",
     "type": "single",
     "options": [
       "鍵值",
@@ -323,24 +831,37 @@
   },
   {
     "id": 741,
-    "postId": null,
+    "postId": 1552,
     "question": "Handling of Multi-valued Attributes?",
-    "type": null,
-    "options": [],
-    "answer": "Double oval symbol\u003Cbr\u003ESeparate into a Table"
+    "language": "en",
+    "type": "multiple",
+    "options": [
+      "Ignore",
+      "Double oval symbol",
+      "Keep one column in original",
+      "Separate into a Table"
+    ],
+    "answer": [1, 3]
   },
   {
     "id": 740,
-    "postId": null,
+    "postId": 1529,
     "question": "Which describes a real-world object?",
-    "type": null,
-    "options": [],
-    "answer": "Entity"
+    "language": "en",
+    "type": "single",
+    "options": [
+      "Relationship",
+      "Data type",
+      "Entity",
+      "Attribute"
+    ],
+    "answer": [2]
   },
   {
     "id": 739,
     "postId": 1599,
     "question": "長方形內標註的名稱通常代表資料庫中的[__1__]。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -349,16 +870,23 @@
   },
   {
     "id": 738,
-    "postId": null,
+    "postId": 1518,
     "question": "一位老師對應一個車位，這屬於什麼關係類型？",
-    "type": null,
-    "options": [],
-    "answer": 0.042361111111111
+    "language": "zh",
+    "type": "single",
+    "options": [
+      "0.042361111111111",
+      "N:1",
+      "M:N",
+      "1:M"
+    ],
+    "answer": [0]
   },
   {
     "id": 737,
     "postId": 1543,
     "question": "ER 圖中，「雙線」符號常用於表示哪些概念？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "弱實體關係",
@@ -372,6 +900,7 @@
     "id": 736,
     "postId": 1591,
     "question": "When ERD converts to Tables, rectangles become [__1__]. (please answer in lowercase english)",
+    "language": "en",
     "type": "text",
     "options": [],
     "answer": [
@@ -382,6 +911,7 @@
     "id": 735,
     "postId": 1522,
     "question": "1:M 關係轉換時，外鍵應放在哪一方？",
+    "language": "zh",
     "type": "single",
     "options": [
       "「多」的那方",
@@ -393,40 +923,57 @@
   },
   {
     "id": 734,
-    "postId": null,
+    "postId": 1566,
     "question": "下列關於菱形標註數字 (1, M) 的意義？",
-    "type": null,
-    "options": [],
-    "answer": "表示關係基數\u003Cbr\u003E輔助 Table 轉換"
+    "language": "zh",
+    "type": "multiple",
+    "options": [
+      "表示關係基數",
+      "標註資料筆數",
+      "輔助 Table 轉換",
+      "標註屬性個數"
+    ],
+    "answer": [0, 2]
   },
   {
     "id": 733,
-    "postId": null,
+    "postId": 1538,
     "question": "複合屬性在 Table 中通常會如何處理？",
-    "type": null,
-    "options": [],
-    "answer": "拆解成多個簡單欄位"
+    "language": "zh",
+    "type": "single",
+    "options": [
+      "忽略",
+      "拆解成多個簡單欄位",
+      "合併成一格",
+      "刪除"
+    ],
+    "answer": [1]
   },
   {
     "id": 732,
     "postId": null,
     "question": "What does the ER Model primarily describe the relationship between?",
+    "language": "en",
     "type": null,
     "options": [],
     "answer": "Entities and Entities"
   },
   {
     "id": 731,
-    "postId": null,
+    "postId": 1590,
     "question": "When ERD converts to Tables, ovals become [__1__]. (please answer in lowercase english)",
-    "type": null,
+    "language": "en",
+    "type": "text",
     "options": [],
-    "answer": "column"
+    "answer": [
+      "column"
+    ]
   },
   {
     "id": 730,
     "postId": 1520,
     "question": "學生與課程之間的選課關係通常屬於？",
+    "language": "zh",
     "type": "single",
     "options": [
       "N:1",
@@ -440,6 +987,7 @@
     "id": 729,
     "postId": 1552,
     "question": "多值屬性 (Multi-valued Attribute) 的處理方式？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "原 Table 留一欄",
@@ -453,6 +1001,7 @@
     "id": 728,
     "postId": 1519,
     "question": "一位老師教導多位學生，這屬於什麼關係類型？",
+    "language": "zh",
     "type": "single",
     "options": [
       "0.042361111111111",
@@ -464,16 +1013,23 @@
   },
   {
     "id": 727,
-    "postId": null,
+    "postId": 1530,
     "question": "Who proposed the Chen ER Model?",
-    "type": null,
-    "options": [],
-    "answer": "Peter Chen"
+    "language": "en",
+    "type": "single",
+    "options": [
+      "Peter Chen",
+      "Codd",
+      "Jobs",
+      "Gates"
+    ],
+    "answer": [0]
   },
   {
     "id": 726,
     "postId": 1588,
     "question": "1:M 關係轉換時，一方的[__1__]會嵌入到多方作為[__2__]。(請用小寫英文縮寫字母間留一個空白)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -485,6 +1041,7 @@
     "id": 725,
     "postId": null,
     "question": "Why use the ER Model?",
+    "language": "en",
     "type": null,
     "options": [],
     "answer": "Visualize data structure\u003Cbr\u003ECommunicate design\u003Cbr\u003EEasy Table conversion"
@@ -493,6 +1050,7 @@
     "id": 724,
     "postId": 1535,
     "question": "虛線橢圓代表的屬性，其值是？",
+    "language": "zh",
     "type": "single",
     "options": [
       "計算出來的",
@@ -506,6 +1064,7 @@
     "id": 723,
     "postId": 1570,
     "question": "How is a 1:1 relationship identified in ERD?",
+    "language": "en",
     "type": "multiple",
     "options": [
       "1 at both ends",
@@ -519,6 +1078,7 @@
     "id": 722,
     "postId": 1589,
     "question": "[__1__]實體是指必須依附於強實體才能存在的實體。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -529,6 +1089,7 @@
     "id": 721,
     "postId": 1537,
     "question": "ER 圖中的直線連接著什麼？",
+    "language": "zh",
     "type": "single",
     "options": [
       "實體與實體",
@@ -542,6 +1103,7 @@
     "id": 720,
     "postId": 1532,
     "question": "ER 模型主要用於資料庫設計的哪個階段？",
+    "language": "zh",
     "type": "single",
     "options": [
       "維護階段",
@@ -555,6 +1117,7 @@
     "id": 719,
     "postId": 1608,
     "question": "For addresses in tables, city and street become separate [__1__]. (please answer in lowercase english)",
+    "language": "en",
     "type": "text",
     "options": [],
     "answer": [
@@ -565,6 +1128,7 @@
     "id": 718,
     "postId": 1510,
     "question": "ER 圖中，用來表示「關係」的符號是？",
+    "language": "zh",
     "type": "single",
     "options": [
       "橢圓形",
@@ -578,6 +1142,7 @@
     "id": 717,
     "postId": 1556,
     "question": "關係 (Relationship) 可以連接哪些項目？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "實體與實體",
@@ -591,6 +1156,7 @@
     "id": 716,
     "postId": 1543,
     "question": "What concepts do \"double-line\" symbols represent in ERD?",
+    "language": "en",
     "type": "multiple",
     "options": [
       "Weak Relationship",
@@ -604,6 +1170,7 @@
     "id": 715,
     "postId": 1578,
     "question": "屬性在 ER 圖中是以[__1__]形狀來表示。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -614,6 +1181,7 @@
     "id": 714,
     "postId": 1522,
     "question": "In 1:M conversion, where should the FK be placed?",
+    "language": "en",
     "type": "single",
     "options": [
       "The \"Many\" side",
@@ -627,6 +1195,7 @@
     "id": 713,
     "postId": 1603,
     "question": "實體、屬性與關係構成了[__1__]模式。(請用大寫英文縮寫)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -637,6 +1206,7 @@
     "id": 712,
     "postId": 1542,
     "question": "下列關於屬性分類的敘述，哪些是正確的？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "複合屬性可細分",
@@ -650,6 +1220,7 @@
     "id": 711,
     "postId": 1534,
     "question": "關係轉換成 Table 時，其名稱通常取自？",
+    "language": "zh",
     "type": "single",
     "options": [
       "屬性名",
@@ -663,6 +1234,7 @@
     "id": 710,
     "postId": 1580,
     "question": "實體的主鍵屬性會在橢圓形內的文字下方加[__1__]。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -673,6 +1245,7 @@
     "id": 709,
     "postId": 1602,
     "question": "選課關係中，學生成績是屬於[__1__]的屬性。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -683,6 +1256,7 @@
     "id": 708,
     "postId": 1553,
     "question": "Examples of Composite Attributes?",
+    "language": "en",
     "type": "multiple",
     "options": [
       "Name (First, Last)",
@@ -696,6 +1270,7 @@
     "id": 707,
     "postId": 1565,
     "question": "在轉換規則中，外鍵 (FK) 的作用是？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "代替主鍵",
@@ -709,6 +1284,7 @@
     "id": 706,
     "postId": 1544,
     "question": "關於「關係 (Relationship)」的種類包含哪些？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "零對一 (0:1)",
@@ -722,6 +1298,7 @@
     "id": 705,
     "postId": 1525,
     "question": "若關係本身有屬性（如選課成績），轉換時應？",
+    "language": "zh",
     "type": "single",
     "options": [
       "放在學生表",
@@ -735,6 +1312,7 @@
     "id": 704,
     "postId": 1579,
     "question": "A relationship is represented by a [__1__] shape in ERD. (please answer in lowercase english)",
+    "language": "en",
     "type": "text",
     "options": [],
     "answer": [
@@ -745,6 +1323,7 @@
     "id": 703,
     "postId": 1582,
     "question": "在 ER 圖中，雙線橢圓代表的是[__1__]屬性。(請用小寫英文回答連字號)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -755,6 +1334,7 @@
     "id": 702,
     "postId": 1593,
     "question": "關係的對應數量（如 1:1, 1:M）稱為[__1__]。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -765,6 +1345,7 @@
     "id": 701,
     "postId": 1559,
     "question": "下列關於主鍵 (Primary Key) 在 ER 圖的標示？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "虛線標示",
@@ -778,6 +1359,7 @@
     "id": 700,
     "postId": 1587,
     "question": "After M:N conversion, a new [__1__] table is needed. (please answer in lowercase english)",
+    "language": "en",
     "type": "text",
     "options": [],
     "answer": [
@@ -788,6 +1370,7 @@
     "id": 699,
     "postId": 1516,
     "question": "What is the symbol for a Weak Entity in an ER Diagram?",
+    "language": "en",
     "type": "single",
     "options": [
       "Double Rectangle",
@@ -801,6 +1384,7 @@
     "id": 698,
     "postId": 1563,
     "question": "Considerations when designing ER Model?",
+    "language": "en",
     "type": "multiple",
     "options": [
       "Redundancy",
@@ -814,6 +1398,7 @@
     "id": 697,
     "postId": 1561,
     "question": "ER 圖中的「菱形」轉換後可能變成？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "索引",
@@ -827,6 +1412,7 @@
     "id": 696,
     "postId": 1592,
     "question": "ER 的全名是 [__1__]。(請用小寫英文回答字母間留一空格)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -837,6 +1423,7 @@
     "id": 695,
     "postId": 1530,
     "question": "Chen 氏 ER Model 是由誰提出的？",
+    "language": "zh",
     "type": "single",
     "options": [
       "Gates",
@@ -850,6 +1437,7 @@
     "id": 694,
     "postId": 1560,
     "question": "下列哪些屬於 1:M 關係的實例？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "顧客與訂單",
@@ -863,6 +1451,7 @@
     "id": 693,
     "postId": 1595,
     "question": "M:N 關係轉換產生的聯合表，其主鍵通常由兩個[__1__]組成。(請用小寫英文縮寫)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -873,6 +1462,7 @@
     "id": 692,
     "postId": 1598,
     "question": "ER 模型主要用於資料庫的[__1__]設計階段。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -883,6 +1473,7 @@
     "id": 691,
     "postId": 1562,
     "question": "遞迴關係 (Recursive Relationship) 是指？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "實體與自己建立關係",
@@ -896,6 +1487,7 @@
     "id": 690,
     "postId": 1524,
     "question": "M:N 關係轉換後，新資料表的主鍵通常是？",
+    "language": "zh",
     "type": "single",
     "options": [
       "隨機 ID",
@@ -909,6 +1501,7 @@
     "id": 689,
     "postId": 1509,
     "question": "ER 圖中，用來表示「屬性」的符號是？",
+    "language": "zh",
     "type": "single",
     "options": [
       "長方形",
@@ -922,6 +1515,7 @@
     "id": 688,
     "postId": 1574,
     "question": "屬性與實體的連線通常表示？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "無任何意義",
@@ -935,6 +1529,7 @@
     "id": 687,
     "postId": 1511,
     "question": "哪種屬性在 ER 圖中會在橢圓形內的文字下方加底線？",
+    "language": "zh",
     "type": "single",
     "options": [
       "主鍵屬性",
@@ -948,6 +1543,7 @@
     "id": 686,
     "postId": 1548,
     "question": "衍生屬性 (Derived Attribute) 的特點有哪些？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "必須是主鍵",
@@ -961,6 +1557,7 @@
     "id": 685,
     "postId": 1607,
     "question": "[__1__]圖是實體關係圖的中文簡稱。(請用大寫英文縮寫)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -971,6 +1568,7 @@
     "id": 684,
     "postId": 1572,
     "question": "下列關於弱實體關係的敘述正確的是？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "弱實體可以獨立存在",
@@ -984,6 +1582,7 @@
     "id": 683,
     "postId": 1579,
     "question": "關係在 ER 圖中是以[__1__]形狀來表示。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -994,6 +1593,7 @@
     "id": 682,
     "postId": 1585,
     "question": "強弱實體間的關係稱為[__1__]關係。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -1004,6 +1604,7 @@
     "id": 681,
     "postId": 1576,
     "question": "ER Model 主要是用來描述[__1__]之間關係的工具。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -1014,6 +1615,7 @@
     "id": 680,
     "postId": 1586,
     "question": "1:M 關係中，M 縮寫代表[__1__]。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -1024,6 +1626,7 @@
     "id": 679,
     "postId": 1571,
     "question": "實體、屬性、關係三者轉換為 Table 的基本對應？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "屬性轉欄位",
@@ -1037,6 +1640,7 @@
     "id": 678,
     "postId": 1608,
     "question": "地址轉為資料表時，縣市與街道應變成獨立的[__1__]。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -1047,6 +1651,7 @@
     "id": 677,
     "postId": 1577,
     "question": "實體在 ER 圖中是以[__1__]形狀來表示。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -1057,6 +1662,7 @@
     "id": 676,
     "postId": 1537,
     "question": "What do the lines in an ERD connect?",
+    "language": "en",
     "type": "single",
     "options": [
       "Entities to entities",
@@ -1070,6 +1676,7 @@
     "id": 675,
     "postId": 1598,
     "question": "ER model is mainly used in the [__1__] design phase. (please answer in lowercase english)",
+    "language": "en",
     "type": "text",
     "options": [],
     "answer": [
@@ -1080,6 +1687,7 @@
     "id": 674,
     "postId": 1507,
     "question": "在 ER Model 中，「學生」或「課程」通常被稱為？",
+    "language": "zh",
     "type": "single",
     "options": [
       "關係",
@@ -1093,6 +1701,7 @@
     "id": 673,
     "postId": 1523,
     "question": "M:N 關係轉換成資料表時，通常會？",
+    "language": "zh",
     "type": "single",
     "options": [
       "合併成一個表",
@@ -1106,6 +1715,7 @@
     "id": 672,
     "postId": 1540,
     "question": "下列哪項不是 ER Model 的基本組成？",
+    "language": "zh",
     "type": "single",
     "options": [
       "關係",
@@ -1119,6 +1729,7 @@
     "id": 671,
     "postId": 1558,
     "question": "PK features of M:N junction table?",
+    "language": "en",
     "type": "multiple",
     "options": [
       "No other columns",
@@ -1132,6 +1743,7 @@
     "id": 670,
     "postId": 1573,
     "question": "Before drawing ERD, a designer should?",
+    "language": "en",
     "type": "multiple",
     "options": [
       "Analyze ent/rels",
@@ -1145,6 +1757,7 @@
     "id": 669,
     "postId": 1531,
     "question": "「性別」在 ER 圖中屬於哪種屬性？",
+    "language": "zh",
     "type": "single",
     "options": [
       "簡單屬性",
@@ -1158,6 +1771,7 @@
     "id": 668,
     "postId": 1596,
     "question": "[__1__] Chen 是 ER Model 的創始人。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -1168,6 +1782,7 @@
     "id": 667,
     "postId": 1553,
     "question": "複合屬性 (Composite Attribute) 的例子？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "性別",
@@ -1181,6 +1796,7 @@
     "id": 666,
     "postId": 1563,
     "question": "設計 ER Model 時應考慮？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "實體的屬性",
@@ -1194,6 +1810,7 @@
     "id": 665,
     "postId": 1551,
     "question": "屬性 (Attribute) 在 Table 中對應的稱呼可以是？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "序組 (Tuple)",
@@ -1207,6 +1824,7 @@
     "id": 654,
     "postId": 1527,
     "question": "ER 圖轉 Table 時，橢圓形會變成？",
+    "language": "zh",
     "type": "single",
     "options": [
       "資料表",
@@ -1220,6 +1838,7 @@
     "id": 653,
     "postId": 1520,
     "question": "The relationship between students and courses is usually?",
+    "language": "en",
     "type": "single",
     "options": [
       "M:N",
@@ -1233,6 +1852,7 @@
     "id": 652,
     "postId": 1587,
     "question": "M:N 關係轉換後，需要產生一個新的[__1__]資料表。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -1243,6 +1863,7 @@
     "id": 651,
     "postId": 1508,
     "question": "ER 圖中，用來表示「實體」的符號是？",
+    "language": "zh",
     "type": "single",
     "options": [
       "菱形",
@@ -1256,6 +1877,7 @@
     "id": 650,
     "postId": 1605,
     "question": "一對一關係通常透過[__1__]嵌入來建立連繫。(請用小寫英文縮寫)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -1266,6 +1888,7 @@
     "id": 649,
     "postId": 1591,
     "question": "ER 圖轉換為資料表後，長方形變成[__1__]。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -1276,6 +1899,7 @@
     "id": 648,
     "postId": 1545,
     "question": "1:M 關係轉換為關聯表時，下列哪些作法正確？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "產生兩個資料表",
@@ -1289,6 +1913,7 @@
     "id": 647,
     "postId": 1557,
     "question": "Statements on Strong/Weak entities?",
+    "language": "en",
     "type": "multiple",
     "options": [
       "Strong has PK",
@@ -1302,6 +1927,7 @@
     "id": 646,
     "postId": 1586,
     "question": "In 1:M, the abbreviation M stands for [__1__]. (please answer in lowercase english)",
+    "language": "en",
     "type": "text",
     "options": [],
     "answer": [
@@ -1312,6 +1938,7 @@
     "id": 645,
     "postId": 1601,
     "question": "ER 圖轉 Table 規則中，[__1__]方通常會參考[2]方。(請用小寫英文數字)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -1322,6 +1949,7 @@
     "id": 644,
     "postId": 1517,
     "question": "弱實體與強實體之間的關係，其符號為？",
+    "language": "zh",
     "type": "single",
     "options": [
       "圓形",
@@ -1335,6 +1963,7 @@
     "id": 643,
     "postId": 1521,
     "question": "在 1:1 關係轉換中，最常見的作法是？",
+    "language": "zh",
     "type": "single",
     "options": [
       "刪除其中一表",
@@ -1348,6 +1977,7 @@
     "id": 642,
     "postId": 1575,
     "question": "M:N 關係轉換後的聯合表名稱建議？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "實體A_實體B",
@@ -1361,6 +1991,7 @@
     "id": 641,
     "postId": 1547,
     "question": "下列哪些屬於「實體 (Entity)」的範例？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "課程",
@@ -1374,6 +2005,7 @@
     "id": 640,
     "postId": 1604,
     "question": "虛線橢圓表示其數值不需[__1__]入資料庫。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -1384,6 +2016,7 @@
     "id": 639,
     "postId": 1533,
     "question": "一個員工只有一個身分證字號，這屬於？",
+    "language": "zh",
     "type": "single",
     "options": [
       "1:M",
@@ -1397,6 +2030,7 @@
     "id": 638,
     "postId": 1550,
     "question": "下列關於 1:1 關係轉換的描述，正確的是？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "必須強迫合併成一表",
@@ -1410,6 +2044,7 @@
     "id": 637,
     "postId": 1512,
     "question": "「地址」可以細分為省、市、區，這屬於什麼屬性？",
+    "language": "zh",
     "type": "single",
     "options": [
       "簡單屬性",
@@ -1423,6 +2058,7 @@
     "id": 636,
     "postId": 1554,
     "question": "在 ER 圖轉 Table 時，哪些會變成資料表？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "簡單屬性",
@@ -1436,6 +2072,7 @@
     "id": 635,
     "postId": 1546,
     "question": "What does the junction table for M:N contain?",
+    "language": "en",
     "type": "multiple",
     "options": [
       "Entity B PK",
@@ -1449,6 +2086,7 @@
     "id": 634,
     "postId": 1584,
     "question": "弱實體通常以[__1__]長方形來表示。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -1459,6 +2097,7 @@
     "id": 633,
     "postId": 1594,
     "question": "當實體與自己建立關係，稱為[__1__]關係。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -1469,6 +2108,7 @@
     "id": 632,
     "postId": 1590,
     "question": "ER 圖轉換為資料表後，橢圓形變成[__1__]。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -1479,6 +2119,7 @@
     "id": 631,
     "postId": 1600,
     "question": "若一個屬性包含「姓」與「名」，這是一個[__1__]屬性。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -1489,6 +2130,7 @@
     "id": 630,
     "postId": 1564,
     "question": "多值屬性 (如：證照) 為何要獨立成表？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "符合正規化",
@@ -1502,6 +2144,7 @@
     "id": 629,
     "postId": 1597,
     "question": "多值屬性獨立成表後，其主鍵與原表主鍵形成[__1__]主鍵。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
@@ -1512,6 +2155,7 @@
     "id": 628,
     "postId": 1541,
     "question": "ER Model 的三大核心組成要素為何？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "實體 (Entity)",
@@ -1525,6 +2169,7 @@
     "id": 627,
     "postId": 1573,
     "question": "資料庫設計者在畫 ER 圖前應先？",
+    "language": "zh",
     "type": "multiple",
     "options": [
       "分析實體與關係",
@@ -1538,8 +2183,9 @@
     "id": 626,
     "postId": 1513,
     "question": "一個員工有多個電話號碼，這在 ER 圖中應使用？",
-    "type": "single",
-    "options": [
+    "language": "zh",
+    "type": "single",「類型」：「單身」，
+    "options": [「選項」：[
       "虛線橢圓",
       "單線橢圓",
       "雙線橢圓",
@@ -1551,6 +2197,7 @@
     "id": 625,
     "postId": 1583,
     "question": "在 ER 圖中，虛線橢圓代表的是[__1__]屬性。(請用小寫英文回答)",
+    "language": "zh",
     "type": "text",
     "options": [],
     "answer": [
