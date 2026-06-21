@@ -11,7 +11,11 @@
       "Must merge into one",
       "Both can be FKs"
     ],
-    "answer": [0, 1, 3]
+    "answer": [
+      0,
+      1,
+      3
+    ]
   },
   {
     "id": 932,
@@ -25,7 +29,9 @@
       "Diamond",
       "Single Oval"
     ],
-    "answer": [0]
+    "answer": [
+      0
+    ]
   },
   {
     "id": 875,
@@ -39,7 +45,9 @@
       "Columns (Attributes)",
       "Tables"
     ],
-    "answer": [2]
+    "answer": [
+      2
+    ]
   },
   {
     "id": 862,
@@ -53,7 +61,11 @@
       "Ensure Ref Integrity",
       "Replace Primary Key"
     ],
-    "answer": [0, 1, 2]
+    "answer": [
+      0,
+      1,
+      2
+    ]
   },
   {
     "id": 861,
@@ -67,7 +79,12 @@
       "Derived attr needs calc",
       "PK cannot repeat"
     ],
-    "answer": [0, 1, 2, 3]
+    "answer": [
+      0,
+      1,
+      2,
+      3
+    ]
   },
   {
     "id": 860,
@@ -81,7 +98,10 @@
       "Cardinality",
       "Attribute count"
     ],
-    "answer": [0, 2]
+    "answer": [
+      0,
+      2
+    ]
   },
   {
     "id": 859,
@@ -95,7 +115,9 @@
       "Zero",
       "Negative"
     ],
-    "answer": [1]
+    "answer": [
+      1
+    ]
   },
   {
     "id": 858,
@@ -109,7 +131,11 @@
       "M:N",
       "1:M"
     ],
-    "answer": [0, 2, 3]
+    "answer": [
+      0,
+      2,
+      3
+    ]
   },
   {
     "id": 857,
@@ -123,7 +149,9 @@
       "Single Diamond",
       "Circle"
     ],
-    "answer": [0]
+    "answer": [
+      0
+    ]
   },
   {
     "id": 856,
@@ -137,7 +165,11 @@
       "Index",
       "Entity"
     ],
-    "answer": [0, 1, 3]
+    "answer": [
+      0,
+      1,
+      3
+    ]
   },
   {
     "id": 855,
@@ -145,7 +177,9 @@
     "question": "A double oval represents a [__1__] attribute. (please answer in lowercase english with hyphen)",
     "language": "en",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "multi-valued"
     ]
@@ -156,7 +190,9 @@
     "question": "Names inside rectangles represent [__1__] in a database. (please answer in lowercase english)",
     "language": "en",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "entity"
     ]
@@ -167,7 +203,9 @@
     "question": "In ER to Table rules, the [__1__] side refers to the [2] side. (please answer in lowercase letters/numbers)",
     "language": "en",
     "type": null,
-    "options": [],
+    "options": [
+      
+    ],
     "answer": "m 1"
   },
   {
@@ -182,7 +220,11 @@
       "Unique identifier",
       "Oval with underline"
     ],
-    "answer": [1, 2, 3]
+    "answer": [
+      1,
+      2,
+      3
+    ]
   },
   {
     "id": 791,
@@ -196,7 +238,9 @@
       "Only M side PK",
       "Combination of both PKs"
     ],
-    "answer": [3]
+    "answer": [
+      3
+    ]
   },
   {
     "id": 790,
@@ -210,7 +254,11 @@
       "Depends on Strong",
       "No full PK usually"
     ],
-    "answer": [1, 2, 3]
+    "answer": [
+      1,
+      2,
+      3
+    ]
   },
   {
     "id": 789,
@@ -218,7 +266,9 @@
     "question": "ER stands for [__1__]. (please answer in lowercase english separated by space)",
     "language": "en",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "entity relationship"
     ]
@@ -229,7 +279,9 @@
     "question": "Entities, attributes, and relationships form the [__1__] model. (please answer in uppercase english abbreviation)",
     "language": "en",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "ER"
     ]
@@ -240,7 +292,9 @@
     "question": "When an entity relates to itself, it is a [__1__] relationship. (please answer in lowercase english)",
     "language": "en",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "recursive"
     ]
@@ -251,7 +305,9 @@
     "question": "How are composite attributes usually handled in a Table?",
     "language": "en",
     "type": null,
-    "options": [],
+    "options": [
+      
+    ],
     "answer": "Split into simple columns"
   },
   {
@@ -260,7 +316,9 @@
     "question": "An attribute containing \"First\" and \"Last\" name is [__1__]. (please answer in lowercase english)",
     "language": "en",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "composite"
     ]
@@ -271,7 +329,9 @@
     "question": "1:1 relationships are established via [__1__] embedding. (please answer in lowercase english abbreviation)",
     "language": "en",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "fk"
     ]
@@ -282,7 +342,9 @@
     "question": "A PK attribute has an [__1__] under the text in an oval. (please answer in lowercase english)",
     "language": "en",
     "type": null,
-    "options": [],
+    "options": [
+      
+    ],
     "answer": "underline"
   },
   {
@@ -297,7 +359,11 @@
       "Derived from others",
       "Not stored directly"
     ],
-    "answer": [1, 2, 3]
+    "answer": [
+      1,
+      2,
+      3
+    ]
   },
   {
     "id": 781,
@@ -311,7 +377,11 @@
       "Student",
       "Name"
     ],
-    "answer": [0, 1, 2]
+    "answer": [
+      0,
+      1,
+      2
+    ]
   },
   {
     "id": 780,
@@ -325,7 +395,11 @@
       "H/W S/W independent",
       "Bridge reqs & dev"
     ],
-    "answer": [0, 2, 3]
+    "answer": [
+      0,
+      2,
+      3
+    ]
   },
   {
     "id": 779,
@@ -333,7 +407,9 @@
     "question": "A dashed oval represents a [__1__] attribute. (please answer in lowercase english)",
     "language": "en",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "derived"
     ]
@@ -344,7 +420,9 @@
     "question": "Dashed ovals mean the value does not need to be [__1__]d in the DB. (please answer in lowercase english)",
     "language": "en",
     "type": null,
-    "options": [],
+    "options": [
+      
+    ],
     "answer": "store"
   },
   {
@@ -353,7 +431,9 @@
     "question": "基數「1」在菱形端代表該實體參與[__1__]次關係。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "one"
     ]
@@ -370,7 +450,11 @@
       "方便轉成關聯表",
       "溝通設計需求"
     ],
-    "answer": [1, 2, 3]
+    "answer": [
+      1,
+      2,
+      3
+    ]
   },
   {
     "id": 775,
@@ -384,7 +468,9 @@
       "實體完整性",
       "系統完整性"
     ],
-    "answer": [1]
+    "answer": [
+      1
+    ]
   },
   {
     "id": 774,
@@ -392,7 +478,9 @@
     "question": "In 1:1 conversion, the most common approach is?",
     "language": "en",
     "type": null,
-    "options": [],
+    "options": [
+      
+    ],
     "answer": "Embed PK as FK"
   },
   {
@@ -407,7 +495,11 @@
       "Weak can stand alone",
       "Identifying relationship"
     ],
-    "answer": [0, 1, 3]
+    "answer": [
+      0,
+      1,
+      3
+    ]
   },
   {
     "id": 772,
@@ -421,7 +513,11 @@
       "Trigger",
       "Relationship"
     ],
-    "answer": [0, 1, 3]
+    "answer": [
+      0,
+      1,
+      3
+    ]
   },
   {
     "id": 771,
@@ -435,7 +531,10 @@
       "代表多對一",
       "不需要轉換"
     ],
-    "answer": [0, 1]
+    "answer": [
+      0,
+      1
+    ]
   },
   {
     "id": 770,
@@ -443,7 +542,9 @@
     "question": "A [__1__] entity depends on a strong entity to exist. (please answer in lowercase english)",
     "language": "en",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "weak"
     ]
@@ -460,7 +561,9 @@
       "自己的主鍵",
       "衍生屬性"
     ],
-    "answer": [0]
+    "answer": [
+      0
+    ]
   },
   {
     "id": 768,
@@ -474,7 +577,10 @@
       "Data stored together",
       "Meaningless"
     ],
-    "answer": [1, 2]
+    "answer": [
+      1,
+      2
+    ]
   },
   {
     "id": 767,
@@ -488,7 +594,11 @@
       "Tuple",
       "Field"
     ],
-    "answer": [0, 1, 3]
+    "answer": [
+      0,
+      1,
+      3
+    ]
   },
   {
     "id": 766,
@@ -502,7 +612,11 @@
       "結構固定不可改",
       "獨立於軟硬體"
     ],
-    "answer": [0, 1, 3]
+    "answer": [
+      0,
+      1,
+      3
+    ]
   },
   {
     "id": 765,
@@ -516,7 +630,9 @@
       "Relationships",
       "Entities"
     ],
-    "answer": [3]
+    "answer": [
+      3
+    ]
   },
   {
     "id": 764,
@@ -530,7 +646,9 @@
       "In student table",
       "In the converted table"
     ],
-    "answer": [3]
+    "answer": [
+      3
+    ]
   },
   {
     "id": 763,
@@ -544,7 +662,9 @@
       "雙線橢圓",
       "實線橢圓"
     ],
-    "answer": [0]
+    "answer": [
+      0
+    ]
   },
   {
     "id": 762,
@@ -552,7 +672,9 @@
     "question": "[__1__]屬性可以細分為更小的簡單屬性。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "composite"
     ]
@@ -569,7 +691,9 @@
       "Maintenance",
       "Physical design"
     ],
-    "answer": [1]
+    "answer": [
+      1
+    ]
   },
   {
     "id": 760,
@@ -583,7 +707,9 @@
       "1:M",
       "M:1"
     ],
-    "answer": [2]
+    "answer": [
+      2
+    ]
   },
   {
     "id": 759,
@@ -597,7 +723,9 @@
       "System Integrity",
       "Referential Integrity"
     ],
-    "answer": [3]
+    "answer": [
+      3
+    ]
   },
   {
     "id": 758,
@@ -611,7 +739,11 @@
       "實體 A 的主鍵",
       "關係本身的屬性"
     ],
-    "answer": [1, 2, 3]
+    "answer": [
+      1,
+      2,
+      3
+    ]
   },
   {
     "id": 757,
@@ -619,7 +751,9 @@
     "question": "一對多關係轉換規則中，多方實體轉換後的資料表須增加一個[__1__]。(請用小寫英文縮寫)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "fk"
     ]
@@ -636,7 +770,11 @@
       "通常無完整主鍵",
       "依附強實體"
     ],
-    "answer": [1, 2, 3]
+    "answer": [
+      1,
+      2,
+      3
+    ]
   },
   {
     "id": 755,
@@ -650,7 +788,9 @@
       "弱實體",
       "強實體"
     ],
-    "answer": [2]
+    "answer": [
+      2
+    ]
   },
   {
     "id": 754,
@@ -664,7 +804,11 @@
       "由兩個外鍵組成",
       "確保唯一性"
     ],
-    "answer": [1, 2, 3]
+    "answer": [
+      1,
+      2,
+      3
+    ]
   },
   {
     "id": 753,
@@ -672,7 +816,9 @@
     "question": "In 1:M, the one-side [__1__] is embedded in the many-side as [__2__]. (please answer in lowercase english abbreviations separated by space)",
     "language": "en",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "pk",
       "fk"
@@ -690,7 +836,10 @@
       "Entity to Entity",
       "Entity to self (recursive)"
     ],
-    "answer": [2, 3]
+    "answer": [
+      2,
+      3
+    ]
   },
   {
     "id": 751,
@@ -704,7 +853,9 @@
       "屬性",
       "實體"
     ],
-    "answer": [3]
+    "answer": [
+      3
+    ]
   },
   {
     "id": 750,
@@ -718,7 +869,11 @@
       "弱實體依賴強實體",
       "強實體不能有關係"
     ],
-    "answer": [0, 1, 2]
+    "answer": [
+      0,
+      1,
+      2
+    ]
   },
   {
     "id": 749,
@@ -732,7 +887,9 @@
       "Strong entity's PK",
       "Its own PK"
     ],
-    "answer": [2]
+    "answer": [
+      2
+    ]
   },
   {
     "id": 748,
@@ -740,7 +897,9 @@
     "question": "若主鍵包含多個欄位，則此主鍵稱為[__1__]主鍵。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "composite"
     ]
@@ -757,7 +916,11 @@
       "觸發器",
       "實體"
     ],
-    "answer": [0, 1, 3]
+    "answer": [
+      0,
+      1,
+      3
+    ]
   },
   {
     "id": 746,
@@ -771,7 +934,9 @@
       "多個",
       "負數"
     ],
-    "answer": [2]
+    "answer": [
+      2
+    ]
   },
   {
     "id": 745,
@@ -785,7 +950,9 @@
       "雙線長方形",
       "單線菱形"
     ],
-    "answer": [2]
+    "answer": [
+      2
+    ]
   },
   {
     "id": 744,
@@ -799,7 +966,9 @@
       "實體與實體",
       "網路與協定"
     ],
-    "answer": [2]
+    "answer": [
+      2
+    ]
   },
   {
     "id": 743,
@@ -813,7 +982,10 @@
       "組合自雙方主鍵",
       "不能有其他欄位"
     ],
-    "answer": [1, 2]
+    "answer": [
+      1,
+      2
+    ]
   },
   {
     "id": 742,
@@ -827,7 +999,9 @@
       "資料表 (關聯)",
       "欄位"
     ],
-    "answer": [2]
+    "answer": [
+      2
+    ]
   },
   {
     "id": 741,
@@ -841,7 +1015,10 @@
       "Keep one column in original",
       "Separate into a Table"
     ],
-    "answer": [1, 3]
+    "answer": [
+      1,
+      3
+    ]
   },
   {
     "id": 740,
@@ -855,7 +1032,9 @@
       "Entity",
       "Attribute"
     ],
-    "answer": [2]
+    "answer": [
+      2
+    ]
   },
   {
     "id": 739,
@@ -863,7 +1042,9 @@
     "question": "長方形內標註的名稱通常代表資料庫中的[__1__]。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "entity"
     ]
@@ -880,7 +1061,9 @@
       "M:N",
       "1:M"
     ],
-    "answer": [0]
+    "answer": [
+      0
+    ]
   },
   {
     "id": 737,
@@ -894,7 +1077,11 @@
       "多值屬性",
       "弱實體"
     ],
-    "answer": [0, 2, 3]
+    "answer": [
+      0,
+      2,
+      3
+    ]
   },
   {
     "id": 736,
@@ -902,7 +1089,9 @@
     "question": "When ERD converts to Tables, rectangles become [__1__]. (please answer in lowercase english)",
     "language": "en",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "table"
     ]
@@ -919,7 +1108,9 @@
       "隨機放置",
       "雙方都放"
     ],
-    "answer": [0]
+    "answer": [
+      0
+    ]
   },
   {
     "id": 734,
@@ -933,7 +1124,10 @@
       "輔助 Table 轉換",
       "標註屬性個數"
     ],
-    "answer": [0, 2]
+    "answer": [
+      0,
+      2
+    ]
   },
   {
     "id": 733,
@@ -947,7 +1141,9 @@
       "合併成一格",
       "刪除"
     ],
-    "answer": [1]
+    "answer": [
+      1
+    ]
   },
   {
     "id": 732,
@@ -955,7 +1151,9 @@
     "question": "What does the ER Model primarily describe the relationship between?",
     "language": "en",
     "type": null,
-    "options": [],
+    "options": [
+      
+    ],
     "answer": "Entities and Entities"
   },
   {
@@ -964,7 +1162,9 @@
     "question": "When ERD converts to Tables, ovals become [__1__]. (please answer in lowercase english)",
     "language": "en",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "column"
     ]
@@ -981,7 +1181,9 @@
       "1:M",
       "0.042361111111111"
     ],
-    "answer": [1]
+    "answer": [
+      1
+    ]
   },
   {
     "id": 729,
@@ -995,7 +1197,10 @@
       "雙線橢圓表示",
       "忽略不計"
     ],
-    "answer": [1, 2]
+    "answer": [
+      1,
+      2
+    ]
   },
   {
     "id": 728,
@@ -1009,7 +1214,9 @@
       "M:N",
       "M:1"
     ],
-    "answer": [1]
+    "answer": [
+      1
+    ]
   },
   {
     "id": 727,
@@ -1023,7 +1230,9 @@
       "Jobs",
       "Gates"
     ],
-    "answer": [0]
+    "answer": [
+      0
+    ]
   },
   {
     "id": 726,
@@ -1031,7 +1240,9 @@
     "question": "1:M 關係轉換時，一方的[__1__]會嵌入到多方作為[__2__]。(請用小寫英文縮寫字母間留一個空白)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "pk",
       "fk"
@@ -1043,7 +1254,9 @@
     "question": "Why use the ER Model?",
     "language": "en",
     "type": null,
-    "options": [],
+    "options": [
+      
+    ],
     "answer": "Visualize data structure\u003Cbr\u003ECommunicate design\u003Cbr\u003EEasy Table conversion"
   },
   {
@@ -1058,7 +1271,9 @@
       "固定的",
       "唯一的"
     ],
-    "answer": [0]
+    "answer": [
+      0
+    ]
   },
   {
     "id": 723,
@@ -1072,7 +1287,10 @@
       "No conversion needed",
       "Exclusive relationship"
     ],
-    "answer": [0, 3]
+    "answer": [
+      0,
+      3
+    ]
   },
   {
     "id": 722,
@@ -1080,7 +1298,9 @@
     "question": "[__1__]實體是指必須依附於強實體才能存在的實體。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "weak"
     ]
@@ -1097,7 +1317,9 @@
       "只有屬性",
       "實體與屬性或關係"
     ],
-    "answer": [3]
+    "answer": [
+      3
+    ]
   },
   {
     "id": 720,
@@ -1111,7 +1333,9 @@
       "概念設計",
       "實作階段"
     ],
-    "answer": [2]
+    "answer": [
+      2
+    ]
   },
   {
     "id": 719,
@@ -1119,7 +1343,9 @@
     "question": "For addresses in tables, city and street become separate [__1__]. (please answer in lowercase english)",
     "language": "en",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "columns"
     ]
@@ -1136,7 +1362,9 @@
       "直線",
       "長方形"
     ],
-    "answer": [1]
+    "answer": [
+      1
+    ]
   },
   {
     "id": 717,
@@ -1150,7 +1378,10 @@
       "屬性與屬性",
       "實體與屬性"
     ],
-    "answer": [0, 1]
+    "answer": [
+      0,
+      1
+    ]
   },
   {
     "id": 716,
@@ -1164,7 +1395,11 @@
       "Multi-valued attr",
       "Composite attr"
     ],
-    "answer": [0, 1, 2]
+    "answer": [
+      0,
+      1,
+      2
+    ]
   },
   {
     "id": 715,
@@ -1172,7 +1407,9 @@
     "question": "屬性在 ER 圖中是以[__1__]形狀來表示。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "oval"
     ]
@@ -1189,7 +1426,9 @@
       "Both sides",
       "Randomly"
     ],
-    "answer": [0]
+    "answer": [
+      0
+    ]
   },
   {
     "id": 713,
@@ -1197,7 +1436,9 @@
     "question": "實體、屬性與關係構成了[__1__]模式。(請用大寫英文縮寫)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "ER"
     ]
@@ -1214,7 +1455,12 @@
       "主鍵不能重複",
       "簡單屬性不可再分"
     ],
-    "answer": [0, 1, 2, 3]
+    "answer": [
+      0,
+      1,
+      2,
+      3
+    ]
   },
   {
     "id": 711,
@@ -1228,7 +1474,9 @@
       "隨機名",
       "關係名"
     ],
-    "answer": [3]
+    "answer": [
+      3
+    ]
   },
   {
     "id": 710,
@@ -1236,7 +1484,9 @@
     "question": "實體的主鍵屬性會在橢圓形內的文字下方加[__1__]。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "underline"
     ]
@@ -1247,7 +1497,9 @@
     "question": "選課關係中，學生成績是屬於[__1__]的屬性。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "relationship"
     ]
@@ -1264,7 +1516,10 @@
       "Address (City, District)",
       "Birthday"
     ],
-    "answer": [0, 2]
+    "answer": [
+      0,
+      2
+    ]
   },
   {
     "id": 707,
@@ -1278,7 +1533,11 @@
       "確保參考完整性",
       "連接兩個資料表"
     ],
-    "answer": [1, 2, 3]
+    "answer": [
+      1,
+      2,
+      3
+    ]
   },
   {
     "id": 706,
@@ -1292,7 +1551,11 @@
       "多對多 (M:N)",
       "一對多 (1:M)"
     ],
-    "answer": [1, 2, 3]
+    "answer": [
+      1,
+      2,
+      3
+    ]
   },
   {
     "id": 705,
@@ -1306,7 +1569,9 @@
       "放在課程表",
       "丟棄屬性"
     ],
-    "answer": [1]
+    "answer": [
+      1
+    ]
   },
   {
     "id": 704,
@@ -1314,7 +1579,9 @@
     "question": "A relationship is represented by a [__1__] shape in ERD. (please answer in lowercase english)",
     "language": "en",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "diamond"
     ]
@@ -1325,7 +1592,9 @@
     "question": "在 ER 圖中，雙線橢圓代表的是[__1__]屬性。(請用小寫英文回答連字號)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "multi-valued"
     ]
@@ -1336,7 +1605,9 @@
     "question": "關係的對應數量（如 1:1, 1:M）稱為[__1__]。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "cardinality"
     ]
@@ -1353,7 +1624,11 @@
       "橢圓加底線",
       "實體的核心"
     ],
-    "answer": [1, 2, 3]
+    "answer": [
+      1,
+      2,
+      3
+    ]
   },
   {
     "id": 700,
@@ -1361,7 +1636,9 @@
     "question": "After M:N conversion, a new [__1__] table is needed. (please answer in lowercase english)",
     "language": "en",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "junction"
     ]
@@ -1378,7 +1655,9 @@
       "Double Diamond",
       "Single Diamond"
     ],
-    "answer": [0]
+    "answer": [
+      0
+    ]
   },
   {
     "id": 698,
@@ -1392,7 +1671,11 @@
       "Entity attributes",
       "Code language"
     ],
-    "answer": [0, 1, 2]
+    "answer": [
+      0,
+      1,
+      2
+    ]
   },
   {
     "id": 697,
@@ -1406,7 +1689,11 @@
       "外鍵",
       "欄位 (1:M)"
     ],
-    "answer": [1, 2, 3]
+    "answer": [
+      1,
+      2,
+      3
+    ]
   },
   {
     "id": 696,
@@ -1414,7 +1701,9 @@
     "question": "ER 的全名是 [__1__]。(請用小寫英文回答字母間留一空格)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "entity relationship"
     ]
@@ -1431,7 +1720,9 @@
       "Codd",
       "Jobs"
     ],
-    "answer": [1]
+    "answer": [
+      1
+    ]
   },
   {
     "id": 694,
@@ -1445,7 +1736,11 @@
       "系所與老師",
       "學生與學生證"
     ],
-    "answer": [0, 1, 2]
+    "answer": [
+      0,
+      1,
+      2
+    ]
   },
   {
     "id": 693,
@@ -1453,7 +1748,9 @@
     "question": "M:N 關係轉換產生的聯合表，其主鍵通常由兩個[__1__]組成。(請用小寫英文縮寫)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "fks"
     ]
@@ -1464,7 +1761,9 @@
     "question": "ER 模型主要用於資料庫的[__1__]設計階段。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "conceptual"
     ]
@@ -1481,7 +1780,10 @@
       "例如學生與老師",
       "例如員工與經理"
     ],
-    "answer": [0, 3]
+    "answer": [
+      0,
+      3
+    ]
   },
   {
     "id": 690,
@@ -1495,7 +1797,9 @@
       "只有 M 方主鍵",
       "只有 N 方主鍵"
     ],
-    "answer": [1]
+    "answer": [
+      1
+    ]
   },
   {
     "id": 689,
@@ -1509,7 +1813,9 @@
       "雙線菱形",
       "菱形"
     ],
-    "answer": [1]
+    "answer": [
+      1
+    ]
   },
   {
     "id": 688,
@@ -1523,7 +1829,10 @@
       "是一對一的連結",
       "該屬性屬於該實體"
     ],
-    "answer": [1, 3]
+    "answer": [
+      1,
+      3
+    ]
   },
   {
     "id": 687,
@@ -1537,7 +1846,9 @@
       "多值屬性",
       "衍生屬性"
     ],
-    "answer": [0]
+    "answer": [
+      0
+    ]
   },
   {
     "id": 686,
@@ -1551,7 +1862,11 @@
       "不直接存入資料庫",
       "由其他屬性推導"
     ],
-    "answer": [1, 2, 3]
+    "answer": [
+      1,
+      2,
+      3
+    ]
   },
   {
     "id": 685,
@@ -1559,7 +1874,9 @@
     "question": "[__1__]圖是實體關係圖的中文簡稱。(請用大寫英文縮寫)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "ER"
     ]
@@ -1576,7 +1893,11 @@
       "用雙線菱形表示",
       "稱為識別關係"
     ],
-    "answer": [1, 2, 3]
+    "answer": [
+      1,
+      2,
+      3
+    ]
   },
   {
     "id": 683,
@@ -1584,7 +1905,9 @@
     "question": "關係在 ER 圖中是以[__1__]形狀來表示。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "diamond"
     ]
@@ -1595,7 +1918,9 @@
     "question": "強弱實體間的關係稱為[__1__]關係。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "identifying"
     ]
@@ -1606,7 +1931,9 @@
     "question": "ER Model 主要是用來描述[__1__]之間關係的工具。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "entity"
     ]
@@ -1617,7 +1944,9 @@
     "question": "1:M 關係中，M 縮寫代表[__1__]。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "many"
     ]
@@ -1634,7 +1963,11 @@
       "關係轉硬碟空間",
       "關係轉連結或欄位"
     ],
-    "answer": [0, 1, 3]
+    "answer": [
+      0,
+      1,
+      3
+    ]
   },
   {
     "id": 678,
@@ -1642,7 +1975,9 @@
     "question": "地址轉為資料表時，縣市與街道應變成獨立的[__1__]。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "columns"
     ]
@@ -1653,7 +1988,9 @@
     "question": "實體在 ER 圖中是以[__1__]形狀來表示。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "rectangle"
     ]
@@ -1670,7 +2007,9 @@
       "Entities to attr/rels",
       "Only attributes"
     ],
-    "answer": [2]
+    "answer": [
+      2
+    ]
   },
   {
     "id": 675,
@@ -1678,7 +2017,9 @@
     "question": "ER model is mainly used in the [__1__] design phase. (please answer in lowercase english)",
     "language": "en",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "conceptual"
     ]
@@ -1695,7 +2036,9 @@
       "實體",
       "鍵值"
     ],
-    "answer": [2]
+    "answer": [
+      2
+    ]
   },
   {
     "id": 673,
@@ -1709,7 +2052,9 @@
       "刪除 N 方",
       "刪除 M 方"
     ],
-    "answer": [1]
+    "answer": [
+      1
+    ]
   },
   {
     "id": 672,
@@ -1723,7 +2068,9 @@
       "屬性",
       "觸發器 (Trigger)"
     ],
-    "answer": [3]
+    "answer": [
+      3
+    ]
   },
   {
     "id": 671,
@@ -1737,7 +2084,10 @@
       "Must be composite",
       "Only one side's PK"
     ],
-    "answer": [1, 2]
+    "answer": [
+      1,
+      2
+    ]
   },
   {
     "id": 670,
@@ -1751,7 +2101,11 @@
       "Write scenario",
       "Interview users"
     ],
-    "answer": [0, 2, 3]
+    "answer": [
+      0,
+      2,
+      3
+    ]
   },
   {
     "id": 669,
@@ -1765,7 +2119,9 @@
       "多值屬性",
       "複合屬性"
     ],
-    "answer": [0]
+    "answer": [
+      0
+    ]
   },
   {
     "id": 668,
@@ -1773,7 +2129,9 @@
     "question": "[__1__] Chen 是 ER Model 的創始人。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "peter"
     ]
@@ -1790,7 +2148,10 @@
       "地址(縣市, 區)",
       "生日"
     ],
-    "answer": [1, 2]
+    "answer": [
+      1,
+      2
+    ]
   },
   {
     "id": 666,
@@ -1804,7 +2165,11 @@
       "程式碼語言",
       "關係的基數 (Cardinality)"
     ],
-    "answer": [0, 1, 3]
+    "answer": [
+      0,
+      1,
+      3
+    ]
   },
   {
     "id": 665,
@@ -1818,7 +2183,11 @@
       "資料行 (Column)",
       "屬性 (Attribute)"
     ],
-    "answer": [1, 2, 3]
+    "answer": [
+      1,
+      2,
+      3
+    ]
   },
   {
     "id": 654,
@@ -1832,7 +2201,9 @@
       "紀錄",
       "欄位 (屬性)"
     ],
-    "answer": [3]
+    "answer": [
+      3
+    ]
   },
   {
     "id": 653,
@@ -1846,7 +2217,9 @@
       "0.042361111111111",
       "1:M"
     ],
-    "answer": [0]
+    "answer": [
+      0
+    ]
   },
   {
     "id": 652,
@@ -1854,7 +2227,9 @@
     "question": "M:N 關係轉換後，需要產生一個新的[__1__]資料表。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "junction"
     ]
@@ -1871,7 +2246,9 @@
       "雙線橢圓",
       "長方形"
     ],
-    "answer": [3]
+    "answer": [
+      3
+    ]
   },
   {
     "id": 650,
@@ -1879,7 +2256,9 @@
     "question": "一對一關係通常透過[__1__]嵌入來建立連繫。(請用小寫英文縮寫)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "fk"
     ]
@@ -1890,7 +2269,9 @@
     "question": "ER 圖轉換為資料表後，長方形變成[__1__]。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "table"
     ]
@@ -1907,7 +2288,11 @@
       "必須產生第三個表",
       "將一方主鍵置於多方"
     ],
-    "answer": [0, 1, 3]
+    "answer": [
+      0,
+      1,
+      3
+    ]
   },
   {
     "id": 647,
@@ -1921,7 +2306,11 @@
       "Weak depends on Strong",
       "Strong has no rels"
     ],
-    "answer": [0, 1, 2]
+    "answer": [
+      0,
+      1,
+      2
+    ]
   },
   {
     "id": 646,
@@ -1929,7 +2318,9 @@
     "question": "In 1:M, the abbreviation M stands for [__1__]. (please answer in lowercase english)",
     "language": "en",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "many"
     ]
@@ -1940,7 +2331,9 @@
     "question": "ER 圖轉 Table 規則中，[__1__]方通常會參考[2]方。(請用小寫英文數字)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "m 1"
     ]
@@ -1957,7 +2350,9 @@
       "單線菱形",
       "虛線菱形"
     ],
-    "answer": [1]
+    "answer": [
+      1
+    ]
   },
   {
     "id": 643,
@@ -1971,7 +2366,9 @@
       "建立第三個表",
       "忽略關係"
     ],
-    "answer": [1]
+    "answer": [
+      1
+    ]
   },
   {
     "id": 642,
@@ -1985,7 +2382,11 @@
       "新的意義名",
       "關係動詞"
     ],
-    "answer": [0, 2, 3]
+    "answer": [
+      0,
+      2,
+      3
+    ]
   },
   {
     "id": 641,
@@ -1999,7 +2400,11 @@
       "老師",
       "姓名"
     ],
-    "answer": [0, 1, 2]
+    "answer": [
+      0,
+      1,
+      2
+    ]
   },
   {
     "id": 640,
@@ -2007,7 +2412,9 @@
     "question": "虛線橢圓表示其數值不需[__1__]入資料庫。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "store"
     ]
@@ -2024,7 +2431,9 @@
       "0.042361111111111",
       "M:N"
     ],
-    "answer": [2]
+    "answer": [
+      2
+    ]
   },
   {
     "id": 638,
@@ -2038,7 +2447,11 @@
       "兩者皆可作外鍵",
       "可將 A 主鍵入 B"
     ],
-    "answer": [1, 2, 3]
+    "answer": [
+      1,
+      2,
+      3
+    ]
   },
   {
     "id": 637,
@@ -2052,7 +2465,9 @@
       "衍生屬性",
       "弱屬性"
     ],
-    "answer": [1]
+    "answer": [
+      1
+    ]
   },
   {
     "id": 636,
@@ -2066,7 +2481,11 @@
       "M:N 關係",
       "實體 (Entity)"
     ],
-    "answer": [1, 2, 3]
+    "answer": [
+      1,
+      2,
+      3
+    ]
   },
   {
     "id": 635,
@@ -2080,7 +2499,11 @@
       "Only Entity A PK",
       "Entity A PK"
     ],
-    "answer": [0, 1, 3]
+    "answer": [
+      0,
+      1,
+      3
+    ]
   },
   {
     "id": 634,
@@ -2088,7 +2511,9 @@
     "question": "弱實體通常以[__1__]長方形來表示。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "double"
     ]
@@ -2099,7 +2524,9 @@
     "question": "當實體與自己建立關係，稱為[__1__]關係。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "recursive"
     ]
@@ -2110,7 +2537,9 @@
     "question": "ER 圖轉換為資料表後，橢圓形變成[__1__]。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "column"
     ]
@@ -2121,7 +2550,9 @@
     "question": "若一個屬性包含「姓」與「名」，這是一個[__1__]屬性。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "composite"
     ]
@@ -2138,7 +2569,11 @@
       "增加資料複雜度",
       "方便查詢"
     ],
-    "answer": [0, 1, 3]
+    "answer": [
+      0,
+      1,
+      3
+    ]
   },
   {
     "id": 629,
@@ -2146,7 +2581,9 @@
     "question": "多值屬性獨立成表後，其主鍵與原表主鍵形成[__1__]主鍵。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "composite"
     ]
@@ -2163,7 +2600,11 @@
       "屬性 (Attribute)",
       "關係 (Relationship)"
     ],
-    "answer": [0, 2, 3]
+    "answer": [
+      0,
+      2,
+      3
+    ]
   },
   {
     "id": 627,
@@ -2177,7 +2618,11 @@
       "決定資料庫名稱",
       "寫下情境說明"
     ],
-    "answer": [0, 1, 3]
+    "answer": [
+      0,
+      1,
+      3
+    ]
   },
   {
     "id": 626,
@@ -2191,7 +2636,9 @@
       "雙線橢圓",
       "菱形"
     ],
-    "answer": [2]
+    "answer": [
+      2
+    ]
   },
   {
     "id": 625,
@@ -2199,7 +2646,9 @@
     "question": "在 ER 圖中，虛線橢圓代表的是[__1__]屬性。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": [],
+    "options": [
+      
+    ],
     "answer": [
       "derived"
     ]
