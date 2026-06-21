@@ -2184,8 +2184,8 @@
     "postId": 1513,
     "question": "一個員工有多個電話號碼，這在 ER 圖中應使用？",
     "language": "zh",
-    "type": "single",「類型」：「單身」，
-    "options": [「選項」：[
+    "type": "single",
+    "options":
       "虛線橢圓",
       "單線橢圓",
       "雙線橢圓",
