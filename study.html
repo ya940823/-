@@ -130,14 +130,9 @@
         }
 
         /* 搜尋框 */
-        .search-box {
-            position: relative;
+        .search-input {
             width: 100%;
-        }
-
-        #questionSearch {
-            width: 100%;
-            padding: 14px 45px 14px 16px;
+            padding: 14px 16px;
             border: 2px solid #e0e0e0;
             border-radius: 10px;
             font-size: 16px;
@@ -147,22 +142,13 @@
             transition: all 0.3s;
         }
 
-        #questionSearch:focus {
+        .search-input:focus {
             border-color: #4facfe;
             box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.15);
         }
 
-        #questionSearch::placeholder {
-            color: #aaa;
-        }
-
-        .search-icon {
-            position: absolute;
-            right: 16px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 20px;
-            pointer-events: none;
+        .search-input::placeholder {
+            color: #999;
         }
 
         .search-hint {
@@ -406,10 +392,9 @@
 
     <div id="contentSection" class="hidden">
 
-        <!-- 篩選區 -->
         <div class="filter-section">
 
-            <!-- 章節 -->
+            <!-- 選擇章節 -->
             <div class="filter-group">
                 <h3>📚 選擇章節</h3>
                 <div class="chapter-options" id="chapterOptions"></div>
@@ -417,7 +402,7 @@
 
             <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;">
 
-            <!-- 題型 -->
+            <!-- 篩選題型 -->
             <div class="filter-group">
                 <h3>📋 篩選題型</h3>
 
@@ -458,35 +443,27 @@
 
             <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;">
 
-            <!-- 題目搜尋 -->
+            <!-- 搜尋題目 -->
             <div class="filter-group">
-
                 <h3>🔍 搜尋題目</h3>
 
-                <div class="search-box">
-
-                    <input
-                        type="text"
-                        id="questionSearch"
-                        placeholder="輸入關鍵字搜尋題目..."
-                        autocomplete="off"
-                    >
-
-                    <span class="search-icon">🔍</span>
-
-                </div>
+                <input
+                    type="text"
+                    id="questionSearch"
+                    class="search-input"
+                    placeholder="輸入關鍵字搜尋題目..."
+                    autocomplete="off"
+                >
 
                 <p class="search-hint">
-                    只搜尋「題目文字」，不搜尋選項。
+                    只搜尋題目文字，不搜尋選項。
                 </p>
-
             </div>
 
             <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;">
 
-            <!-- 中文題目 -->
+            <!-- 題目篩選 -->
             <div class="filter-group">
-
                 <h3>🔎 題目篩選</h3>
 
                 <div class="type-options">
@@ -509,14 +486,12 @@
                 <p style="color:#666; font-size:0.9em; margin-top:8px;">
                     判斷方式：只檢查題目文字是否包含任一中文字（不檢查選項）。
                 </p>
-
             </div>
 
             <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;">
 
-            <!-- 排序 -->
+            <!-- 排序方式 -->
             <div class="filter-group">
-
                 <h3>⚙️ 排序方式</h3>
 
                 <div class="display-options">
@@ -536,12 +511,11 @@
                     </button>
 
                 </div>
-
             </div>
 
         </div>
 
-        <!-- 說明 -->
+        <!-- 使用說明 -->
         <div class="highlight-info">
 
             <h3>💡 如何使用閱讀記憶</h3>
@@ -558,7 +532,7 @@
 
         </div>
 
-        <!-- 統計 -->
+        <!-- 題目統計 -->
         <div class="stats-summary" id="statsSummary">
 
             <h3>📊 題目統計</h3>
@@ -566,102 +540,56 @@
             <div class="stats-grid">
 
                 <div class="stat-box">
-                    <div
-                        class="number"
-                        id="totalCount"
-                    >
-                        0
-                    </div>
-                    <div class="label">
-                        總題數
-                    </div>
+                    <div class="number" id="totalCount">0</div>
+                    <div class="label">總題數</div>
                 </div>
 
                 <div class="stat-box">
-                    <div
-                        class="number"
-                        id="highlightCount"
-                    >
-                        0
-                    </div>
-                    <div class="label">
-                        需特別記憶
-                    </div>
+                    <div class="number" id="highlightCount">0</div>
+                    <div class="label">需特別記憶</div>
                 </div>
 
                 <div class="stat-box">
-                    <div
-                        class="number"
-                        id="singleCount"
-                    >
-                        0
-                    </div>
-                    <div class="label">
-                        單選題
-                    </div>
+                    <div class="number" id="singleCount">0</div>
+                    <div class="label">單選題</div>
                 </div>
 
                 <div class="stat-box">
-                    <div
-                        class="number"
-                        id="multipleCount"
-                    >
-                        0
-                    </div>
-                    <div class="label">
-                        多選題
-                    </div>
+                    <div class="number" id="multipleCount">0</div>
+                    <div class="label">多選題</div>
                 </div>
 
                 <div class="stat-box">
-                    <div
-                        class="number"
-                        id="textCount"
-                    >
-                        0
-                    </div>
-                    <div class="label">
-                        填充題
-                    </div>
+                    <div class="number" id="textCount">0</div>
+                    <div class="label">填充題</div>
                 </div>
 
             </div>
-
         </div>
 
         <!-- 題目列表 -->
         <div id="questionList"></div>
 
-        <!-- 沒有題目 -->
-        <div
-            id="emptyState"
-            class="empty-state hidden"
-        >
+        <!-- 無結果 -->
+        <div id="emptyState" class="empty-state hidden">
 
-            <div class="icon">
-                🗑️
-            </div>
+            <div class="icon">🗑️</div>
 
-            <h3>
-                沒有符合條件的題目
-            </h3>
+            <h3>沒有符合條件的題目</h3>
 
-            <p>
-                請確認搜尋關鍵字或篩選條件
-            </p>
+            <p>請選擇至少一個章節和題型，或確認搜尋關鍵字。</p>
 
         </div>
 
     </div>
-
 </div>
 
 
 <script>
 
-    // ==========================================
-    // 基本設定
-    // ==========================================
+    // =========================================================
+    // 基本資料
+    // =========================================================
 
     const AVAILABLE_CHAPTERS = [
         'CH5',
@@ -682,9 +610,9 @@
     let answerCounts = {};
 
 
-    // ==========================================
-    // Answer 格式統一
-    // ==========================================
+    // =========================================================
+    // 統一答案格式
+    // =========================================================
 
     function toAnswerArray(answer) {
 
@@ -698,9 +626,9 @@
     }
 
 
-    // ==========================================
+    // =========================================================
     // 自動判斷題型
-    // ==========================================
+    // =========================================================
 
     function inferQuestionType(q) {
 
@@ -721,14 +649,12 @@
         const ansArr =
             toAnswerArray(q.answer);
 
-
-        // 沒有選項 → 填空
+        // 沒有選項：填充題
         if (options.length === 0) {
             return 'text';
         }
 
-
-        // answer 是字串 → 填空
+        // answer 如果是字串：填充題
         if (
             ansArr.some(
                 a => typeof a === 'string'
@@ -737,21 +663,19 @@
             return 'text';
         }
 
-
-        // 多個答案 → 多選
+        // 多個答案：多選題
         if (ansArr.length > 1) {
             return 'multiple';
         }
 
-
-        // 一個答案 → 單選
+        // 一個答案：單選題
         return 'single';
     }
 
 
-    // ==========================================
+    // =========================================================
     // 統一題目格式
-    // ==========================================
+    // =========================================================
 
     function normalizeQuestion(raw, chapter) {
 
@@ -779,9 +703,9 @@
     }
 
 
-    // ==========================================
-    // 判斷是否有中文字
-    // ==========================================
+    // =========================================================
+    // 判斷是否包含中文字
+    // =========================================================
 
     function hasChinese(text) {
 
@@ -798,9 +722,9 @@
     }
 
 
-    // ==========================================
-    // 頁面初始化
-    // ==========================================
+    // =========================================================
+    // 網頁載入
+    // =========================================================
 
     window.addEventListener(
         'DOMContentLoaded',
@@ -816,9 +740,9 @@
     );
 
 
-    // ==========================================
-    // 建立章節 Checkbox
-    // ==========================================
+    // =========================================================
+    // 建立章節選項
+    // =========================================================
 
     function createChapterCheckboxes() {
 
@@ -829,14 +753,11 @@
 
         container.innerHTML = '';
 
-
         AVAILABLE_CHAPTERS.forEach(
             (chapter, index) => {
 
-                // 預設第一章打勾
                 const isChecked =
                     index === 0;
-
 
                 const label =
                     document.createElement(
@@ -850,31 +771,24 @@
                             : ''
                     }`;
 
-
-                label.innerHTML = `
-                    <input
+                label.innerHTML =
+                    `<input
                         type="checkbox"
                         value="${chapter}"
                         class="chapter-filter"
                         ${isChecked ? 'checked' : ''}
                     >
-
-                    <span>
-                        ${chapter}
-                    </span>
-                `;
-
+                    <span>${chapter}</span>`;
 
                 container.appendChild(label);
-
             }
         );
     }
 
 
-    // ==========================================
-    // 事件監聽
-    // ==========================================
+    // =========================================================
+    // 設定事件
+    // =========================================================
 
     function setupEventListeners() {
 
@@ -883,18 +797,15 @@
                 '.filter-section'
             );
 
-
         if (filterSection) {
 
             filterSection.addEventListener(
                 'change',
-                event => {
+                (event) => {
 
                     const target =
                         event.target;
 
-
-                    // 章節、題型、中文篩選
                     if (
                         target.matches(
                             '.chapter-filter, .type-filter, #chineseOnly'
@@ -914,9 +825,7 @@
                                 'selected',
                                 target.checked
                             );
-
                         }
-
 
                         if (
                             target.id ===
@@ -928,39 +837,30 @@
                                     'zhOnlyLabel'
                                 );
 
-
                             if (zhLabel) {
 
                                 zhLabel.classList.toggle(
                                     'selected',
                                     target.checked
                                 );
-
                             }
-
                         }
 
-
-                        // 重新處理
                         loadAndDisplayContent();
-
                     }
-
                 }
             );
-
         }
 
 
-        // ======================================
+        // =====================================================
         // 搜尋題目
-        // ======================================
+        // =====================================================
 
         const searchInput =
             document.getElementById(
                 'questionSearch'
             );
-
 
         if (searchInput) {
 
@@ -972,18 +872,15 @@
 
                 }
             );
-
         }
 
 
-        // ======================================
-        // 答案排序
-        // ======================================
+        // =====================================================
+        // 按答案排序
+        // =====================================================
 
         document
-            .getElementById(
-                'sortByAnswerBtn'
-            )
+            .getElementById('sortByAnswerBtn')
             ?.addEventListener(
                 'click',
                 () => {
@@ -992,34 +889,25 @@
                         .getElementById(
                             'sortByAnswerBtn'
                         )
-                        .classList.add(
-                            'active'
-                        );
-
+                        .classList.add('active');
 
                     document
                         .getElementById(
                             'resetSortBtn'
                         )
-                        .classList.remove(
-                            'active'
-                        );
-
+                        .classList.remove('active');
 
                     sortAndRender();
-
                 }
             );
 
 
-        // ======================================
+        // =====================================================
         // 恢復預設排序
-        // ======================================
+        // =====================================================
 
         document
-            .getElementById(
-                'resetSortBtn'
-            )
+            .getElementById('resetSortBtn')
             ?.addEventListener(
                 'click',
                 () => {
@@ -1028,31 +916,23 @@
                         .getElementById(
                             'sortByAnswerBtn'
                         )
-                        .classList.remove(
-                            'active'
-                        );
-
+                        .classList.remove('active');
 
                     document
                         .getElementById(
                             'resetSortBtn'
                         )
-                        .classList.add(
-                            'active'
-                        );
-
+                        .classList.add('active');
 
                     sortAndRender();
-
                 }
             );
-
     }
 
 
-    // ==========================================
-    // 載入 JSON
-    // ==========================================
+    // =========================================================
+    // 載入章節 JSON
+    // =========================================================
 
     async function loadAndDisplayContent() {
 
@@ -1062,7 +942,6 @@
                 true,
                 '正在讀取章節資料...'
             );
-
 
             const selectedChapters =
                 getSelectedFilters(
@@ -1097,26 +976,22 @@
                                     throw new Error(
                                         `無法載入 ${chapter}.json`
                                     );
-
                                 }
 
                                 return res.json();
-
                             }
                         )
                         .then(
                             data =>
 
-                                (data || [])
-                                    .map(
-                                        q =>
-                                            normalizeQuestion(
-                                                q,
-                                                chapter
-                                            )
-                                    )
+                                (data || []).map(
+                                    q =>
+                                        normalizeQuestion(
+                                            q,
+                                            chapter
+                                        )
+                                )
                         )
-
                 );
 
 
@@ -1124,7 +999,6 @@
                 await Promise.all(
                     fetchPromises
                 );
-
 
             allQuestions =
                 chapterArrays.flat();
@@ -1161,29 +1035,26 @@
             showLoading(false);
 
         }
-
     }
 
 
-    // ==========================================
+    // =========================================================
     // 篩選 + 搜尋
-    // ==========================================
+    // =========================================================
 
     function processAndRender() {
 
-        // 分析答案
         analyzeQuestions();
 
 
-        // ======================================
+        // -----------------------------------------------------
         // 1. 題型篩選
-        // ======================================
+        // -----------------------------------------------------
 
         const selectedTypes =
             getSelectedFilters(
                 '.type-filter'
             );
-
 
         displayedQuestions =
             allQuestions.filter(
@@ -1194,15 +1065,14 @@
             );
 
 
-        // ======================================
+        // -----------------------------------------------------
         // 2. 中文題目篩選
-        // ======================================
+        // -----------------------------------------------------
 
         const chineseOnly =
             document.getElementById(
                 'chineseOnly'
             )?.checked;
-
 
         if (chineseOnly) {
 
@@ -1213,19 +1083,17 @@
                             q.question
                         )
                 );
-
         }
 
 
-        // ======================================
-        // 3. 搜尋「題目文字」
-        // ======================================
+        // -----------------------------------------------------
+        // 3. 搜尋「題目」
+        // -----------------------------------------------------
 
         const searchInput =
             document.getElementById(
                 'questionSearch'
             );
-
 
         const searchText =
             searchInput
@@ -1235,7 +1103,7 @@
                 : '';
 
 
-        if (searchText) {
+        if (searchText !== '') {
 
             displayedQuestions =
                 displayedQuestions.filter(
@@ -1243,60 +1111,53 @@
 
                         const questionText =
                             String(
-                                q.question ?? ''
-                            )
-                            .toLowerCase();
-
+                                q.question || ''
+                            ).toLowerCase();
 
                         return questionText.includes(
                             searchText
                         );
-
                     }
                 );
-
         }
 
 
-        // ======================================
-        // 4. 答案出現次數
-        // ======================================
+        // -----------------------------------------------------
+        // 4. 計算答案出現次數
+        // -----------------------------------------------------
 
         calculateAnswerFrequencies();
 
 
-        // ======================================
-        // 5. 排序 + 顯示
-        // ======================================
+        // -----------------------------------------------------
+        // 5. 排序
+        // -----------------------------------------------------
 
         sortAndRender();
 
 
-        // ======================================
-        // 6. 更新統計
-        // ======================================
+        // -----------------------------------------------------
+        // 6. 統計
+        // -----------------------------------------------------
 
         updateStats();
-
     }
 
 
-    // ==========================================
-    // 排序 + Render
-    // ==========================================
+    // =========================================================
+    // 排序並顯示
+    // =========================================================
 
     function sortAndRender() {
 
-        const sortButton =
-            document.getElementById(
-                'sortByAnswerBtn'
-            );
-
-
         if (
-            sortButton?.classList.contains(
-                'active'
-            )
+            document
+                .getElementById(
+                    'sortByAnswerBtn'
+                )
+                ?.classList.contains(
+                    'active'
+                )
         ) {
 
             sortQuestionsByAnswer();
@@ -1308,15 +1169,13 @@
 
         }
 
-
         renderQuestions();
-
     }
 
 
-    // ==========================================
+    // =========================================================
     // 分析答案
-    // ==========================================
+    // =========================================================
 
     function analyzeQuestions() {
 
@@ -1350,14 +1209,10 @@
                                 allOtherOptions.add(
                                     opt
                                 );
-
                             }
-
                         }
                     );
-
                 }
-
             }
         );
 
@@ -1376,7 +1231,6 @@
                     );
 
 
-                // 填充題
                 if (q.type === 'text') {
 
                     answerArray.forEach(
@@ -1391,16 +1245,11 @@
                                 analysis.highlightAnswers.add(
                                     ans
                                 );
-
                             }
-
                         }
                     );
 
                 }
-
-
-                // 選擇題
                 else if (
                     q.options &&
                     Array.isArray(q.options)
@@ -1414,7 +1263,6 @@
                                     ansIdx
                                 ];
 
-
                             if (
                                 optionText &&
                                 !allOtherOptions.has(
@@ -1425,28 +1273,22 @@
                                 analysis.highlightOptions.add(
                                     optionText
                                 );
-
                             }
-
                         }
                     );
-
                 }
-
             }
         );
-
     }
 
 
-    // ==========================================
+    // =========================================================
     // 計算答案頻率
-    // ==========================================
+    // =========================================================
 
     function calculateAnswerFrequencies() {
 
         answerCounts = {};
-
 
         displayedQuestions.forEach(
             q => {
@@ -1457,7 +1299,6 @@
                         'key'
                     );
 
-
                 answerCounts[
                     answerKey
                 ] =
@@ -1466,16 +1307,14 @@
                             answerKey
                         ] || 0
                     ) + 1;
-
             }
         );
-
     }
 
 
-    // ==========================================
-    // 取得排序答案
-    // ==========================================
+    // =========================================================
+    // 取得排序用答案
+    // =========================================================
 
     function getSortableAnswer(
         question,
@@ -1496,7 +1335,6 @@
             return type === 'key'
                 ? 'Z_NO_ANSWER'
                 : 9999;
-
         }
 
 
@@ -1523,7 +1361,6 @@
 
             answerContent =
                 answerArray;
-
         }
 
 
@@ -1536,7 +1373,6 @@
             return JSON.stringify(
                 sortedAnswer
             );
-
         }
 
 
@@ -1549,13 +1385,12 @@
 
 
         return 10000 - count;
-
     }
 
 
-    // ==========================================
-    // 按答案出現次數排序
-    // ==========================================
+    // =========================================================
+    // 答案重複次數排序
+    // =========================================================
 
     function sortQuestionsByAnswer() {
 
@@ -1568,7 +1403,6 @@
                         'rank'
                     );
 
-
                 const rankB =
                     getSortableAnswer(
                         b,
@@ -1576,10 +1410,11 @@
                     );
 
 
-                if (rankA !== rankB) {
+                if (
+                    rankA !== rankB
+                ) {
 
                     return rankA - rankB;
-
                 }
 
 
@@ -1588,7 +1423,6 @@
                         a,
                         'key'
                     );
-
 
                 const answerKeyB =
                     getSortableAnswer(
@@ -1605,7 +1439,6 @@
                     return answerKeyA.localeCompare(
                         answerKeyB
                     );
-
                 }
 
 
@@ -1613,16 +1446,14 @@
                     a.originalIndex -
                     b.originalIndex
                 );
-
             }
         );
-
     }
 
 
-    // ==========================================
+    // =========================================================
     // 恢復預設排序
-    // ==========================================
+    // =========================================================
 
     function resetSort() {
 
@@ -1631,13 +1462,12 @@
                 a.originalIndex -
                 b.originalIndex
         );
-
     }
 
 
-    // ==========================================
+    // =========================================================
     // 顯示題目
-    // ==========================================
+    // =========================================================
 
     function renderQuestions() {
 
@@ -1645,7 +1475,6 @@
             document.getElementById(
                 'questionList'
             );
-
 
         const emptyState =
             document.getElementById(
@@ -1665,7 +1494,6 @@
             );
 
             return;
-
         }
 
 
@@ -1682,60 +1510,37 @@
                         'div'
                     );
 
-
                 questionItem.className =
                     'question-item';
 
 
                 const typeText = {
-
                     single: '單選題',
-
                     multiple: '多選題',
-
                     text: '填充題'
-
                 }[
                     question.type
                 ] || '未知';
 
 
-                const chapterTag = `
-                    <span class="question-chapter">
-                        ${question.chapter}
-                    </span>
-                `;
+                const chapterTag =
+                    `<span class="question-chapter">${question.chapter}</span>`;
 
 
                 let hasHighlight = false;
 
 
-                const questionTitleHTML = `
-                    <p class="question-title">
-                        ${question.question}
-                    </p>
-                `;
+                const questionTitleHTML =
+                    `<p class="question-title">${question.question}</p>`;
 
 
-                let contentHTML = `
-
-                    <div class="question-header">
-
-                        <span class="question-number">
-                            ${index + 1}
-                        </span>
-
-                        <span class="question-type">
-                            ${typeText}
-                        </span>
-
+                let contentHTML =
+                    `<div class="question-header">
+                        <span class="question-number">${index + 1}</span>
+                        <span class="question-type">${typeText}</span>
                         ${chapterTag}
-
                     </div>
-
-                    ${questionTitleHTML}
-
-                `;
+                    ${questionTitleHTML}`;
 
 
                 const answerArray =
@@ -1744,9 +1549,9 @@
                     );
 
 
-                // ==================================
+                // -------------------------------------------------
                 // 填充題
-                // ==================================
+                // -------------------------------------------------
 
                 if (
                     question.type === 'text'
@@ -1768,32 +1573,23 @@
 
 
                     if (isHighlight) {
-
                         hasHighlight = true;
-
                     }
 
 
-                    contentHTML += `
-
-                        <div
-                            class="text-answer ${
-                                isHighlight
-                                    ? 'highlight'
-                                    : ''
-                            }"
-                        >
-                            ${ans}
-                        </div>
-
-                    `;
+                    contentHTML +=
+                        `<div class="text-answer ${
+                            isHighlight
+                                ? 'highlight'
+                                : ''
+                        }">${ans}</div>`;
 
                 }
 
 
-                // ==================================
+                // -------------------------------------------------
                 // 選擇題
-                // ==================================
+                // -------------------------------------------------
 
                 else {
 
@@ -1823,10 +1619,7 @@
 
 
                             if (isHighlight) {
-
-                                hasHighlight =
-                                    true;
-
+                                hasHighlight = true;
                             }
 
 
@@ -1835,44 +1628,31 @@
 
 
                             if (isAnswer) {
-
                                 optionClass +=
                                     ' answer';
-
                             }
 
 
                             if (isHighlight) {
-
                                 optionClass +=
                                     ' highlight';
-
                             }
 
 
-                            contentHTML += `
-
-                                <li
-                                    class="${optionClass}"
-                                >
-                                    ${option}
-                                </li>
-
-                            `;
-
+                            contentHTML +=
+                                `<li class="${optionClass}">${option}</li>`;
                         }
                     );
 
 
                     contentHTML +=
                         '</ul>';
-
                 }
 
 
-                // ==================================
+                // -------------------------------------------------
                 // 特別記憶標籤
-                // ==================================
+                // -------------------------------------------------
 
                 if (hasHighlight) {
 
@@ -1880,7 +1660,6 @@
                         document.createElement(
                             'div'
                         );
-
 
                     tempDiv.innerHTML =
                         contentHTML;
@@ -1894,20 +1673,12 @@
 
                     if (header) {
 
-                        header.innerHTML += `
-
-                            <span class="highlight-badge">
-                                需特別記憶
-                            </span>
-
-                        `;
-
+                        header.innerHTML +=
+                            '<span class="highlight-badge">需特別記憶</span>';
 
                         contentHTML =
                             tempDiv.innerHTML;
-
                     }
-
                 }
 
 
@@ -1918,16 +1689,14 @@
                 questionList.appendChild(
                     questionItem
                 );
-
             }
         );
-
     }
 
 
-    // ==========================================
-    // 取得目前勾選的項目
-    // ==========================================
+    // =========================================================
+    // 取得選取的篩選條件
+    // =========================================================
 
     function getSelectedFilters(
         selector
@@ -1941,13 +1710,12 @@
             input =>
                 input.value
         );
-
     }
 
 
-    // ==========================================
+    // =========================================================
     // Loading
-    // ==========================================
+    // =========================================================
 
     function showLoading(
         isLoading,
@@ -1958,7 +1726,6 @@
             document.getElementById(
                 'loadingSection'
             );
-
 
         const contentSection =
             document.getElementById(
@@ -1973,16 +1740,13 @@
                 .textContent =
                     message;
 
-
             loadingSection.classList.remove(
                 'hidden'
             );
 
-
             contentSection.classList.add(
                 'hidden'
             );
-
 
             document
                 .getElementById(
@@ -1999,19 +1763,16 @@
                 'hidden'
             );
 
-
             contentSection.classList.remove(
                 'hidden'
             );
-
         }
-
     }
 
 
-    // ==========================================
-    // 顯示錯誤
-    // ==========================================
+    // =========================================================
+    // 錯誤顯示
+    // =========================================================
 
     function showError(message) {
 
@@ -2020,18 +1781,15 @@
                 'errorSection'
             );
 
-
         errorSection.classList.remove(
             'hidden'
         );
 
 
-        document
-            .getElementById(
-                'errorMessage'
-            )
-            .textContent =
-                message;
+        document.getElementById(
+            'errorMessage'
+        ).textContent =
+            message;
 
 
         document
@@ -2041,27 +1799,21 @@
             .classList.add(
                 'hidden'
             );
-
     }
 
 
-    // ==========================================
+    // =========================================================
     // 更新統計
-    // ==========================================
+    // =========================================================
 
     function updateStats() {
 
         let highlightCount = 0;
 
-
         const typeCounts = {
-
             single: 0,
-
             multiple: 0,
-
             text: 0
-
         };
 
 
@@ -2076,7 +1828,6 @@
                 ) {
 
                     typeCounts[q.type]++;
-
                 }
 
 
@@ -2089,7 +1840,6 @@
                 let hasHighlight = false;
 
 
-                // 填充題
                 if (
                     q.type === 'text'
                 ) {
@@ -2104,13 +1854,9 @@
                     ) {
 
                         hasHighlight = true;
-
                     }
 
                 }
-
-
-                // 選擇題
                 else if (
                     q.options &&
                     q.answer
@@ -2131,18 +1877,13 @@
                     ) {
 
                         hasHighlight = true;
-
                     }
-
                 }
 
 
                 if (hasHighlight) {
-
                     highlightCount++;
-
                 }
-
             }
         );
 
@@ -2161,7 +1902,7 @@
 
         document.getElementById(
             'singleCount'
-        ).textContent =[object Object]
+        ).textContent =
             typeCounts.single;
 
 
@@ -2175,7 +1916,6 @@
             'textCount'
         ).textContent =
             typeCounts.text;
-
     }
 
 </script>
