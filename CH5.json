@@ -38,10 +38,13 @@
   {
     "id": "2174",
     "postId": null,
-    "question": "",
+    "question": "function fibonacci(n) {\nif (\n) {\nreturn 0;\n} else if (\n) {\nreturn 1;\n}\nint prev2 = 0;\nint prev1 = 1;\nint current = 0;\nfor (int i = 2; i <= n; i++) {\ncurrent = prev1 + prev2;\nprev2 = prev1;\nprev1 = current;\n}\nreturn current;\n}\n以上是計算費氏數列的函數 請正確地完成此程式 (用英文 變數要符合程式內的設定 填空格字裡不要有空白)",
     "language": "zh",
     "type": "text",
-    "options": []
+    "options": [],
+    "answer": [
+      "n<=0/n==1"
+    ]
   },
   {
     "id": "2158",
@@ -96,10 +99,13 @@
   {
     "id": "2173",
     "postId": null,
-    "question": "",
+    "question": "史特林近似公式（Stirling's approximation）指出阶乘 n! 的增長趨勢。寫成極限與漸進公式時，log(n!) =\n。(請用英文回答，表示形式為 請用log，不可用lg替代log，上標請用^，符號請用 {big-theta, theta, big-omega, omega, O, o,})",
     "language": "zh",
     "type": "text",
-    "options": []
+    "options": [],
+    "answer": [
+      "big-theta(nlogn)"
+    ]
   },
   {
     "id": "2154",
@@ -123,10 +129,13 @@
   {
     "id": "2181",
     "postId": null,
-    "question": "",
+    "question": "Insertion-Sort(A)\n1 for j ← 2 to length[A]\n2 do key ← A[j]\n3 // Insert A[j] into the sorted sequence A[1 .. j - 1]\n4 i ← j - 1\n5 while i > 0 and A[i] > key\n6 do A[i + 1] ← A[i]\n7 i ← i - 1\n8 A[i + 1] ← key\n以上 為 insertion sort 的演算法 請問\n令A 長度為n , 每一行的執行成本都是 1\n若第5行 每次都執行1次 請問這個程式執行的成本是多少\n(答案用到英文字母請用小寫 裡面部要有空白)",
     "language": "zh",
     "type": "text",
-    "options": []
+    "options": [],
+    "answer": [
+      "5n-4"
+    ]
   },
   {
     "id": "2132",
@@ -147,10 +156,13 @@
   {
     "id": "2179",
     "postId": null,
-    "question": "",
+    "question": "遞迴式 T(n) = 2T(n/2) + cn 的漸進解為\n。(請用英文回答，表示形式為 請用log，不可用lg替代log，上標請用^，符號請用 {big-theta, theta, big-omega, omega, O, o,})",
     "language": "zh",
     "type": "text",
-    "options": []
+    "options": [],
+    "answer": [
+      "big-theta(nlogn)"
+    ]
   },
   {
     "id": "2142",
@@ -256,18 +268,24 @@
   {
     "id": "2185",
     "postId": null,
-    "question": "",
+    "question": "若一個函數滿足 f(n) =\n，則稱此函數是多項式有界。(請用英文回答，表示形式為 請用log，不可用lg替代log，上標請用^ 指數符號 用 k)",
     "language": "zh",
     "type": "text",
-    "options": []
+    "options": [],
+    "answer": [
+      "O(n^k)"
+    ]
   },
   {
     "id": "2175",
     "postId": null,
-    "question": "",
+    "question": "表示重複對數函數（Iterative logarithm function）的數學寫法為\n。(請用小寫英文回答)",
     "language": "zh",
     "type": "text",
-    "options": []
+    "options": [],
+    "answer": [
+      "lg*(n)"
+    ]
   },
   {
     "id": "2166",
@@ -291,10 +309,13 @@
   {
     "id": "2184",
     "postId": null,
-    "question": "",
+    "question": "漸進上界與下界的轉換：f(n) = O(g(n)) 若且唯若 g(n) =\n。(請用英文回答，表示形式為 請用log，不可用lg替代log，上標請用^，符號請用 {big-theta, theta, big-omega, omega, O, o,})",
     "language": "zh",
     "type": "text",
-    "options": []
+    "options": [],
+    "answer": [
+      "big-omega(f(n))"
+    ]
   },
   {
     "id": "2137",
@@ -315,10 +336,13 @@
   {
     "id": "2182",
     "postId": null,
-    "question": "",
+    "question": "若滿足 m <= n 則 f(m) >= f(n)，此函數性質稱為\n。(請用英文小寫回答，單字間留一空白)",
     "language": "zh",
     "type": "text",
-    "options": []
+    "options": [],
+    "answer": [
+      "monotonically decreasing"
+    ]
   },
   {
     "id": "2145",
@@ -357,10 +381,13 @@
   {
     "id": "2187",
     "postId": null,
-    "question": "",
+    "question": "史特林公式中指出，階乘 n! 的增長大於常數指數 2^n，即 n! =\n。(請用英文回答，表示形式為 請用log，不可用lg替代log，上標請用^，符號請用 {big-theta, theta, big-omega, omega, O, o,})",
     "language": "zh",
     "type": "text",
-    "options": []
+    "options": [],
+    "answer": [
+      "omega(2^n)"
+    ]
   },
   {
     "id": "2138",
@@ -381,10 +408,13 @@
   {
     "id": "2180",
     "postId": null,
-    "question": "",
+    "question": "對於任意整數 n，天花板函數與地板函數的相加關係式為： ⌈n/2⌉ + ⌊n/2⌋ =\n。(請用英文小寫回答)",
     "language": "zh",
     "type": "text",
-    "options": []
+    "options": [],
+    "answer": [
+      "n"
+    ]
   },
   {
     "id": "2161",
@@ -427,10 +457,13 @@
   {
     "id": "2172",
     "postId": null,
-    "question": "",
+    "question": "在漸進符號中，表示 f(n) 最壞情況或上限為\n，而表示最佳情況或下限為\n。(請用英文回答，表示形式為 請用log，不可用lg替代log，上標請用^，符號請用 {big-theta, theta, big-omega, omega, O, o,})",
     "language": "zh",
     "type": "text",
-    "options": []
+    "options": [],
+    "answer": [
+      "O(f(n))/big-omega(f(n))"
+    ]
   },
   {
     "id": "2164",
@@ -453,10 +486,13 @@
   {
     "id": "2183",
     "postId": null,
-    "question": "",
+    "question": "若滿足 m < n 則 f(m) < f(n)，此函數性質稱為\n。(請用英文小寫回答，單字間留一空白)",
     "language": "zh",
     "type": "text",
-    "options": []
+    "options": [],
+    "answer": [
+      "strictly increasing"
+    ]
   },
   {
     "id": "2128",
@@ -472,6 +508,101 @@
     ],
     "answer": [
       1
+    ]
+  },
+  {
+    "id": "2135",
+    "postId": null,
+    "question": "漸進上界（Asymptotic upper bound）是用下列哪一個漸進符號表示？",
+    "language": "zh",
+    "type": "single",
+    "options": [
+      "A. O",
+      "B. Ω",
+      "C. ω",
+      "D. Θ"
+    ],
+    "answer": [
+      0
+    ]
+  },
+  {
+    "id": "2163",
+    "postId": null,
+    "question": "下列哪些函數屬於多對數有界（Polylogarithmically bounded）的範疇？",
+    "language": "zh",
+    "type": "multiple",
+    "options": [
+      "A. f(n) = lg(lg n)",
+      "B. f(n) = n",
+      "C. f(n) = (lg n)⁵",
+      "D. f(n) = lg² n"
+    ],
+    "answer": [
+      3,
+      2,
+      0
+    ]
+  },
+  {
+    "id": "2168",
+    "postId": null,
+    "question": "我們使用\n（請填二個字的英文單字）來證明演算法的正確性。在迴圈每次迭代開始時，子序列的特定性質都保持不變。(請用英文小寫回答，單字間留一空白)",
+    "language": "zh",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "loop invariant"
+    ]
+  },
+  {
+    "id": "2140",
+    "postId": null,
+    "question": "小於或等於實數 x 的最大整數是用下列哪一個函數表示？",
+    "language": "zh",
+    "type": "single",
+    "options": [
+      "A. 絕對值 (Absolute)",
+      "B. 高斯函數 (Ceiling)",
+      "C. 地板函數 (Floor)",
+      "D. 四捨五入 (Round)"
+    ],
+    "answer": [
+      2
+    ]
+  },
+  {
+    "id": "2157",
+    "postId": null,
+    "question": "對於所有實數 x，下列關於指數函數的性質哪些是正確的？",
+    "language": "zh",
+    "type": "multiple",
+    "options": [
+      "A. 1 + x <= eˣ",
+      "B. eˣ 永遠小於 1",
+      "C. 當 n 趨向無窮大時，lim (1 + x/n)ⁿ = eˣ",
+      "D. 當 |x| <= 1 時，eˣ <= 1 + x + x²/2"
+    ],
+    "answer": [
+      0,
+      3,
+      2
+    ]
+  },
+  {
+    "id": "2136",
+    "postId": null,
+    "question": "漸進下界（Asymptotic lower bound）是用下列哪一個漸進符號表示？",
+    "language": "zh",
+    "type": "single",
+    "options": [
+      "A. o",
+      "B. O",
+      "C. Ω",
+      "D. Θ"
+    ],
+    "answer": [
+      2
     ]
   }
 ]
