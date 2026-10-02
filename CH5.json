@@ -54,14 +54,14 @@
     "type": "multiple",
     "options": [
       "A. 建立了兩個輔助陣列 L 和 R",
-      "B. 在輔助陣列尾端放置無限大值（∞）作為哨兵（Sentinels）",
-      "C. 將排序結果複製回原陣列 A",
-      "D. 完全不需要額外的記憶體空間"
+      "B. 將排序結果複製回原陣列 A",
+      "C. 完全不需要額外的記憶體空間",
+      "D. 在輔助陣列尾端放置無限大值（∞）作為哨兵（Sentinels）"
     ],
     "answer": [
       0,
-      1,
-      2
+      3,
+      1
     ]
   },
   {
@@ -88,12 +88,12 @@
     "type": "single",
     "options": [
       "A. Ω",
-      "B. o",
-      "C. O",
-      "D. Θ"
+      "B. O",
+      "C. Θ",
+      "D. o"
     ],
     "answer": [
-      3
+      2
     ]
   },
   {
@@ -187,16 +187,16 @@
     "language": "zh",
     "type": "multiple",
     "options": [
-      "A. 若 f(n) = Θ(g(n)) 且 g(n) = Θ(h(n))，則 f(n) = Θ(h(n))",
-      "B. 若 f(n) = o(g(n)) 且 g(n) = o(h(n))，則 f(n) = o(h(n))",
-      "C. 若 f(n) = O(g(n)) 且 g(n) = O(h(n))，則 f(n) = O(h(n))",
-      "D. 若 f(n) = Ω(g(n)) 且 g(n) = Ω(h(n))，則 f(n) = Ω(h(n))"
+      "A. 若 f(n) = Ω(g(n)) 且 g(n) = Ω(h(n))，則 f(n) = Ω(h(n))",
+      "B. 若 f(n) = O(g(n)) 且 g(n) = O(h(n))，則 f(n) = O(h(n))",
+      "C. 若 f(n) = o(g(n)) 且 g(n) = o(h(n))，則 f(n) = o(h(n))",
+      "D. 若 f(n) = Θ(g(n)) 且 g(n) = Θ(h(n))，則 f(n) = Θ(h(n))"
     ],
     "answer": [
-      2,
-      3,
+      1,
       0,
-      1
+      3,
+      2
     ]
   },
   {
@@ -256,13 +256,13 @@
     "language": "zh",
     "type": "single",
     "options": [
-      "A. 插入排序 (Insertion Sort)",
-      "B. 合併排序 (Merge Sort)",
-      "C. 計數排序 (Counting Sort)",
-      "D. 基數排序 (Radix Sort)"
+      "A. 計數排序 (Counting Sort)",
+      "B. 基數排序 (Radix Sort)",
+      "C. 插入排序 (Insertion Sort)",
+      "D. 合併排序 (Merge Sort)"
     ],
     "answer": [
-      0
+      2
     ]
   },
   {
@@ -325,12 +325,12 @@
     "type": "single",
     "options": [
       "A. Ω",
-      "B. O",
-      "C. ω",
-      "D. o"
+      "B. ω",
+      "C. o",
+      "D. O"
     ],
     "answer": [
-      3
+      2
     ]
   },
   {
@@ -443,15 +443,15 @@
     "type": "multiple",
     "options": [
       "A. 它是極度緩慢增長的函數",
-      "B. 在可觀測宇宙中幾乎遇不到 n 使得 lg* n > 5",
-      "C. lg* 65536 = 4",
+      "B. lg* 65536 = 4",
+      "C. 在可觀測宇宙中幾乎遇不到 n 使得 lg* n > 5",
       "D. lg* 2 = 1"
     ],
     "answer": [
       0,
       3,
-      2,
-      1
+      1,
+      2
     ]
   },
   {
@@ -473,14 +473,14 @@
     "type": "multiple",
     "options": [
       "A. f(n) = 2ⁿ",
-      "B. f(n) = n³",
-      "C. f(n) = √n",
-      "D. f(n) = 10n² + 5n"
+      "B. f(n) = 10n² + 5n",
+      "C. f(n) = n³",
+      "D. f(n) = √n"
     ],
     "answer": [
+      2,
       1,
-      3,
-      2
+      3
     ]
   },
   {
@@ -603,6 +603,167 @@
     ],
     "answer": [
       2
+    ]
+  },
+  {
+    "id": "2129",
+    "postId": null,
+    "question": "合併排序法（Merge Sort）採用的是下列哪一種演算法設計方法？",
+    "language": "zh",
+    "type": "single",
+    "options": [
+      "A. 回溯法 (Backtracking)",
+      "B. 增量法 (Incremental Approach)",
+      "C. 分治法 (Divide-and-Conquer)",
+      "D. 貪婪法 (Greedy Approach)"
+    ],
+    "answer": [
+      2
+    ]
+  },
+  {
+    "id": "2146",
+    "postId": null,
+    "question": "史特林近似公式（Stirling's approximation）主要用於估算下列哪一種數學函數的增長？",
+    "language": "zh",
+    "type": "single",
+    "options": [
+      "A. 指數函數 (Exponential)",
+      "B. 對數函數 (Logarithm)",
+      "C. 階乘函數 (Factorial)",
+      "D. 多項式函數 (Polynomial)"
+    ],
+    "answer": [
+      2
+    ]
+  },
+  {
+    "id": "2171",
+    "postId": null,
+    "question": "當問題規模 n > 1 時，合併排序法（Merge Sort）執行時間的遞迴關係式（Recurrence）為 T(n) = 2T(n/2) +\n。(請用英文回答，表示形式為 請用log，不可用lg替代log，上標請用^，符號請用 {big-theta, theta, big-omega, omega, O, o,})",
+    "language": "zh",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "big-theta(n)"
+    ]
+  },
+  {
+    "id": "2167",
+    "postId": null,
+    "question": "在分析演算法時，我們常使用的單處理器隨機存取機器（RAM）模型中，做了哪些基礎假設？",
+    "language": "zh",
+    "type": "multiple",
+    "options": [
+      "A. 所有數據都能隨機存取",
+      "B. 指令是逐一順序執行的（沒有並行運作）",
+      "C. 數據傳輸頻寬是無限大的",
+      "D. 每條基本指令（如加法、乘法、存取）花費常數時間"
+    ],
+    "answer": [
+      1,
+      3,
+      0
+    ]
+  },
+  {
+    "id": "2162",
+    "postId": null,
+    "question": "關於費氏數列（Fibonacci numbers），下列定義與數學公式哪些是正確的？",
+    "language": "zh",
+    "type": "multiple",
+    "options": [
+      "A. 當 i >= 2 時，Fi = Fi-1 + Fi-2",
+      "B. Fi 可以用 φ（黃金比例）與其共軛值來精確表示",
+      "C. F0 = 0 且 F1 = 1",
+      "D. 費氏數列隨指數級增長"
+    ],
+    "answer": [
+      2,
+      0,
+      1,
+      3
+    ]
+  },
+  {
+    "id": "2131",
+    "postId": null,
+    "question": "插入排序法（Insertion Sort）在最壞情況（Worst-case）下的時間複雜度為何？",
+    "language": "zh",
+    "type": "single",
+    "options": [
+      "A. O(n)",
+      "B. O(2ⁿ)",
+      "C. O(n²)",
+      "D. O(n log n)"
+    ],
+    "answer": [
+      2
+    ]
+  },
+  {
+    "id": "2143",
+    "postId": null,
+    "question": "費氏數列（Fibonacci numbers）中定義的黃金比例 φ（Golden ratio）之近似值約為多少？",
+    "language": "zh",
+    "type": "single",
+    "options": [
+      "A. 1.414",
+      "B. 2.718",
+      "C. 3.141",
+      "D. 1.618"
+    ]
+  },
+  {
+    "id": "2186",
+    "postId": null,
+    "question": "若一個函數滿足 f(n) =\n，則稱此函數是多對數有界(polylogarithmically bounded)。(請用英文回答，表示形式為 請用log，不可用lg替代log，上標請用^ 指數符號 用 k)",
+    "language": "zh",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "O(logn)^k"
+    ]
+  },
+  {
+    "id": "2177",
+    "postId": null,
+    "question": "階乘增長率與指數增長率相比，n! 屬於 o(nⁿ)，但與常見的 2ⁿ 指數相比，n! 屬於\n關係。(請用英文回答，表示形式為 請用log，不可用lg替代log，上標請用^，符號請用 {big-theta, theta, big-omega, omega, O, o,})",
+    "language": "zh",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "omega(2^n)"
+    ]
+  },
+  {
+    "id": "2151",
+    "postId": null,
+    "question": "分析演算法（Analyzing algorithms）時，通常需要預測演算法所需的哪些資源？",
+    "language": "zh",
+    "type": "multiple",
+    "options": [
+      "A. 網路頻寬 (Communication bandwidth)",
+      "B. 執行時間 (Time)",
+      "C. 記憶體空間 (Memory)",
+      "D. 邏輯閘數量 (Logic gates)"
+    ],
+    "answer": [
+      1,
+      2,
+      0,
+      3
+    ]
+  },
+  {
+    "id": "2170",
+    "postId": null,
+    "question": "分治法將問題分解成子問題，遞迴求解。其三個主要動作分別為：\n、\n、\n。(請用小寫英文回答)",
+    "language": "zh",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "divide/conquer/combine"
     ]
   }
 ]
