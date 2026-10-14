@@ -22,10 +22,10 @@
     "language": "zh",
     "type": "single",
     "options": [
-      "A. O(n)",
+      "A. O(f(n))",
       "B. O(nˡᵒᵍᵇ⁽ᵃ⁾)",
       "C. O(n log n)",
-      "D. O(f(n))"
+      "D. O(n)"
     ],
     "answer": [
       1
@@ -99,13 +99,13 @@
     "language": "zh",
     "type": "single",
     "options": [
-      "A. 分治演算法的複雜度分析",
-      "B. 動態規劃的路徑選擇",
-      "C. 資料結構的記憶體分配",
-      "D. 圖論中的最短路徑"
+      "A. 資料結構的記憶體分配",
+      "B. 圖論中的最短路徑",
+      "C. 分治演算法的複雜度分析",
+      "D. 動態規劃的路徑選擇"
     ],
     "answer": [
-      0
+      2
     ]
   },
   {
@@ -115,13 +115,13 @@
     "language": "zh",
     "type": "single",
     "options": [
-      "A. T(n)=2T(n/2)+n²",
-      "B. T(n)=aT(n/b)+f(n)",
-      "C. T(n)=aT(n-b)+f(n)",
-      "D. T(n)=T(n-1)+f(n)"
+      "A. T(n)=aT(n-b)+f(n)",
+      "B. T(n)=T(n-1)+f(n)",
+      "C. T(n)=2T(n/2)+n²",
+      "D. T(n)=aT(n/b)+f(n)"
     ],
     "answer": [
-      1
+      3
     ]
   },
   {
@@ -132,14 +132,14 @@
     "type": "multiple",
     "options": [
       "A. Ω 符號代表下界",
-      "B. Θ 符號代表緊確界",
-      "C. 這些符號都只用於遞迴式",
-      "D. O 符號代表上界"
+      "B. 這些符號都只用於遞迴式",
+      "C. O 符號代表上界",
+      "D. Θ 符號代表緊確界"
     ],
     "answer": [
-      3,
+      2,
       0,
-      1
+      3
     ]
   },
   {
@@ -182,15 +182,15 @@
     "language": "zh",
     "type": "multiple",
     "options": [
-      "A. f(n) 成長較快",
-      "B. ε > 0",
-      "C. a, b 是常數",
-      "D. f(n) 為 O(nˡᵒᵍᵇ⁽ᵃ⁾(a - ε))"
+      "A. ε > 0",
+      "B. f(n) 為 O(nˡᵒᵍᵇ⁽ᵃ⁾(a - ε))",
+      "C. f(n) 成長較快",
+      "D. a, b 是常數"
     ],
     "answer": [
-      3,
       1,
-      2
+      0,
+      3
     ]
   },
   {
@@ -201,12 +201,12 @@
     "type": "single",
     "options": [
       "A. b",
-      "B. n!",
-      "C. a",
+      "B. a",
+      "C. n!",
       "D. f(n)"
     ],
     "answer": [
-      1
+      2
     ]
   },
   {
@@ -309,6 +309,177 @@
     "options": [],
     "answer": [
       "tree"
+    ]
+  },
+  {
+    "id": "2249",
+    "postId": null,
+    "question": "在使用代入法時，常遇到的困難包含？",
+    "language": "zh",
+    "type": "multiple",
+    "options": [
+      "A. 無法進行代數變換",
+      "B. 猜測解的正確形式",
+      "C. 證明邊界條件的繁瑣",
+      "D. 遞迴樹過於龐大"
+    ],
+    "answer": [
+      1,
+      2,
+      0
+    ]
+  },
+  {
+    "id": "2281",
+    "postId": null,
+    "question": "處理遞迴中的 n/b 時，若非整數，我們常會忽略\n函數 (請用小寫英文回答)",
+    "language": "zh",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "floor"
+    ]
+  },
+  {
+    "id": "2255",
+    "postId": null,
+    "question": "關於遞迴式 T(n) = T(n-1) + n 的描述，何者正確？",
+    "language": "zh",
+    "type": "multiple",
+    "options": [
+      "A. 適用大師定理",
+      "B. 解為 O(n²)",
+      "C. 屬於線性遞迴",
+      "D. 不能使用大師定理"
+    ],
+    "answer": [
+      2,
+      1,
+      3
+    ]
+  },
+  {
+    "id": "2272",
+    "postId": null,
+    "question": "當 f(n) 在大師定理中成長速度大於 nˡᵒᵍᵇ⁽ᵃ⁾ 時，我們稱之為 Case\n(請用小寫英文回答)",
+    "language": "zh",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "three"
+    ]
+  },
+  {
+    "id": "2235",
+    "postId": null,
+    "question": "當遞迴式包含下取整或上取整時，我們通常？",
+    "language": "zh",
+    "type": "single",
+    "options": [
+      "A. 將其改為絕對值",
+      "B. 將其改為指數",
+      "C. 忽略它們",
+      "D. 將其改為階乘"
+    ],
+    "answer": [
+      2
+    ]
+  },
+  {
+    "id": "2243",
+    "postId": null,
+    "question": "「忽略技術細節」(neglecting technical details)在演算法分析中代表？",
+    "language": "zh",
+    "type": "single",
+    "options": [
+      "A. 只關注最好情況",
+      "B. 捨棄對漸進複雜度無影響的因素",
+      "C. 錯誤的分析方式",
+      "D. 簡化代數運算"
+    ],
+    "answer": [
+      1
+    ]
+  },
+  {
+    "id": "2250",
+    "postId": null,
+    "question": "遞迴樹法主要由哪幾個步驟組成？",
+    "language": "zh",
+    "type": "multiple",
+    "options": [
+      "A. 計算每層代價",
+      "B. 寫出遞迴式",
+      "C. 繪製遞迴樹",
+      "D. 將所有層級代價加總"
+    ],
+    "answer": [
+      2,
+      0,
+      3
+    ]
+  },
+  {
+    "id": "2263",
+    "postId": null,
+    "question": "遞迴樹的總成本計算，需考慮？",
+    "language": "zh",
+    "type": "multiple",
+    "options": [
+      "A. 葉節點代價",
+      "B. 根節點代價",
+      "C. 中間層節點代價",
+      "D. 全域變數值"
+    ],
+    "answer": [
+      1,
+      2,
+      0
+    ]
+  },
+  {
+    "id": "2254",
+    "postId": null,
+    "question": "下列哪些技術常用來改善遞迴解的猜測？",
+    "language": "zh",
+    "type": "multiple",
+    "options": [
+      "A. 使用隨機搜尋",
+      "B. 觀察遞迴樹結構",
+      "C. 利用歸納法證明",
+      "D. 觀察小樣本數據"
+    ],
+    "answer": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": "2277",
+    "postId": null,
+    "question": "遞迴關係式分析中，我們通常會忽略\n條件 (請用小寫英文回答)",
+    "language": "zh",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "boundary"
+    ]
+  },
+  {
+    "id": "2246",
+    "postId": null,
+    "question": "歸納法中的「歸納假設」是？",
+    "language": "zh",
+    "type": "single",
+    "options": [
+      "A. 假設遞迴式永遠收斂",
+      "B. 假設常數 c 為 0",
+      "C. 假設參數 n 為無限大",
+      "D. 假設對於較小的輸入值解是正確的"
+    ],
+    "answer": [
+      3
     ]
   }
 ]
