@@ -1,1 +1,314 @@
-[{"id":451,"postId":1003,"question":"多對多關係需要加入一個[__1__]來轉換。(請用小寫英文回答字母間留一個空白)","type":"text","options":[],"answer":["junction table"]},{"id":446,"postId":993,"question":"表格間是透過[__1__]參考[__2__]來建立連結。(請用小寫英文回答)","type":"text","options":[],"answer":["fk","pk"]},{"id":422,"postId":950,"question":"\"Dept ID\" in student table refers to Dept table PK; it is?","type":"single","options":["Primary Key","Super Key","Foreign Key","Candidate Key"],"answer":[2]},{"id":418,"postId":990,"question":"Which operations may cause integrity violations?","type":"multiple","options":["Insert","Delete","Select","Update"],"answer":[0,1,3]},{"id":396,"postId":948,"question":"Which attribute is shown as a double oval in ER diagrams?","type":"single","options":["Composite attribute","Simple attribute","Derived attribute","Multi-valued attribute"],"answer":[3]},{"id":395,"postId":993,"question":"Tables link via [__1__] referencing [__2__]. (please answer in lowercase english separated by spaces)","type":"text","options":[],"answer":["fk","pk"]},{"id":374,"postId":944,"question":"In a relational model, what is each row of data called?","type":"single","options":["Domain","Tuple","Schema","Attribute"],"answer":[1]},{"id":343,"postId":977,"question":"Qualities of an Alternate Key?","type":"multiple","options":["It has minimality","Backup for PK","Not unique","It is a Candidate Key"],"answer":[0,1,3]},{"id":338,"postId":1008,"question":"One employee to one desk is a [__1__] relation. (please answer in lowercase english with hyphens and digits)","type":"text","options":[],"answer":["1-to-1"]},{"id":335,"postId":965,"question":"Categories of Null values include?","type":"multiple","options":["Numeric Null","Applicable Null","Inapplicable Null","Totally Unknown Null"],"answer":[1,2,3]},{"id":334,"postId":963,"question":"What are types of relationships in relational databases?","type":"multiple","options":["M:M","M:N","1:M","0.042361111111111"],"answer":[1,2,3]},{"id":332,"postId":947,"question":"\"Spouse name of an unmarried person\" is which type of Null?","type":"single","options":["Inapplicable","Totally Unknown","Known","Applicable"],"answer":[0]},{"id":330,"postId":988,"question":"Why is changing a PK discouraged?","type":"multiple","options":["Violates laws of heaven","Lower performance","Affects related FKs","Data chaos"],"answer":[1,2,3]},{"id":329,"postId":931,"question":"A Primary Key field cannot contain what value?","type":"single","options":["English","100","Number","Null"],"answer":[3]},{"id":328,"postId":995,"question":"The field chosen as the ID basis in a table is the [__1__]. (please answer in lowercase english separated by spaces)","type":"text","options":[],"answer":["primary key"]},{"id":327,"postId":1012,"question":"PK not allowed to be blank follows [__1__] integrity. (please answer in lowercase english)","type":"text","options":[],"answer":["entity"]},{"id":326,"postId":952,"question":"In a relational database, what is a Table called?","type":"single","options":["Relation","Attribute","Entity","Hierarchy"],"answer":[0]},{"id":325,"postId":925,"question":"Which is NOT a goal of relational databases?","type":"single","options":["Improve efficiency","Ensure consistency","Save space","Increase redundancy"],"answer":[3]},{"id":324,"postId":1018,"question":"A Dept table usually acts as the [__1__] relation table. (please answer in lowercase english)","type":"text","options":[],"answer":["parent"]},{"id":323,"postId":959,"question":"Candidate Keys must possess which two characteristics?","type":"multiple","options":["Uniqueness","Minimality","Derivability","Compositeness"],"answer":[0,1]},{"id":322,"postId":945,"question":"In a relational model, what is each column called?","type":"single","options":["Attribute","Tuple","Entity","Key"],"answer":[0]},{"id":321,"postId":1014,"question":"An attribute with multiple values is [__1__]. (please answer in lowercase english with hyphen)","type":"text","options":[],"answer":["multi-valued"]},{"id":320,"postId":968,"question":"Features of Composite Primary Keys?","type":"multiple","options":["Multi-field","Group must be unique","Found in M:N relations","One column can repeat"],"answer":[0,1,2]},{"id":319,"postId":924,"question":"In a relational database, what does a \"Foreign Key\" refer to?","type":"single","options":["Candidate Key","Primary Key","Composite Key","Super Key"],"answer":[1]},{"id":318,"postId":997,"question":"由主鍵與其他屬性組成的超集稱為[__1__]。(請用小寫英文回答字母間留一個空白)","type":"text","options":[],"answer":["super key"]},{"id":317,"postId":971,"question":"Steps to build a relational database include?","type":"multiple","options":["Define PK","Put all in one table","Split by nature","Define FK links"],"answer":[0,2,3]},{"id":316,"postId":939,"question":"To resolve an M:N relationship, what table is usually added?","type":"single","options":["History Table","Junction Table","System Table","Backup Table"],"answer":[1]},{"id":315,"postId":973,"question":"Which attributes should be marked \"NOT NULL\"?","type":"multiple","options":["Remarks","PK fields","Optional address","Vital ID info"],"answer":[1,3]},{"id":314,"postId":1013,"question":"The [__1__] in a child table must correspond to the parent PK. (please answer in lowercase english abbreviation)","type":"text","options":[],"answer":["fk"]},{"id":313,"postId":946,"question":"What does Null represent regarding the data state?","type":"single","options":["Error","Unknown","Blank"],"answer":[1]},{"id":312,"postId":954,"question":"If an FK value isn't found in Parent table, it violates?","type":"single","options":["Domain Integrity","Referential Integrity","Structural Integrity","Entity Integrity"],"answer":[1]},{"id":311,"postId":933,"question":"Candidate keys not chosen as the primary key are called?","type":"single","options":["Composite Key","Derived Key","Alternate Key","Reference Key"],"answer":[2]},{"id":310,"postId":935,"question":"Which key acts as a bridge to establish table relationships?","type":"single","options":["Candidate Key","Foreign Key","Primary Key","Simple Key"],"answer":[1]},{"id":305,"postId":962,"question":"下列哪些屬於屬性 (Attribute) 的分類？","type":"multiple","options":["候選屬性","簡單屬性","衍生屬性","複合屬性"],"answer":[1,2,3]},{"id":303,"postId":991,"question":"設定外鍵約束 (FK Constraint) 時的選項包含？","type":"multiple","options":["串接 (Cascade)","拒絕執行 (No Action)","設為空值 (Set Null)","自動加密 (Encrypt)"],"answer":[0,1,2]},{"id":302,"postId":951,"question":"下列何者可以幫助減少行政人員重複輸入的時間？","type":"single","options":["記事本","掃描器","小畫家","關聯式資料庫"],"answer":[3]},{"id":301,"postId":1019,"question":"A Student table usually acts as the [__1__] relation table. (please answer in lowercase english)","type":"text","options":[],"answer":["child"]},{"id":300,"postId":984,"question":"如果資料庫中出現「相同學籍資料存放在兩處」，代表？","type":"multiple","options":["違反重複性原則","浪費儲存空間","增加安全性","可能產生一致性問題"],"answer":[0,1,3]},{"id":299,"postId":929,"question":"A set of fields that uniquely identifies a record is called?","type":"single","options":["Super Key","Foreign Key","Null","Derived Key"],"answer":[0]},{"id":298,"postId":1012,"question":"若主鍵不准留白，這是遵循[__1__]完整性規則。(請用小寫英文回答)","type":"text","options":[],"answer":["entity"]},{"id":296,"postId":931,"question":"設定為主鍵 (Primary Key) 的欄位不可以為什麼值？","type":"single","options":["數字","100","空值 (Null)","英文"],"answer":[2]},{"id":295,"postId":1000,"question":"Field values must come from a valid [__1__]. (please answer in lowercase english)","type":"text","options":[],"answer":["domain"]},{"id":294,"postId":1004,"question":"經由計算而得的屬性稱為[__1__]。(請用小寫英文回答字母間留一個空白)","type":"text","options":[],"answer":["derived attribute"]},{"id":289,"postId":969,"question":"Domain Integrity rules include which constraints?","type":"multiple","options":["No duplicates","Same data types","Within legal range","Consistent column nature"],"answer":[1,2,3]},{"id":288,"postId":989,"question":"PK of Student-Course junction table includes?","type":"multiple","options":["Course ID","Student ID","Teacher Name","Semester"],"answer":[0,1]},{"id":285,"postId":980,"question":"Correct FK placement in a 1:M relationship?","type":"multiple","options":["Refers to \"Many\" PK","Refers to \"One\" PK","In \"One\" side","In \"Many\" side"],"answer":[1,3]},{"id":284,"postId":979,"question":"關聯式資料庫系統包含？","type":"multiple","options":["關係 (Relationships)","實體 (Entities)","屬性 (Attributes)","物理磁軌"],"answer":[0,1,2]},{"id":283,"postId":968,"question":"複合主鍵 (Composite Key) 的特點？","type":"multiple","options":["只要其中一欄重複即可","常見於 M:N 關係","整組不可重複","由多個欄位組成"],"answer":[1,2,3]},{"id":282,"postId":1026,"question":"Every table must have at least one [__1__] key. (please answer in lowercase english)","type":"text","options":[],"answer":["primary"]},{"id":281,"postId":1023,"question":"屬性的範圍或合法值群稱為[__1__]。(請用小寫英文回答)","type":"text","options":[],"answer":["domain"]},{"id":274,"postId":938,"question":"學生與課程之間的選課關係通常屬於？","type":"single","options":["一對一","一對多","單向關係","多對多"],"answer":[3]},{"id":273,"postId":964,"question":"下列哪些狀況會使用到外來鍵 (Foreign Key)？","type":"multiple","options":["1:M 關係轉換","實體完整性檢查","參考完整性檢查","建立資料表關聯"],"answer":[0,2,3]},{"id":272,"postId":1013,"question":"子關聯表中的[__1__]必須對應父關聯表的主鍵。(請用小寫英文縮寫)","type":"text","options":[],"answer":["fk"]},{"id":271,"postId":965,"question":"關於空值 (Null) 的分類包含哪些？","type":"multiple","options":["可應用空值","不可應用空值","數字空值","完全未知空值"],"answer":[0,1,3]},{"id":270,"postId":1010,"question":"Fields describing features in a table are [__1__]. (please answer in lowercase english)","type":"text","options":[],"answer":["attribute"]},{"id":269,"postId":973,"question":"哪些屬性在處理時應儘量標註「NOT NULL」？","type":"multiple","options":["備註欄位","選填地址","重要識別資訊","主鍵欄位"],"answer":[2,3]},{"id":265,"postId":999,"question":"參考完整性至少需要[__1__]個資料表才能執行。(請用阿拉伯數字)","type":"text","options":[],"answer":["2"]},{"id":264,"postId":926,"question":"The smallest indivisible attribute unit is called?","type":"single","options":["Derived attribute","Composite attribute","Simple attribute","Multi-valued attribute"],"answer":[2]},{"id":263,"postId":983,"question":"When creating M:N Junction Table, it should include?","type":"multiple","options":["Auto-generated ID","Entity A PK","Relation attr (e.g. score)","Entity B PK"],"answer":[1,2,3]},{"id":246,"postId":986,"question":"Descriptions of the Relational Model?","type":"multiple","options":["Uses physical links","Simple and intuitive","2D Tables","Proposed by Codd"],"answer":[1,2,3]},{"id":245,"postId":962,"question":"Which are categories of Attributes?","type":"multiple","options":["Composite attribute","Candidate attribute","Derived attribute","Simple attribute"],"answer":[0,2,3]},{"id":244,"postId":1009,"question":"包含兩個以上欄位的主鍵稱為[__1__]鍵。(請用小寫英文回答)","type":"text","options":[],"answer":["composite"]},{"id":243,"postId":960,"question":"關聯式資料完整性包含哪三大規則？","type":"multiple","options":["值域完整性","網路完整性","實體完整性","參考完整性"],"answer":[0,2,3]},{"id":242,"postId":964,"question":"In which situations is a Foreign Key used?","type":"multiple","options":["Entity Integrity check","Referential Integrity check","Link tables","1:M conversion"],"answer":[1,2,3]},{"id":241,"postId":949,"question":"Which integrity requires same data types in a column?","type":"single","options":["Referential Integrity","Logical Integrity","Entity Integrity","Domain Integrity"],"answer":[3]},{"id":240,"postId":936,"question":"Relationship between a teacher and their specific parking spot?","type":"single","options":["M:N","0.042361111111111","1:M","No relation"],"answer":[1]},{"id":235,"postId":1015,"question":"[__1__]值不代表零或空白。(請用小寫英文回答)","type":"text","options":[],"answer":["null"]},{"id":234,"postId":998,"question":"實體完整性規則規定主鍵不准有[__1__]值。(請用小寫英文回答)","type":"text","options":[],"answer":["null"]},{"id":233,"postId":1005,"question":"[__1__] integrity ensures validity of FK references. (please answer in lowercase english)","type":"text","options":[],"answer":["referential"]},{"id":232,"postId":1023,"question":"The range of valid values for an attribute is the [__1__]. (please answer in lowercase english)","type":"text","options":[],"answer":["domain"]},{"id":231,"postId":1020,"question":"ER 圖中雙線長方形代表[__1__]實體。(請用小寫英文回答)","type":"text","options":[],"answer":["weak"]},{"id":230,"postId":1009,"question":"A PK with two or more fields is a [__1__] key. (please answer in lowercase english)","type":"text","options":[],"answer":["composite"]},{"id":229,"postId":928,"question":"Calculating age from date of birth makes \"age\" what attribute?","type":"single","options":["Derived attribute","Composite attribute","Simple attribute","Primary attribute"],"answer":[0]},{"id":228,"postId":927,"question":"地址可以分解為縣市、街道，這屬於什麼屬性？","type":"single","options":["鍵值屬性","簡單屬性","複合屬性","衍生屬性"],"answer":[2]},{"id":227,"postId":934,"question":"A Primary Key consisting of two or more fields is a?","type":"single","options":["External Key","Super Key","Single Key","Composite Key"],"answer":[3]},{"id":226,"postId":963,"question":"關聯式資料庫的關聯種類有哪些？","type":"multiple","options":["0.042361111111111","1:M","M:N","M:M"],"answer":[0,1,2]},{"id":225,"postId":967,"question":"參考完整性規則的特性有哪些？","type":"multiple","options":["至少需兩個表","檢查欄位是否為數字","建立父子表關係","檢查輸入有效性"],"answer":[0,2,3]},{"id":224,"postId":986,"question":"關於關聯式模型的描述正確的是？","type":"multiple","options":["以二維表格呈現","透過鏈結連結","由 Codd 提出","結構簡單直觀"],"answer":[0,2,3]},{"id":223,"postId":1020,"question":"Double line rectangle in ERD represents [__1__] entity. (please answer in lowercase english)","type":"text","options":[],"answer":["weak"]},{"id":222,"postId":983,"question":"建立 M:N 的聯合資料表時，新表應包含？","type":"multiple","options":["實體 B 的主鍵","關聯屬性（如成績）","系統自動產生的序號","實體 A 的主鍵"],"answer":[0,1,3]},{"id":221,"postId":926,"question":"一個已經無法再分割的最小屬性單位稱為什麼？","type":"single","options":["簡單屬性","多值屬性","衍生屬性","複合屬性"],"answer":[0]},{"id":220,"postId":1003,"question":"M:N relationships need a [__1__] to convert. (please answer in lowercase english separated by spaces)","type":"text","options":[],"answer":["junction table"]},{"id":219,"postId":932,"question":"在候選鍵中被挑選出來作為識別根基的是？","type":"single","options":["外鍵","簡單屬性","主鍵","交替鍵"],"answer":[2]},{"id":218,"postId":958,"question":"下列哪些屬於鍵值屬性 (Key Attribute)？","type":"multiple","options":["候選鍵","衍生屬性","外鍵 (FK)","主鍵 (PK)"],"answer":[0,2,3]},{"id":217,"postId":1011,"question":"確保同一行欄位資料屬性相同是[__1__]完整性。(請用小寫英文回答)","type":"text","options":[],"answer":["domain"]},{"id":216,"postId":976,"question":"若刪除父表的一筆紀錄，參考完整性可能會？","type":"multiple","options":["同步刪除子表紀錄","產生懸空紀錄","自動增加新紀錄","禁止刪除"],"answer":[0,1,3]},{"id":215,"postId":1017,"question":"將關聯式資料庫中重複的資料減少稱為降低[__1__]。(請用小寫英文回答)","type":"text","options":[],"answer":["redundancy"]},{"id":214,"postId":1000,"question":"欄位的值必須來自合法的[__1__]。(請用小寫英文回答)","type":"text","options":[],"answer":["domain"]},{"id":213,"postId":966,"question":"實體完整性規則的特性有哪些？","type":"multiple","options":["針對外鍵","確保紀錄唯一識別","主鍵不能為空","針對主鍵"],"answer":[1,2,3]},{"id":212,"postId":992,"question":"關聯式資料庫是由兩個以上的[__1__]組合而成。(請用小寫英文回答)","type":"text","options":[],"answer":["tables"]},{"id":211,"postId":950,"question":"學生表中的「系碼」對應科系表的主鍵，系碼是？","type":"single","options":["主鍵","外來鍵","超鍵","候選鍵"],"answer":[1]},{"id":210,"postId":1017,"question":"Reducing duplicates in a DB is reducing [__1__]. (please answer in lowercase english)","type":"text","options":[],"answer":["redundancy"]},{"id":209,"postId":999,"question":"Referential integrity requires at least [__1__] tables. (please use arabic numerals)","type":"text","options":[],"answer":["2"]},{"id":208,"postId":971,"question":"建立關聯式資料庫的步驟通常包括？","type":"multiple","options":["依照性質分表","定義主鍵","定義外鍵連結","把所有資料塞進一表"],"answer":[0,1,2]},{"id":207,"postId":927,"question":"An address divisible into city and street is what attribute?","type":"single","options":["Composite attribute","Derived attribute","Key attribute","Simple attribute"],"answer":[0]},{"id":206,"postId":945,"question":"在關聯式模型中，每一行欄位稱之為？","type":"single","options":["實體","鍵","序組","屬性"],"answer":[3]},{"id":205,"postId":1004,"question":"Attributes calculated from others are [__1__]. (please answer in lowercase english separated by spaces)","type":"text","options":[],"answer":["derived attribute"]},{"id":204,"postId":991,"question":"Options when setting FK constraints?","type":"multiple","options":["Auto Encrypt","Cascade","Set Null","No Action"],"answer":[1,2,3]},{"id":203,"postId":972,"question":"Why convert M:N to two 1:M relationships?","type":"multiple","options":["Save space","Easier computation","Meet relational specs","Simplify structure"],"answer":[1,2,3]},{"id":202,"postId":998,"question":"Entity integrity states the PK cannot be [__1__]. (please answer in lowercase english)","type":"text","options":[],"answer":["null"]},{"id":176,"postId":940,"question":"實體完整性規則要求哪一個鍵不能為 Null？","type":"single","options":["候選鍵","交替鍵","主鍵","外鍵"],"answer":[2]},{"id":175,"postId":970,"question":"Which examples are \"1:M\" relationships?","type":"multiple","options":["Student to Clubs","Teacher to Courses","Dept to Students","Citizen to ID"],"answer":[0,1,2]},{"id":174,"postId":978,"question":"Examples of Derived Attributes?","type":"multiple","options":["Age from DOB","ID from entry year","Name from parents","Total from scores"],"answer":[0,1,3]},{"id":173,"postId":936,"question":"教師與其專屬停車位的關係通常是什麼？","type":"single","options":["一對一","無關","多對多","一對多"],"answer":[0]},{"id":172,"postId":1025,"question":"關聯式資料庫英文簡稱為[__1__]。(請用大寫英文縮寫)","type":"text","options":[],"answer":["RDB"]},{"id":171,"postId":979,"question":"A Relational DB System includes?","type":"multiple","options":["Relationships","Entities","Physical tracks","Attributes"],"answer":[0,1,3]},{"id":170,"postId":941,"question":"In Referential Integrity, the FK value must exist in the Parent's?","type":"single","options":["Primary Key","Notes","Index","Foreign Key"],"answer":[0]},{"id":169,"postId":990,"question":"哪三種操作可能導致完整性違規？","type":"multiple","options":["查詢 (Select)","刪除 (Delete)","新增 (Insert)","修改 (Update)"],"answer":[1,2,3]},{"id":168,"postId":953,"question":"若主鍵值重複，違反了哪項規則？","type":"single","options":["使用者規則","參考完整性","值域完整性","實體完整性"],"answer":[3]},{"id":167,"postId":981,"question":"Benefits of setting Domain Integrity rules?","type":"multiple","options":["Maintain data quality","Less error entry","More search efficiency","Enforce format"],"answer":[0,1,3]},{"id":166,"postId":938,"question":"The relationship between students and courses is usually?","type":"single","options":["0.042361111111111","1:M","M:N","Unidirectional"],"answer":[2]},{"id":165,"postId":996,"question":"複合屬性可再分割，而[__1__]屬性不可再分割。(請用小寫英文回答字母間留一個空白)","type":"text","options":[],"answer":["simple attribute"]},{"id":164,"postId":923,"question":"Tables are linked through what kind of field values?","type":"single","options":["Unique","Same","Different","Random"],"answer":[1]},{"id":163,"postId":1005,"question":"[__1__]完整性規則確保外鍵參考的有效性。(請用小寫英文回答)","type":"text","options":[],"answer":["referential"]},{"id":161,"postId":966,"question":"Features of Entity Integrity rules?","type":"multiple","options":["Ensures unique ID","PK cannot be empty","Targets FK","Targets PK"],"answer":[0,1,3]},{"id":160,"postId":958,"question":"Which of the following are Key Attributes?","type":"multiple","options":["Candidate Key","Derived attribute","Foreign Key (FK)","Primary Key (PK)"],"answer":[0,2,3]},{"id":159,"postId":1002,"question":"一對多關係的英文縮寫通常表示為[__1__]。(請用大寫英文與冒號)","type":"text","options":[],"answer":["1:M"]},{"id":158,"postId":951,"question":"What helps reduce repetitive manual data entry time?","type":"single","options":["Scanner","Relational Database","Notepad","MS Paint"],"answer":[1]},{"id":157,"postId":977,"question":"交替鍵 (Alternate Key) 的性質有哪些？","type":"multiple","options":["它具有最小性","它是候選鍵之一","它不具有唯一性","它是主鍵的備選"],"answer":[0,1,3]},{"id":156,"postId":942,"question":"Field values must be within valid groups (e.g., Male/Female)?","type":"single","options":["Domain Integrity","Entity Integrity","System Integrity","Referential Integrity"],"answer":[0]},{"id":155,"postId":957,"question":"關聯式資料庫的主要優點包括哪些？","type":"multiple","options":["確保資料一致性","提高行政效率","節省記憶體空間","增加開發難度"],"answer":[0,1,2]},{"id":154,"postId":922,"question":"A relational database is composed of two or more of what?","type":"single","options":["Hardware","Networks","Tables","Programs"],"answer":[2]},{"id":153,"postId":1021,"question":"確保異動資料時的一致性與[__1__]性。(請用小寫英文回答)","type":"text","options":[],"answer":["integrity"]},{"id":152,"postId":929,"question":"能夠唯一識別一筆記錄的欄位組合稱為什麼？","type":"single","options":["空值","衍生鍵","外鍵","超鍵"],"answer":[3]},{"id":151,"postId":947,"question":"「未婚者的配偶姓名」屬於哪種 Null？","type":"single","options":["可應用","已知","完全未知","不可應用"],"answer":[3]},{"id":150,"postId":1022,"question":"選課表中由學號與課號組成的鍵稱為[__1__]鍵。(請用小寫英文回答)","type":"text","options":[],"answer":["composite"]},{"id":149,"postId":937,"question":"One teacher teaching many students is what relationship?","type":"single","options":["M:1","M:N","1:M","0.042361111111111"],"answer":[2]},{"id":148,"postId":974,"question":"關於「系碼」作為外鍵的描述哪些正確？","type":"multiple","options":["確保學生屬於合法系所","存在於學生表","參考科系表主鍵","一定要跟學號一樣"],"answer":[0,1,2]},{"id":147,"postId":943,"question":"執行「參考完整性」至少需要幾個資料表？","type":"single","options":["0 個","2 個","1 個","無數個"],"answer":[1]},{"id":146,"postId":941,"question":"參考完整性規則中，外鍵的值必須存在於父表的？","type":"single","options":["外鍵","主鍵","備註","索引"],"answer":[1]},{"id":145,"postId":1016,"question":"[__1__]設計者負責規畫資料庫結構。(請用小寫英文回答)","type":"text","options":[],"answer":["database"]},{"id":144,"postId":961,"question":"關於主鍵 (Primary Key) 的敘述，哪些正確？","type":"multiple","options":["可以有兩組主鍵","用於唯一識別紀錄","不可為 Null","不可重複"],"answer":[1,2,3]},{"id":143,"postId":954,"question":"外鍵值在父表中找不到，違反了哪項規則？","type":"single","options":["實體完整性","結構完整性","參考完整性","值域完整性"],"answer":[2]},{"id":142,"postId":982,"question":"下列哪些是「超鍵」而非「候選鍵」？","type":"multiple","options":["(身分證字號, 性別)","(學號, 姓名)","學號","姓名"],"answer":[0,1]},{"id":141,"postId":946,"question":"Null 代表資料目前的狀態為何？","type":"single","options":["錯誤","不詳","空白"],"answer":[1]},{"id":140,"postId":1016,"question":"A [__1__] designer plans the structure. (please answer in lowercase english)","type":"text","options":[],"answer":["database"]},{"id":139,"postId":942,"question":"欄位的值必須符合合法值群（如性別限男女）是？","type":"single","options":["值域完整性","實體完整性","參考完整性","系統完整性"],"answer":[0]},{"id":138,"postId":985,"question":"Comparison of Composite vs Simple attributes?","type":"multiple","options":["Composite is divisible","Gender is simple","Simple is indivisible","Address is simple"],"answer":[0,1,2]},{"id":137,"postId":992,"question":"A relational database is composed of two or more [__1__]. (please answer in lowercase english)","type":"text","options":[],"answer":["tables"]},{"id":136,"postId":935,"question":"用來建立兩個資料表之間關聯橋樑的鍵是？","type":"single","options":["簡單鍵","外來鍵","候選鍵","主鍵"],"answer":[1]},{"id":135,"postId":1010,"question":"資料表中用來描述特性的欄位稱為[__1__]。(請用小寫英文回答)","type":"text","options":[],"answer":["attribute"]},{"id":134,"postId":1026,"question":"每個資料表必須至少有一個[__1__]鍵。(請用小寫英文回答)","type":"text","options":[],"answer":["primary"]},{"id":133,"postId":980,"question":"在 1:M 關係中，關於外鍵位置的描述正確的是？","type":"multiple","options":["置於「多」的那方","置於「一」的那方","參考「多」那方的主鍵","參考「一」那方的主鍵"],"answer":[0,3]},{"id":132,"postId":975,"question":"關聯式資料庫中，下列哪些詞彙意義相通？","type":"multiple","options":["主鍵與外鍵","紀錄與序組","欄位與屬性","資料表與關聯表"],"answer":[1,2,3]},{"id":131,"postId":930,"question":"Candidates for the primary key that are unique and minimal?","type":"single","options":["Candidate Key","Domain","Foreign Key","Super Key"],"answer":[0]},{"id":130,"postId":960,"question":"Relational Data Integrity includes which three main rules?","type":"multiple","options":["Domain Integrity","Entity Integrity","Referential Integrity","Network Integrity"],"answer":[0,1,2]},{"id":129,"postId":923,"question":"資料表之間是透過什麼欄位值來連結？","type":"single","options":["不同","隨機","相同","唯一"],"answer":[2]},{"id":128,"postId":995,"question":"資料表中被選定為識別根基的欄位稱為[__1__]。(請用小寫英文回答字母間留一個空白)","type":"text","options":[],"answer":["primary key"]},{"id":121,"postId":982,"question":"Which are Super Keys but NOT Candidate Keys?","type":"multiple","options":["Student ID","(ID, Name)","(SSN, Gender)","Name"],"answer":[1,2]},{"id":120,"postId":970,"question":"下列哪些實例屬於「一對多」關係？","type":"multiple","options":["系對學生","學生對社團","國民對身分證","老師對課程"],"answer":[0,1,3]},{"id":119,"postId":1007,"question":"在二維表格中，每一欄稱為[__1__]。(請用小寫英文回答)","type":"text","options":[],"answer":["attribute"]},{"id":118,"postId":987,"question":"值域完整性的實例有哪些？","type":"multiple","options":["姓名不可為空","學號不可重複","分數必須在 0-100","月份必須在 1-12"],"answer":[2,3]},{"id":117,"postId":1002,"question":"The abbreviation for one-to-many is [__1__]. (please answer in uppercase english with a colon)","type":"text","options":[],"answer":["1:M"]},{"id":116,"postId":984,"question":"Identical student records stored in two places means?","type":"multiple","options":["Violates redundancy","Extra security","Waste space","Consistency issues"],"answer":[0,2,3]},{"id":115,"postId":955,"question":"A student ID number is usually chosen as the?","type":"single","options":["Foreign Key","Multi-valued attribute","Derived attribute","Primary Key"],"answer":[3]},{"id":114,"postId":956,"question":"一對一關係通常用於將什麼資料分割存放？","type":"single","options":["公開資料","垃圾資料","敏感或保密資料","歷史資料"],"answer":[2]},{"id":113,"postId":1003,"question":"多對多關係需要加入一個[__1__]資料表來轉換。(請用小寫英文回答字母間留一個空白)","type":"text","options":[],"answer":["junction table"]},{"id":112,"postId":972,"question":"為什麼「多對多」需要轉化為「兩個一對多」？","type":"multiple","options":["符合關聯式模型規範","方便電腦運算","簡化資料結構","節省空間"],"answer":[0,1,2]},{"id":111,"postId":1014,"question":"某屬性有多個內含值（如多個電話）稱為[__1__]屬性。(請用小寫英文連字號回答)","type":"text","options":[],"answer":["multi-valued"]},{"id":110,"postId":922,"question":"關聯式資料庫是由兩個或兩個以上的什麼組合而成？","type":"single","options":["程式","資料表","硬體","網路"],"answer":[1]},{"id":109,"postId":1006,"question":"在二維表格中，每一列稱為[__1__]。(請用小寫英文回答)","type":"text","options":[],"answer":["tuple"]},{"id":108,"postId":944,"question":"在關聯式模型中，每一列紀錄稱之為？","type":"single","options":["序組","綱要","域","屬性"],"answer":[0]},{"id":107,"postId":994,"question":"The minimal set of fields to uniquely identify a record is [__1__]. (please answer in lowercase english separated by spaces)","type":"text","options":[],"answer":["candidate key"]},{"id":106,"postId":933,"question":"沒被選為主鍵的候選鍵稱為什麼？","type":"single","options":["複合鍵","衍生鍵","參考鍵","交替鍵"],"answer":[3]},{"id":105,"postId":1018,"question":"科系代碼表在關聯中通常擔任[__1__]關聯表。(請用小寫英文回答)","type":"text","options":[],"answer":["parent"]},{"id":104,"postId":937,"question":"一位老師教導多位學生，這屬於什麼關係？","type":"single","options":["多對一","一對多","一對一","多對多"],"answer":[1]},{"id":103,"postId":949,"question":"哪一種完整性規定同一行的資料類型必須相同？","type":"single","options":["邏輯完整性","值域完整性","參考完整性","實體完整性"],"answer":[1]},{"id":102,"postId":943,"question":"How many tables are needed to execute Referential Integrity?","type":"single","options":["0 個","1","2","Infinite"],"answer":[2]},{"id":101,"postId":985,"question":"下列關於複合屬性與簡單屬性的比較？","type":"multiple","options":["性別是簡單屬性","地址是簡單屬性","簡單屬性不可再分","複合屬性可再分"],"answer":[0,2,3]},{"id":100,"postId":981,"question":"設定值域完整性規則的好處？","type":"multiple","options":["強制一致的資料格式","減少錯誤資料輸入","增加搜尋效率","維持資料品質"],"answer":[0,1,3]},{"id":99,"postId":1024,"question":"身分證號碼具備候選鍵的[__1__]性。(請用小寫英文回答)","type":"text","options":[],"answer":["uniqueness"]},{"id":95,"postId":939,"question":"為了解決多對多關係，通常需要加入一個什麼表？","type":"single","options":["歷史表","聯合資料表","備份表","系統表"],"answer":[1]},{"id":94,"postId":955,"question":"學生證號碼通常被選為？","type":"single","options":["外鍵","多值屬性","主鍵","衍生屬性"],"answer":[2]},{"id":93,"postId":1001,"question":"未被選為主鍵的候選鍵稱為[__1__]。(請用小寫英文回答字母間留一個空白)","type":"text","options":[],"answer":["alternate key"]},{"id":92,"postId":924,"question":"關聯式資料庫中，「外鍵」是用來參考哪一種鍵？","type":"single","options":["複合鍵","主鍵","候選鍵","超鍵"],"answer":[1]},{"id":91,"postId":996,"question":"Composite attributes are divisible, but [__1__] are not. (please answer in lowercase english separated by spaces)","type":"text","options":[],"answer":["simple attribute"]},{"id":90,"postId":988,"question":"為何主鍵不建議經常變動？","type":"multiple","options":["違反天道法則","影響參考它的外鍵","系統效能降低","導致資料混亂"],"answer":[1,2,3]},{"id":89,"postId":1025,"question":"Relational database abbreviation is [__1__]. (please answer in uppercase english abbreviation)","type":"text","options":[],"answer":["RDB"]},{"id":88,"postId":925,"question":"下列何者不是關聯式資料庫的目的？","type":"single","options":["節省空間","確保一致性","提高行政效率","增加資料冗餘"],"answer":[3]},{"id":87,"postId":993,"question":"表格間是透過[__1__]參考[__2__]來建立連結。(請用小寫英文回答字母間留一個空白)","type":"text","options":[],"answer":["fk","pk"]},{"id":86,"postId":934,"question":"由兩個或兩個以上欄位組成的主鍵稱為？","type":"single","options":["超鍵","複合鍵","外部鍵","單一鍵"],"answer":[1]},{"id":85,"postId":952,"question":"關聯式資料庫中，Table 被稱為？","type":"single","options":["關聯","階層","屬性","實體"],"answer":[0]},{"id":84,"postId":1011,"question":"Ensuring same attribute in a column is [__1__] integrity. (please answer in lowercase english)","type":"text","options":[],"answer":["domain"]},{"id":83,"postId":978,"question":"衍生屬性 (Derived Attribute) 的範例？","type":"multiple","options":["姓名來自父母","學號來自入學年份","總分來自各科成績","年齡來自生日"],"answer":[1,2,3]},{"id":82,"postId":967,"question":"Features of Referential Integrity rules?","type":"multiple","options":["Needs 2+ tables","Link Parent-Child","Check if numeric","Check input validity"],"answer":[0,1,3]},{"id":81,"postId":932,"question":"The candidate key chosen as the basis for identification is?","type":"single","options":["Primary Key","Foreign Key","Simple attribute","Alternate Key"],"answer":[0]},{"id":80,"postId":994,"question":"能夠唯一識別一筆記錄的最小欄位集合稱為[__1__]。(請用小寫英文回答字母間留一個空白)","type":"text","options":[],"answer":["candidate key"]},{"id":79,"postId":948,"question":"下列哪種屬性在 ER 圖中以雙線橢圓表示？","type":"single","options":["衍生屬性","多值屬性","簡單屬性","複合屬性"],"answer":[1]},{"id":78,"postId":969,"question":"值域完整性規則包含哪些限制？","type":"multiple","options":["不能有重複值","資料類型需相同","必須在合法範圍內","同一行的性質一致"],"answer":[1,2,3]},{"id":77,"postId":1019,"question":"學生表在關聯中通常擔任[__1__]關聯表。(請用小寫英文回答)","type":"text","options":[],"answer":["child"]},{"id":76,"postId":959,"question":"候選鍵 (Candidate Key) 必須具備哪兩個特性？","type":"multiple","options":["複合性","唯一性","最小性","衍生性"],"answer":[1,2]},{"id":75,"postId":928,"question":"由「生日」推算出「年齡」，「年齡」屬於什麼屬性？","type":"single","options":["衍生屬性","複合屬性","簡單屬性","主屬性"],"answer":[0]},{"id":74,"postId":961,"question":"Which statements about the Primary Key are correct?","type":"multiple","options":["Cannot be Null","Can have two PK sets","No duplicates","Unique identification"],"answer":[0,2,3]},{"id":73,"postId":974,"question":"Descriptions of \"Dept ID\" as an FK?","type":"multiple","options":["Exists in Student table","Must equal Student ID","Ensures valid Dept","Refers to Dept table PK"],"answer":[0,2,3]},{"id":72,"postId":930,"question":"主鍵的候選人，且需符合唯一性與最小性的是？","type":"single","options":["候選鍵","外鍵","超鍵","值域"],"answer":[0]},{"id":71,"postId":989,"question":"學生選課表（聯合表）中的主鍵通常由哪些組成？","type":"multiple","options":["學號","老師姓名","學期","課號"],"answer":[0,3]},{"id":70,"postId":1008,"question":"一個員工只能對應一個辦公桌是[__1__]關聯。(請用小寫英文與連字號及數字)","type":"text","options":[],"answer":["1-to-1"]}]
+[
+  {
+    "id": "2266",
+    "postId": null,
+    "question": "遞迴樹的葉節點深度通常為？",
+    "language": "zh",
+    "type": "single",
+    "options": [
+      "A. log(n!)",
+      "B. log_b(n), _b表示下標",
+      "C. n",
+      "D. n²"
+    ],
+    "answer": [
+      1
+    ]
+  },
+  {
+    "id": "2247",
+    "postId": null,
+    "question": "大師定理中，若 f(n) 成長速度慢於 O(nˡᵒᵍᵇ⁽ᵃ⁾)，則複雜度為？",
+    "language": "zh",
+    "type": "single",
+    "options": [
+      "A. O(n)",
+      "B. O(nˡᵒᵍᵇ⁽ᵃ⁾)",
+      "C. O(n log n)",
+      "D. O(f(n))"
+    ],
+    "answer": [
+      1
+    ]
+  },
+  {
+    "id": "2259",
+    "postId": null,
+    "question": "證明一個遞迴式的 O(n) 上界，通常需要？",
+    "language": "zh",
+    "type": "multiple",
+    "options": [
+      "A. 使用數學歸納法",
+      "B. 找到一個邊界值 n0",
+      "C. 找到一個常數 c",
+      "D. 檢查所有可能的輸入值"
+    ],
+    "answer": [
+      2,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "2231",
+    "postId": null,
+    "question": "在遞迴樹法中，我們關注的是？",
+    "language": "zh",
+    "type": "single",
+    "options": [
+      "A. 樹中所有節點的成本總和",
+      "B. 樹的高度",
+      "C. 樹的節點數量",
+      "D. 樹的根節點代價"
+    ],
+    "answer": [
+      0
+    ]
+  },
+  {
+    "id": "2258",
+    "postId": null,
+    "question": "為何遞迴分析中要忽略底數的取整函數？",
+    "language": "zh",
+    "type": "single",
+    "options": [
+      "A. 因為它們屬於硬體層面",
+      "B. 因為它們對漸進複雜度影響微乎其微",
+      "C. 因為它們在程式語言中不適用",
+      "D. 因為它們會導致計算錯誤"
+    ],
+    "answer": [
+      1
+    ]
+  },
+  {
+    "id": "2286",
+    "postId": null,
+    "question": "代入法需確保初始\n也滿足 (請用小寫英文回答)",
+    "language": "zh",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "conditions"
+    ]
+  },
+  {
+    "id": "2238",
+    "postId": null,
+    "question": "大師定理適用於？",
+    "language": "zh",
+    "type": "single",
+    "options": [
+      "A. 分治演算法的複雜度分析",
+      "B. 動態規劃的路徑選擇",
+      "C. 資料結構的記憶體分配",
+      "D. 圖論中的最短路徑"
+    ],
+    "answer": [
+      0
+    ]
+  },
+  {
+    "id": "2232",
+    "postId": null,
+    "question": "大師定理主要用於解決哪種形式的遞迴？",
+    "language": "zh",
+    "type": "single",
+    "options": [
+      "A. T(n)=2T(n/2)+n²",
+      "B. T(n)=aT(n/b)+f(n)",
+      "C. T(n)=aT(n-b)+f(n)",
+      "D. T(n)=T(n-1)+f(n)"
+    ],
+    "answer": [
+      1
+    ]
+  },
+  {
+    "id": "2251",
+    "postId": null,
+    "question": "下列關於漸進符號 (Asymptotic Notation) 的敘述，何者正確？",
+    "language": "zh",
+    "type": "multiple",
+    "options": [
+      "A. Ω 符號代表下界",
+      "B. Θ 符號代表緊確界",
+      "C. 這些符號都只用於遞迴式",
+      "D. O 符號代表上界"
+    ],
+    "answer": [
+      3,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "2273",
+    "postId": null,
+    "question": "在代入法中，證明常數通常使用數學\n法 (請用小寫英文回答)",
+    "language": "zh",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "induction"
+    ]
+  },
+  {
+    "id": "2275",
+    "postId": null,
+    "question": "大師定理分析中 f(n) 與 nˡᵒᵍᵇ⁽ᵃ⁾ 的成長率需進行\n(請用小寫英文回答)",
+    "language": "zh",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "comparison"
+    ]
+  },
+  {
+    "id": "2284",
+    "postId": null,
+    "question": "大師定理 Case 3 要求 f(n) 必須\n大於 nˡᵒᵍᵇ⁽ᵃ⁾ (請用小寫英文回答)",
+    "language": "zh",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "polynomially"
+    ]
+  },
+  {
+    "id": "2257",
+    "postId": null,
+    "question": "大師定理 Case 1 的條件包含？",
+    "language": "zh",
+    "type": "multiple",
+    "options": [
+      "A. f(n) 成長較快",
+      "B. ε > 0",
+      "C. a, b 是常數",
+      "D. f(n) 為 O(nˡᵒᵍᵇ⁽ᵃ⁾(a - ε))"
+    ],
+    "answer": [
+      3,
+      1,
+      2
+    ]
+  },
+  {
+    "id": "2241",
+    "postId": null,
+    "question": "下列何者不是大師定理分析的變數？",
+    "language": "zh",
+    "type": "single",
+    "options": [
+      "A. b",
+      "B. n!",
+      "C. a",
+      "D. f(n)"
+    ],
+    "answer": [
+      1
+    ]
+  },
+  {
+    "id": "2228",
+    "postId": null,
+    "question": "下列何者不是求解遞迴關係式的主要方法？",
+    "language": "zh",
+    "type": "single",
+    "options": [
+      "A. 暴力列舉法",
+      "B. 遞迴樹法",
+      "C. 代入法",
+      "D. 主定理"
+    ],
+    "answer": [
+      0
+    ]
+  },
+  {
+    "id": "2285",
+    "postId": null,
+    "question": "遞迴樹的高度通常為\n(請用小寫英文回答 不留空白)",
+    "language": "zh",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "logn"
+    ]
+  },
+  {
+    "id": "2253",
+    "postId": null,
+    "question": "大師定理 Case 3 的條件包含？",
+    "language": "zh",
+    "type": "multiple",
+    "options": [
+      "A. a 必須小於 1",
+      "B. 存在常數 epsilon > 0",
+      "C. f(n) 成長速度大於 nˡᵒᵍᵇ⁽ᵃ⁾",
+      "D. 滿足規則性條件 (regularity condition)"
+    ],
+    "answer": [
+      2,
+      1,
+      3
+    ]
+  },
+  {
+    "id": "2256",
+    "postId": null,
+    "question": "遞迴樹法在下列哪些情況下特別有用？",
+    "language": "zh",
+    "type": "multiple",
+    "options": [
+      "A. 當遞迴樹非常對稱時",
+      "B. 當使用代入法過於複雜時",
+      "C. 當需要產生好的猜測時",
+      "D. 當 f(n) 在遞迴樹中變化時"
+    ],
+    "answer": [
+      3,
+      2,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "2229",
+    "postId": null,
+    "question": "代入法求解遞迴關係式的第一步是？",
+    "language": "zh",
+    "type": "single",
+    "options": [
+      "A. 進行數學歸納法",
+      "B. 猜測解的形式",
+      "C. 驗證邊界條件",
+      "D. 忽略常數項"
+    ],
+    "answer": [
+      1
+    ]
+  },
+  {
+    "id": "2282",
+    "postId": null,
+    "question": "對於 T(n) = 2T(n/2) + n，其複雜度為 O(n\nn) (請用小寫英文回答)",
+    "language": "zh",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "log"
+    ]
+  },
+  {
+    "id": "2271",
+    "postId": null,
+    "question": "遞迴樹法的核心是將問題拆解為\n結構 (請用小寫英文回答)",
+    "language": "zh",
+    "type": "text",
+    "options": [],
+    "answer": [
+      "tree"
+    ]
+  }
+]
